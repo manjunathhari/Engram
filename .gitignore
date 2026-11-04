@@ -1,0 +1,7 @@
+locomo/
+__pycache__/
+*.log
+*.pkl
+.env
+*.pem
+id_*
