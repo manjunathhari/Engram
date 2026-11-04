@@ -8,6 +8,7 @@ Later chats: Engram's session shortlist finds the right old chats, then the righ
 
 The model only ever receives plain text, so any open model can sit on top.
 """
+import datetime as dt
 import os
 import re
 import sqlite3
@@ -50,6 +51,91 @@ def words(text: str) -> list[str]:
 engram.words, engram.stem = words, stem  # Engram's read path uses the same word trimming
 
 
+MONTHS = "January February March April May June July August September October November December".split()
+WEEKDAYS = "monday tuesday wednesday thursday friday saturday sunday".split()
+WORD_NUM = {"a": 1, "an": 1, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "couple of": 2, "a couple of": 2}
+_N = r"(\d+|an?|one|two|three|four|five|six|seven|eight|nine|ten|(?:a )?couple of)"
+RELATIVE = re.compile(rf"\b(the day before yesterday|day before yesterday|yesterday|last night|today|tonight|this morning|tomorrow"
+                      rf"|(?:last|next) (?:week|weekend|month|year|summer|winter|spring|fall|autumn|monday|tuesday|wednesday|thursday|friday|saturday|sunday)"
+                      rf"|this (?:week|weekend|month|year)"
+                      rf"|{_N} (?:days?|weeks?|months?|years?) ago|(?:a )?few (?:days|weeks|months|years) ago"
+                      rf"|in {_N} (?:days?|weeks?|months?|years?))\b", re.I)
+
+
+def _d(x) -> str:
+    return f"{x.day} {MONTHS[x.month - 1]} {x.year}"
+
+
+def _shift_month(x, n):
+    m = x.year * 12 + x.month - 1 + n
+    return m // 12, m % 12 + 1
+
+
+def _span(a, b) -> str:
+    if a.month == b.month and a.year == b.year: return f"{a.day} to {b.day} {MONTHS[a.month - 1]} {a.year}"
+    return f"{_d(a)} to {_d(b)}"
+
+
+def resolve_phrase(phrase: str, day) -> str | None:
+    """The real date behind words like yesterday or last Friday, given the day they were said."""
+    p = phrase.lower(); one = dt.timedelta(days=1)
+    if p in ("today", "tonight", "this morning"): return _d(day)
+    if p == "yesterday" or p == "last night": return _d(day - one)
+    if "day before yesterday" in p: return _d(day - 2 * one)
+    if p == "tomorrow": return _d(day + one)
+    m = re.fullmatch(r"(last|next|this) (\w+)", p)
+    if m:
+        which, unit = m.groups()
+        step = {"last": -1, "next": 1, "this": 0}[which]
+        if unit in WEEKDAYS:
+            target = WEEKDAYS.index(unit)
+            if step < 0: return _d(day - ((day.weekday() - target - 1) % 7 + 1) * one)
+            return _d(day + ((target - day.weekday() - 1) % 7 + 1) * one)
+        if unit == "week":
+            start = day - day.weekday() * one + 7 * step * one
+            return "week of " + _span(start, start + 6 * one)
+        if unit == "weekend":
+            sat = day + (5 - day.weekday()) * one  # Saturday of this calendar week
+            if step < 0:
+                sat = sat - 7 * one
+            elif step > 0 and day.weekday() >= 5:
+                sat = sat + 7 * one
+            return "weekend of " + _span(sat, sat + one)
+        if unit == "month":
+            y, mo = _shift_month(day, step)
+            return f"{MONTHS[mo - 1]} {y}"
+        if unit == "year": return str(day.year + step)
+        season = {"spring": 3, "summer": 6, "fall": 9, "autumn": 9, "winter": 12}[unit]
+        if step < 0: y = day.year if day.month > season + 2 else day.year - 1
+        else: y = day.year if day.month < season else day.year + 1
+        return f"{unit} {y}"
+    m = re.fullmatch(rf"(?:a )?few (days|weeks|months|years) ago", p)
+    if m: return f"a few {m.group(1)} before {_d(day)}"
+    m = re.fullmatch(rf"(in )?{_N} (days?|weeks?|months?|years?)( ago)?", p)
+    if m:
+        n = int(m.group(2)) if m.group(2).isdigit() else WORD_NUM[m.group(2)]
+        sign = 1 if m.group(1) else -1
+        u = m.group(3)
+        if u.startswith("day"): return _d(day + sign * n * one)
+        if u.startswith("week"): return "around " + _d(day + sign * 7 * n * one)
+        if u.startswith("month"):
+            y, mo = _shift_month(day, sign * n)
+            return f"{MONTHS[mo - 1]} {y}"
+        return str(day.year + sign * n)
+    return None
+
+
+def with_dates(text: str, date_said: str) -> str:
+    """Shows the real date beside words like yesterday. The saved sentence itself never changes."""
+    day = engram.parse_session_date(date_said) if date_said else None
+    if not day: return text
+    if hasattr(day, "date"): day = day.date()
+    def add(m):
+        r = resolve_phrase(m.group(0), day)
+        return f"{m.group(0)} [{r}]" if r else m.group(0)
+    return RELATIVE.sub(add, text)
+
+
 NOTE_PROMPT = """Below is a finished conversation. Write a short handover note for whoever continues it later.
 Use these headings: Goal, Decisions, Open tasks, Important facts. Under Important facts, keep names, dates, numbers, places and feelings exactly as written.
 Use only what is written. Write under 150 words.
@@ -76,6 +162,7 @@ class Settings:
 class ChatMemory:
     def __init__(self, path: str, cfg: Config | None = None, settings: Settings | None = None, llm=None, durable: bool = True):
         self.s, self.cfg, self.llm = settings or Settings(), cfg or Config(), llm
+        self.show_dates = True
         self.db = sqlite3.connect(path)
         self.db.execute("PRAGMA journal_mode=WAL")
         self.db.execute(f"PRAGMA synchronous={'FULL' if durable else 'OFF'}")
@@ -200,7 +287,8 @@ class ChatMemory:
         lines = []
         for sid in sids:
             speaker, date, text, caption = self.db.execute("SELECT speaker, date, text, caption FROM sentences WHERE sid=?", (sid,)).fetchone()
-            lines.append(f"[{date}] {speaker}: {text}" + (f" [image: {caption}]" if caption else ""))
+            shown = with_dates(text, date) if self.show_dates else text
+            lines.append(f"[{date}] {speaker}: {shown}" + (f" [image: {caption}]" if caption else ""))
         return "\n".join(lines)
 
     def desk_text(self) -> str:
@@ -246,7 +334,8 @@ class ChatMemory:
         keep, used = [], 0
         for date, speaker, text, caption, tokens in rows:
             if used + tokens > self.s.note_read_tokens: break
-            keep.append(f"{speaker}: {text}" + (f" [image: {caption}]" if caption else "")); used += tokens
+            shown = with_dates(text, date) if self.show_dates else text
+            keep.append(f"{speaker}: {shown}" + (f" [image: {caption}]" if caption else "")); used += tokens
         date = rows[0][0] if rows else ""
         return f"[{date}]\n" + "\n".join(reversed(keep))
 
