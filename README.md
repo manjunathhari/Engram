@@ -28,9 +28,15 @@ Add that public key at GitHub: repository Settings, Deploy keys, Add deploy key,
 
 ## Run the tests
 
-    python3 vps_kit.py check --model gemma3:4b --tag g3
+If Ollama runs on the server itself, leave out `--url`. If it runs in Docker, find its internal address first, using your container's name:
+
+    OLLAMA=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' YOUR_OLLAMA_CONTAINER)
+
+Then:
+
+    python3 vps_kit.py check --url http://$OLLAMA:11434/v1 --model gemma3:4b --tag g3
     ./sync_results.sh
-    nohup python3 vps_kit.py answers --model gemma3:4b --tag g3 --sample 120 > answers.log 2>&1 &
+    nohup python3 vps_kit.py answers --url http://$OLLAMA:11434/v1 --model gemma3:4b --tag g3 --sample 120 > answers.log 2>&1 &
 
 To send results every 15 minutes while it runs:
 
