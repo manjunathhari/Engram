@@ -1,0 +1,9 @@
+{
+ "cores": 2,
+ "ram": {
+  "MemTotal": 7940,
+  "MemAvailable": 3891
+ },
+ "model": "gemma3:4b",
+ "secs_per_answer": 17.80737066268921
+}
