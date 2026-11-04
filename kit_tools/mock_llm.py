@@ -15,6 +15,7 @@ class H(BaseHTTPRequestHandler):
         elif "Write the lasting facts" in p:
             r = "\n".join(f"{m[1]} said something. [{m[0]}]" for m in re.findall(r"^\[(D\d+:\d+)\] (\w+):", p, re.M)[:5])
         elif "mean the same" in p: r = "yes"
+        elif "handover note for whoever" in p: r = "Goal: test.\nImportant facts: mock note."
         elif "Excerpts:" in p: r = "7 May 2023"
         else: r = "ready"
         o = json.dumps(dict(choices=[dict(message=dict(content=r))], usage=dict(prompt_tokens=len(p) // 4, completion_tokens=len(r) // 4))).encode()
