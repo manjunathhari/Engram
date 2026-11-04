@@ -1,0 +1,35 @@
+{
+ "none": {
+  "n": 60,
+  "f1": 0.003,
+  "not_mentioned": 1.0,
+  "ctx_tokens": 3,
+  "secs": 2.9
+ },
+ "note": {
+  "n": 60,
+  "f1": 0.276,
+  "not_mentioned": 0.333,
+  "ctx_tokens": 183,
+  "secs": 6.5
+ },
+ "memory": {
+  "n": 60,
+  "f1": 0.409,
+  "not_mentioned": 0.183,
+  "ctx_tokens": 448,
+  "secs": 15.9
+ },
+ "note+memory": {
+  "n": 60,
+  "f1": 0.407,
+  "not_mentioned": 0.083,
+  "ctx_tokens": 632,
+  "secs": 20.3
+ },
+ "notes": {
+  "n": 47,
+  "secs": 35.5,
+  "tokens": 173
+ }
+}
