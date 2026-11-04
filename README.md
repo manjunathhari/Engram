@@ -39,3 +39,7 @@ To send results every 15 minutes while it runs:
 Question types are interleaved, so a run can stop at any time and still leave a balanced set. Repeat the same command to continue.
 
 Keep Ollama's port (11434) closed to the internet.
+
+## Data and licence
+
+Tests use [LoCoMo](https://github.com/snap-research/locomo) (Maharana et al., 2024), licensed CC BY-NC 4.0. The data is not stored here, but `results/` contains questions and short excerpts from it, under that licence. This repository's own code has no licence yet, so its rights stay with the author unless one is added.
