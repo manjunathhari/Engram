@@ -178,7 +178,8 @@ class ChannelSearch:
         mode, f = mode or self.mode, self.features(q)
         if mode in ("plain", "cabinet"):
             return [self.sids[i] for i in np.argsort(-f[mode])]
-        s = np.mean([self.model[k][1].predict_proba(self.model[k][0].transform(f["tables"][k]))[:, 1] for k in CHANNELS], axis=0)
+        models = self.model if isinstance(self.model, list) else [self.model]  # several trained starts can be averaged
+        s = np.mean([m[k][1].predict_proba(m[k][0].transform(f["tables"][k]))[:, 1] for m in models for k in CHANNELS], axis=0)
         first = f["pool"][np.argsort(-s)].tolist()
         have = set(first)
         return [self.sids[i] for i in first + [x for x in np.argsort(-f["plain"]).tolist() if x not in have]]

@@ -9,12 +9,15 @@ Later chats: Engram's session shortlist finds the right old chats, then the righ
 The model only ever receives plain text, so any open model can sit on top.
 """
 import datetime as dt
+import math
 import os
 import re
 import sqlite3
 import time
-from collections import deque
+from collections import Counter, deque
 from dataclasses import dataclass
+
+import numpy as np
 
 import engram
 import engram_facts as F
@@ -315,7 +318,7 @@ class ChatMemory:
         if self.use_facts:
             shown = self.facts_text(question)
             if shown: parts.append(shown)
-        if sids: parts.append(self.text_of(sids))
+        if sids: parts.append(self.text_of(sorted(sids) if self.search is not None else sids))
         if self.desk: parts.append(self.desk_text())
         return "\n".join(parts) or "(no excerpts)", info | dict(sids=sids)
 
@@ -395,6 +398,7 @@ class ChatMemory:
                 self.db.execute("INSERT INTO fact_sources(fact, sid) VALUES(?,?)", (fid, ids[link]))
             self.db.execute("INSERT INTO facts_index(rowid, words) VALUES(?,?)", (fid, " ".join(dict.fromkeys(words(f["text"])))))
         moved = sum(f["moved"] for f in facts)
+        self._fact_vectors = None
         self.db.execute("INSERT OR REPLACE INTO episodes(chat, context, status, model, seconds, accepted, moved, rejected, raw) VALUES(?,?,?,?,?,?,?,?,?)",
                         (chat, context, "done" if facts else "empty", self.helper_name, secs, len(facts), moved, rejected, reply[:2500]))
         self.db.commit()
@@ -408,8 +412,30 @@ class ChatMemory:
             self.db.execute("DELETE FROM facts WHERE fact=?", (fid,))
         return len(fids)
 
+    def _ranked_facts(self, question: str) -> list[tuple]:
+        """Meaning and word search over facts, the method used in the facts test. Needs the search layer."""
+        s = self.search
+        if getattr(self, "_fact_vectors", None) is None:
+            rows = self.db.execute("SELECT fact, text FROM facts ORDER BY fact").fetchall()
+            w = [words(r[1]) for r in rows]
+            df = Counter(x for ws in w for x in set(ws))
+            self._fact_vectors = (rows, w, df, sum(map(len, w)) / max(1, len(w)), s._embed([r[1] for r in rows]) if rows else None)
+        rows, w, df, avg, vectors = self._fact_vectors
+        if not rows: return []
+        qv, qw, n = s._embed([question])[0], set(words(question)), len(rows)
+        mid, st = s._curve(question)
+        score = vectors @ qv
+        for i, ws in enumerate(w):
+            b = 0.
+            for x in qw & set(ws):
+                tf = ws.count(x); b += math.log(1 + (n - df[x] + .5) / (df[x] + .5)) * tf * 2.2 / (tf + 1.2 * (.5 + .5 * len(ws) / avg))
+            if b > 0: score[i] += 1 / (1 + math.exp(-st * (b - mid)))
+        return [rows[i] for i in np.argsort(-score)]
+
     def find_facts(self, question: str, limit: int = 8) -> list[dict]:
         """Noted facts for a question, each with the ids of the sentences behind it."""
+        if self.search is not None and self.search.N:
+            return [dict(fact=fid, text=text, sources=[r[0] for r in self.db.execute("SELECT sid FROM fact_sources WHERE fact=?", (fid,))]) for fid, text in self._ranked_facts(question)[:limit]]
         terms = [t for t in (re.sub(r"[^a-z0-9]", "", w) for w in dict.fromkeys(words(question))) if t]
         if not terms: return []
         q = " OR ".join(f'"{t}"' for t in terms)
@@ -419,10 +445,11 @@ class ChatMemory:
 
     def facts_text(self, question: str) -> str:
         lines, used = [], 0
-        for f in self.find_facts(question):
-            t = count_tokens(f["text"]) + 4
+        ranked = self._ranked_facts(question) if self.search is not None and self.search.N else [(f["fact"], f["text"]) for f in self.find_facts(question, 40)]
+        for _, text in ranked:
+            t = count_tokens(text) + 6
             if used + t > self.s.fact_tokens: break
-            lines.append("[Noted fact; the exact sentences take priority] " + f["text"]); used += t
+            lines.append("[Noted fact] " + text); used += t
         return "\n".join(lines)
 
     def episode_context(self, chat: int) -> str:
@@ -433,6 +460,7 @@ class ChatMemory:
         """Deletes one sentence and every fact built on it, then rebuilds what lives in RAM."""
         fids = [r[0] for r in self.db.execute("SELECT fact FROM fact_sources WHERE sid=?", (sid,)).fetchall()]
         for fid in fids: self._drop_facts("fact=?", (fid,))
+        self._fact_vectors = None
         n = self.db.execute("DELETE FROM sentences WHERE sid=?", (sid,)).rowcount
         self.db.execute("DELETE FROM words_index WHERE rowid=?", (sid,))
         self.db.commit()

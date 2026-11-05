@@ -17,18 +17,16 @@ SCHEMA = """
     CREATE VIRTUAL TABLE IF NOT EXISTS facts_index USING fts5(words, tokenize="unicode61 remove_diacritics 0");
 """
 
-PROMPT = """Below is one conversation. Each line starts with its id. Write what is worth remembering later.
-The first line must be:
-CONTEXT: under 40 words on what was going on, the goal, and what was learned
-Then write one line per fact, at most 12, in exactly this form:
+PROMPT = """Below is one conversation. Each line starts with its id. Write the facts worth remembering later.
+Write one line per fact, at most 12, in exactly this form:
 ID | fact
 The ID must be copied from the line the fact came from. If a fact uses several lines, separate their ids with commas.
-Choose the facts from the whole conversation, not only its start. Each fact must make sense alone: use full names instead of he, she or they, and give real dates from the square brackets. Keep figures and places exactly. Check who actually did each thing. Skip greetings, thanks, compliments and small talk. Use only what is written. Write nothing else.
+Choose the facts from the whole conversation, not only its start. Each fact must make sense alone: use full names instead of he, she or they, and give real dates from the square brackets. Check who actually did each thing. Skip greetings, thanks, compliments and small talk. Use only what is written. Write nothing else.
 
 Conversation:
 {chat}
 
-Answer:
+Facts:
 """
 
 LINE_ID = re.compile(r"\b(?:D\d+:\d+|S\d+)\b")

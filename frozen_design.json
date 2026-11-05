@@ -1,0 +1,18 @@
+{
+ "name": "Engram design for the final test, fixed on 5 November 2026 before any use of conversations 5 to 9",
+ "search": "four channel networks (time, place, person, context), each MLP 32 and 16, three starts (seeds 1, 2, 3) averaged",
+ "training": "conversations 0 to 4 only, evidence labels, up to 8 negatives per positive",
+ "sentence_tokens": 800,
+ "next_sentence_included": true,
+ "fact_tokens": 300,
+ "fact_label": "[Noted fact] ",
+ "facts_position": "above the sentences; sentences shown in time order",
+ "fact_writer": "Gemma 3 4B, hf.co/bartowski/google_gemma-3-4b-it-GGUF:Q4_K_M, at chat close, 700 reply tokens, at most 12 facts per chat",
+ "fact_check": "engram_facts.parse, minimum word support 0.2, unsupported facts rejected",
+ "answer_model": "same Gemma 3 4B file, Ollama context 4096, 60 reply tokens, temperature 0, vps_kit.ANSWER prompt",
+ "test_questions": "all non-adversarial questions with evidence in conversations 5 to 9",
+ "comparison": "paired, same questions, same search with facts against without facts; current Engram also reported",
+ "primary_measure": "strict score, blind labels, score4 rules; 95% interval by paired bootstrap; success if the interval stays above zero",
+ "secondary": "generous score, by question type, evidence found, not mentioned, fact accuracy sample",
+ "not_included": "search phrases, episode context, 1,500 tokens, any model smaller than Gemma 3 4B"
+}
