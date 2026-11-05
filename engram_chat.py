@@ -17,6 +17,7 @@ from collections import deque
 from dataclasses import dataclass
 
 import engram
+import engram_facts as F
 from engram import Config, Engrams
 
 STOP, TOKEN = engram.STOP, engram.TOKEN
@@ -157,12 +158,15 @@ class Settings:
     retrieved_tokens: int = 800  # memories that may return to the desk for one question
     note_read_tokens: int = 3200 # most of a chat the model reads when writing its note
     note_tokens: int = 300       # longest note
+    fact_tokens: int = 300       # noted facts shown on top of retrieved memories, when facts are on
+    fact_reply_tokens: int = 700 # longest reply the helper may write for one chat
 
 
 class ChatMemory:
-    def __init__(self, path: str, cfg: Config | None = None, settings: Settings | None = None, llm=None, durable: bool = True, search=None):
+    def __init__(self, path: str, cfg: Config | None = None, settings: Settings | None = None, llm=None, durable: bool = True, search=None, helper=None, helper_name: str = "", use_facts: bool = False, nlp=None):
         self.s, self.cfg, self.llm = settings or Settings(), cfg or Config(), llm
         self.search = search  # optional reader of past chats, see engram_parallel.py
+        self.helper, self.helper_name, self.use_facts, self.nlp = helper, helper_name, use_facts, nlp  # optional, see engram_facts.py
         self.show_dates = True
         self.db = sqlite3.connect(path)
         self.db.execute("PRAGMA journal_mode=WAL")
@@ -173,6 +177,7 @@ class ChatMemory:
             CREATE INDEX IF NOT EXISTS sentences_chat ON sentences(chat);
             CREATE VIRTUAL TABLE IF NOT EXISTS words_index USING fts5(words, tokenize="unicode61 remove_diacritics 0");
         """)
+        self.db.executescript(F.SCHEMA)
         self.index = Engrams(cfg=self.cfg)
         self.indexed_any = False
         self.chat = None
@@ -307,6 +312,9 @@ class ChatMemory:
         parts = []
         note = self.carried_note()
         if note: parts.append("[Handover note from the last chat]\n" + note)
+        if self.use_facts:
+            shown = self.facts_text(question)
+            if shown: parts.append(shown)
         if sids: parts.append(self.text_of(sids))
         if self.desk: parts.append(self.desk_text())
         return "\n".join(parts) or "(no excerpts)", info | dict(sids=sids)
@@ -327,7 +335,8 @@ class ChatMemory:
         self.desk.clear(); self.desk_used = 0
         note = None
         if write_note and self.llm is not None: note = self.write_note(chat, chain)
-        return dict(chat=chat, sleep_ms=ms, note=note)
+        facts = self.write_facts(chat) if self.helper is not None else None
+        return dict(chat=chat, sleep_ms=ms, note=note, facts=facts)
 
     def close_if_idle(self, idle_seconds: float, **kw):
         """Treats a long-idle chat as closed, for chats nobody closed properly."""
@@ -355,6 +364,85 @@ class ChatMemory:
         self.db.execute("UPDATE chats SET note=? WHERE chat=?", (note, chat))
         self.db.commit()
         return note
+
+    # ---------- facts and episode context, optional ----------
+    def write_facts(self, chat: int) -> dict:
+        """The helper reads a closed chat. A failure changes nothing and can be retried; running again replaces the chat's facts."""
+        rows = self.db.execute("SELECT sid, ref, speaker, date, text, caption FROM sentences WHERE chat=? ORDER BY sid", (chat,)).fetchall()
+        ids, lines, sentences = {}, [], {}
+        for sid, ref, speaker, date, text, caption in rows:
+            line_id = ref or f"S{sid}"
+            ids[line_id] = sid
+            body = f"{speaker}: {with_dates(text, date)}" + (f" [image: {caption}]" if caption else "")
+            lines.append(f"{line_id} {body}")
+            sentences[line_id] = body
+        date = rows[0][3] if rows else ""
+        t0 = time.perf_counter()
+        try:
+            reply = self.helper(F.PROMPT.format(chat=f"[{date}]\n" + "\n".join(lines)), max_tokens=self.s.fact_reply_tokens)[0]
+        except Exception as e:
+            self.db.execute("INSERT OR REPLACE INTO episodes(chat, status, model, seconds, raw) VALUES(?,?,?,?,?)", (chat, "failed", self.helper_name, time.perf_counter() - t0, str(e)[:500]))
+            self.db.commit()
+            return dict(status="failed", error=str(e)[:200])
+        secs = time.perf_counter() - t0
+        context, facts, rejected = F.parse(reply, sentences, words)
+        self._drop_facts("chat=?", (chat,))
+        for f in facts:
+            person, place, when, number = F.fields(f["text"], self.nlp)
+            fid = self.db.execute("INSERT INTO facts(chat,text,person,place,time,number,checked,model) VALUES(?,?,?,?,?,?,?,?)",
+                                  (chat, f["text"], person, place, when, number, "moved" if f["moved"] else "linked", self.helper_name)).lastrowid
+            for link in f["links"]:
+                self.db.execute("INSERT INTO fact_sources(fact, sid) VALUES(?,?)", (fid, ids[link]))
+            self.db.execute("INSERT INTO facts_index(rowid, words) VALUES(?,?)", (fid, " ".join(dict.fromkeys(words(f["text"])))))
+        moved = sum(f["moved"] for f in facts)
+        self.db.execute("INSERT OR REPLACE INTO episodes(chat, context, status, model, seconds, accepted, moved, rejected, raw) VALUES(?,?,?,?,?,?,?,?,?)",
+                        (chat, context, "done" if facts else "empty", self.helper_name, secs, len(facts), moved, rejected, reply[:2500]))
+        self.db.commit()
+        return dict(status="done" if facts else "empty", accepted=len(facts), moved=moved, rejected=rejected, seconds=secs)
+
+    def _drop_facts(self, where: str, args: tuple):
+        fids = [r[0] for r in self.db.execute(f"SELECT fact FROM facts WHERE {where}", args).fetchall()]
+        for fid in fids:
+            self.db.execute("DELETE FROM facts_index WHERE rowid=?", (fid,))
+            self.db.execute("DELETE FROM fact_sources WHERE fact=?", (fid,))
+            self.db.execute("DELETE FROM facts WHERE fact=?", (fid,))
+        return len(fids)
+
+    def find_facts(self, question: str, limit: int = 8) -> list[dict]:
+        """Noted facts for a question, each with the ids of the sentences behind it."""
+        terms = [t for t in (re.sub(r"[^a-z0-9]", "", w) for w in dict.fromkeys(words(question))) if t]
+        if not terms: return []
+        q = " OR ".join(f'"{t}"' for t in terms)
+        rows = self.db.execute("""SELECT f.fact, f.text FROM facts_index i JOIN facts f ON f.fact = i.rowid
+                                  WHERE facts_index MATCH ? ORDER BY bm25(facts_index) LIMIT ?""", (q, limit)).fetchall()
+        return [dict(fact=fid, text=text, sources=[r[0] for r in self.db.execute("SELECT sid FROM fact_sources WHERE fact=?", (fid,))]) for fid, text in rows]
+
+    def facts_text(self, question: str) -> str:
+        lines, used = [], 0
+        for f in self.find_facts(question):
+            t = count_tokens(f["text"]) + 4
+            if used + t > self.s.fact_tokens: break
+            lines.append("[Noted fact; the exact sentences take priority] " + f["text"]); used += t
+        return "\n".join(lines)
+
+    def episode_context(self, chat: int) -> str:
+        r = self.db.execute("SELECT context FROM episodes WHERE chat=?", (chat,)).fetchone()
+        return (r[0] or "") if r else ""
+
+    def forget_sentence(self, sid: int) -> dict:
+        """Deletes one sentence and every fact built on it, then rebuilds what lives in RAM."""
+        fids = [r[0] for r in self.db.execute("SELECT fact FROM fact_sources WHERE sid=?", (sid,)).fetchall()]
+        for fid in fids: self._drop_facts("fact=?", (fid,))
+        n = self.db.execute("DELETE FROM sentences WHERE sid=?", (sid,)).rowcount
+        self.db.execute("DELETE FROM words_index WHERE rowid=?", (sid,))
+        self.db.commit()
+        self.index = Engrams(cfg=self.cfg)
+        self.indexed_any, self.chat = False, None
+        self.desk.clear(); self.desk_used = 0
+        if self.search is not None: self.search.seen.pop(sid, None)
+        self._reload()
+        if self.search is not None and not self.indexed_any: self.search.rebuild(self.db)
+        return dict(sentences=n, facts=len(fids))
 
     def close(self):
         self.db.commit()
