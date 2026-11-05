@@ -3,6 +3,11 @@
 # GitHub sometimes rejects this server's key at random, so each network step retries.
 set -eu
 cd "$(dirname "$0")"
+# Pulling can replace a results file while a running test still writes to the old copy, and those answers vanish when it stops.
+if pgrep -f "chat_kit.py|vps_kit.py" >/dev/null 2>&1; then
+  echo "A test is running, so nothing was synced, to protect its results. Run this again when it finishes."
+  exit 0
+fi
 retry() {
   n=1
   until "$@" 2>/dev/null; do
