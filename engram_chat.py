@@ -21,6 +21,7 @@ import numpy as np
 
 import engram
 import engram_facts as F
+import engram_knowledge as K
 from engram import Config, Engrams
 
 STOP, TOKEN = engram.STOP, engram.TOKEN
@@ -181,6 +182,7 @@ class ChatMemory:
             CREATE VIRTUAL TABLE IF NOT EXISTS words_index USING fts5(words, tokenize="unicode61 remove_diacritics 0");
         """)
         self.db.executescript(F.SCHEMA)
+        self.db.executescript(K.SCHEMA)
         self.index = Engrams(cfg=self.cfg)
         self.indexed_any = False
         self.chat = None
@@ -461,8 +463,10 @@ class ChatMemory:
         fids = [r[0] for r in self.db.execute("SELECT fact FROM fact_sources WHERE sid=?", (sid,)).fetchall()]
         for fid in fids: self._drop_facts("fact=?", (fid,))
         self._fact_vectors = None
+        touched = K.forget_sentence(self.db, sid)
         n = self.db.execute("DELETE FROM sentences WHERE sid=?", (sid,)).rowcount
         self.db.execute("DELETE FROM words_index WHERE rowid=?", (sid,))
+        K.KnowledgeState(self.db).rebuild_after_forget(touched)
         self.db.commit()
         self.index = Engrams(cfg=self.cfg)
         self.indexed_any, self.chat = False, None
