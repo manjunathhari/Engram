@@ -160,8 +160,9 @@ class Settings:
 
 
 class ChatMemory:
-    def __init__(self, path: str, cfg: Config | None = None, settings: Settings | None = None, llm=None, durable: bool = True):
+    def __init__(self, path: str, cfg: Config | None = None, settings: Settings | None = None, llm=None, durable: bool = True, search=None):
         self.s, self.cfg, self.llm = settings or Settings(), cfg or Config(), llm
+        self.search = search  # optional reader of past chats, see engram_parallel.py
         self.show_dates = True
         self.db = sqlite3.connect(path)
         self.db.execute("PRAGMA journal_mode=WAL")
@@ -199,6 +200,7 @@ class ChatMemory:
 
     def _sleep(self):
         self.index.sleep()
+        if self.search is not None: self.search.rebuild(self.db)
 
     # ---------- during a chat ----------
     def open_chat(self, date: str = "") -> int:
@@ -256,6 +258,7 @@ class ChatMemory:
     def _past_chats(self, question: str) -> list[int]:
         """Engram's read path: shortlist old chats, then choose sentences. Closed chats only."""
         if not self.indexed_any: return []
+        if self.search is not None: return self.search.order(question)
         return [int(self.index.engrams[n].id) for n in self.index.retrieve(question, None, use_habit=False)]
 
     def find(self, question: str):
@@ -277,7 +280,11 @@ class ChatMemory:
             nxt = self._next_in_chat(sid)
             if nxt is not None: take(nxt, self.s.retrieved_tokens // 2)
         for sid in self._past_chats(question):
+            if self.search is not None and used >= self.s.retrieved_tokens: break
             take(sid, self.s.retrieved_tokens)
+            if self.search is not None:  # the reply after a sentence often holds the answer
+                nxt = self._next_in_chat(sid)
+                if nxt is not None: take(nxt, self.s.retrieved_tokens)
         return out, dict(tokens=used, ms=(time.perf_counter() - t0) * 1000, overflow_hits=len(overflow))
 
     def _tokens(self, sid: int) -> int:
