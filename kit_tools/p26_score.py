@@ -3,7 +3,7 @@ Without replies it scores the fixed-rule writer."""
 import json, os, re, sys, tempfile
 sys.path.insert(0, os.environ.get("ENGRAM", "."))
 import engram_chat as E
-from engram_knowledge.extract import RuleWriter, parse_writer_reply
+from engram_knowledge.extract import RuleWriter, parse_writer_json, parse_writer_reply
 from engram_knowledge.models import normalize_name
 from engram_knowledge.fact_validator import ACCEPTED, REJECTED, UNCERTAIN, KnowledgePipeline
 
@@ -34,7 +34,9 @@ for r in rows:
     gold = labels[r["id"]]["facts"]
     if replies is None: facts = writer.extract(r["speaker"], r["text"], r["said_on"], sid=sid)
     else:
-        facts, unread = parse_writer_reply(replies[r["id"]]["raw"], r["speaker"], r["said_on"], sid=sid, writer="model")
+        raw = replies[r["id"]]["raw"]
+        read = parse_writer_json if raw.lstrip().startswith("{") else parse_writer_reply  # the forced form replies in JSON
+        facts, unread = read(raw, r["speaker"], r["said_on"], sid=sid, writer="model")
         unread_lines += len(unread)
     gold_n += len(gold); written += len(facts)
     used = set()  # each labelled fact can be matched once
