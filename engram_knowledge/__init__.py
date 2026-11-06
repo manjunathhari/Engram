@@ -7,7 +7,7 @@ import importlib
 
 _HOME = dict(
     models=("Entity", "EntityAlias", "KnowledgeFact", "FactEvidence", "FactWithEvidence", "SourceSentence", "RecordError", "normalize_name", "tidy"),
-    schema=("SCHEMA", "SCHEMA_VERSION"), database=("KnowledgeBase", "prepare"), evidence=("forget_sentence",), migrations=("migrate",),
+    schema=("SCHEMA", "SCHEMA_VERSION"), database=("KnowledgeBase", "prepare"), evidence=("forget_sentence",), migrations=("migrate",), serialization=("export_knowledge", "import_knowledge", "backup", "integrity_report"),
     entity_resolver=("EntityResolver", "Resolution"), extraction=("STRUCTURED_PROMPT", "parse_reply"),
     fact_validator=("ACCEPTED", "REJECTED", "UNCERTAIN", "Candidate", "Decision", "FactValidator", "KnowledgePipeline", "SourceLine"),
     conflict=("Conflict",), state_engine=("Period", "SlotState", "StateEngine"), evidence_assembler=("EvidenceAssembler",),

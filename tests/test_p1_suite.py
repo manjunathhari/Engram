@@ -1,5 +1,5 @@
 """Manj's P1 suite (33 tests), each rewritten against the names in main, keeping what it checks.
-Tests marked xfail check something main does not have, or does differently by design; the reason is given."""
+The one xfail checks something main does differently by design; the reason is given."""
 import sqlite3
 import pytest
 import engram_chat as E
@@ -136,21 +136,69 @@ def test_batch_evidence_validates_all_ids_before_writing(mem):
     assert mem.db.execute("SELECT count(*) FROM record_evidence").fetchone()[0] == before and mem.db.execute("SELECT count(*) FROM knowledge_records").fetchone()[0] == 0
 
 # ---------- P1.4 portability (6) ----------
-MISSING = "not built: main has no export, import or backup yet (serialization.py)"
-@pytest.mark.xfail(strict=True, reason=MISSING)
-def test_knowledge_export_import_round_trip(mem): from engram_knowledge import export_knowledge  # noqa
-@pytest.mark.xfail(strict=True, reason=MISSING)
-def test_export_checksum_detects_tampering(mem): from engram_knowledge import import_knowledge  # noqa
-@pytest.mark.xfail(strict=True, reason=MISSING)
-def test_import_is_atomic_on_id_conflict(mem): from engram_knowledge import import_knowledge  # noqa
-@pytest.mark.xfail(strict=True, reason=MISSING)
-def test_sqlite_backup_preserves_all_tables(mem): mem.kb.backup
+from engram_knowledge import backup, export_knowledge, import_knowledge, integrity_report
+import json
+
+
+def copy_memory(src, dst):
+    """A second memory holding the same sentences, as a restored or moved memory would."""
+    d = sqlite3.connect(dst); src.db.backup(d); d.close()
+    m = E.ChatMemory(dst); m.kb = KnowledgeBase(m.db)
+    for t in ("record_evidence", "knowledge_records", "entity_aliases", "entities"): m.db.execute(f"DELETE FROM {t}")
+    m.db.commit()
+    return m
+
+
+def test_knowledge_export_import_round_trip(mem, tmp_path):
+    p = ent(mem.kb, "User"); r = put(mem, p, [mem.sid[0]], predicate="prefers", object_value="SQLite")
+    out = export_knowledge(mem.kb, tmp_path / "knowledge.json")
+    assert out["counts"]["entities"] == 1 and out["counts"]["knowledge_records"] == 1
+    target = copy_memory(mem, str(tmp_path / "target.sqlite"))
+    got = import_knowledge(target.kb, tmp_path / "knowledge.json")
+    loaded = target.kb.get(r.fact.fact_id)
+    assert loaded.fact.value == "SQLite" and loaded.evidence[0].source_id == str(mem.sid[0]) and target.kb.entity(p.entity_id).canonical_name == "User"
+    assert got["counts"]["record_evidence"] == 1 and target.kb.integrity_check() == []
+    target.close()
+
+
+def test_export_checksum_detects_tampering(mem, tmp_path):
+    put(mem, ent(mem.kb, "User"), [mem.sid[0]])
+    export_knowledge(mem.kb, tmp_path / "k.json")
+    payload = json.loads((tmp_path / "k.json").read_text()); payload["data"]["entities"][0]["canonical_name"] = "Changed"
+    (tmp_path / "bad.json").write_text(json.dumps(payload))
+    target = copy_memory(mem, str(tmp_path / "target.sqlite"))
+    with pytest.raises(RecordError, match="checksum"): import_knowledge(target.kb, tmp_path / "bad.json")
+    assert target.db.execute("SELECT count(*) FROM entities").fetchone()[0] == 0
+    target.close()
+
+
+def test_import_is_atomic_on_id_conflict(mem, tmp_path):
+    p = ent(mem.kb, "User"); put(mem, p, [mem.sid[0]])
+    export_knowledge(mem.kb, tmp_path / "k.json")
+    target = copy_memory(mem, str(tmp_path / "target.sqlite"))
+    target.kb.add_entity(Entity(p.entity_id, "Existing", "person", STAMP, STAMP))
+    with pytest.raises(RecordError, match="different content"): import_knowledge(target.kb, tmp_path / "k.json")
+    assert target.db.execute("SELECT count(*) FROM entities").fetchone()[0] == 1 and target.db.execute("SELECT count(*) FROM knowledge_records").fetchone()[0] == 0
+    target.close()
+
+
+def test_sqlite_backup_preserves_all_tables(mem, tmp_path):
+    put(mem, ent(mem.kb), [mem.sid[2]])
+    mem.db.execute("CREATE TABLE legacy_marker(value TEXT)"); mem.db.execute("INSERT INTO legacy_marker VALUES ('preserve me')"); mem.db.commit()
+    out = backup(mem.db, str(tmp_path / "backup.db"))
+    assert out["integrity_check"] == "ok"
+    b = sqlite3.connect(tmp_path / "backup.db")
+    assert b.execute("SELECT value FROM legacy_marker").fetchone()[0] == "preserve me" and b.execute("SELECT count(*) FROM knowledge_records").fetchone()[0] == 1 and b.execute("SELECT count(*) FROM sentences").fetchone()[0] == 4
+    b.close()
+
 
 def test_integrity_report_ok_for_valid_store(mem):
     put(mem, ent(mem.kb), [mem.sid[2]])
-    assert mem.kb.integrity_check() == [] and mem.db.execute("SELECT count(*) FROM knowledge_records").fetchone()[0] == 1
+    report = integrity_report(mem.kb)
+    assert report["ok"] is True and report["problems"] == [] and report["row_counts"]["knowledge_records"] == 1
 
 def test_integrity_report_detects_orphan_sentence_reference(mem):
     r = put(mem, ent(mem.kb), [mem.sid[2], mem.sid[3]])
     mem.db.execute("DELETE FROM sentences WHERE sid IN (?, ?)", (mem.sid[2], mem.sid[3])); mem.db.commit()  # deleted behind Engram's back
-    assert sum("does not exist" in p for p in mem.kb.integrity_check()) == 2
+    report = integrity_report(mem.kb)
+    assert sum("does not exist" in p for p in report["problems"]) == 2 and report["ok"] is False

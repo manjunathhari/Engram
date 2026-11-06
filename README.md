@@ -71,6 +71,7 @@ The knowledge store lives in `engram_knowledge/`: `models.py` (the records), `sc
 - **Shared names:** two entities may have the same name or alias. A lookup then returns both, and nothing picks one.
 - **Helper facts:** `link_helper_fact` gives a record the source sentences of a fact noted by `engram_facts.py`. The helper's text is never turned into a record.
 - **Qualifying evidence:** a sentence can limit a fact without supporting or contradicting it. It never counts as support.
+- **Export, import and backup** (`serialization.py`): an export holds personal content, so it is written for the owner only and never over a file; it carries a copy of each sentence its records cite and a checksum. Import adds everything together or nothing, and keeps a record only where the same sentence, word for word, is in the memory, so a sentence deleted after an export stays deleted. An export already made cannot be recalled. `backup` copies the whole memory, sentences included. The review queue is not exported.
 - **Version 2:** an older database is brought up to date in one step, or left unchanged with the reason if its data breaks a new rule.
 
 `engram_records.py` is a standard, typed record for knowledge, stored beside the sentences and always traceable to them. It is not used by search or answers, and nothing writes records automatically yet.
