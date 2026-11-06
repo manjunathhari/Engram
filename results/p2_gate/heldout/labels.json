@@ -1,0 +1,802 @@
+{
+ "h001": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h002": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h003": {
+  "decision": "review",
+  "note": "bare 'they'"
+ },
+ "h004": {
+  "decision": "ignore",
+  "note": "lead-in referring to other's words"
+ },
+ "h005": {
+  "decision": "learn",
+  "note": "short-term plan"
+ },
+ "h006": {
+  "decision": "ignore",
+  "note": "generic agreement"
+ },
+ "h007": {
+  "decision": "review",
+  "note": "bare 'those'"
+ },
+ "h008": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h009": {
+  "decision": "review",
+  "note": "bare 'that'"
+ },
+ "h010": {
+  "decision": "review",
+  "note": "bare 'them'/'one'"
+ },
+ "h011": {
+  "decision": "review",
+  "note": "conditional 'when'"
+ },
+ "h012": {
+  "decision": "ignore",
+  "note": "advice to other"
+ },
+ "h013": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h014": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h015": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h016": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h017": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h018": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h019": {
+  "decision": "review",
+  "note": "bare 'it'"
+ },
+ "h020": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h021": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h022": {
+  "decision": "review",
+  "note": "bare 'they'"
+ },
+ "h023": {
+  "decision": "ignore",
+  "note": "photo share"
+ },
+ "h024": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h025": {
+  "decision": "ignore",
+  "note": "vague small talk"
+ },
+ "h026": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h027": {
+  "decision": "ignore",
+  "note": "compliment"
+ },
+ "h028": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h029": {
+  "decision": "ignore",
+  "note": "conversational promise; 'the recipes' bare"
+ },
+ "h030": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h031": {
+  "decision": "learn",
+  "note": "family fact"
+ },
+ "h032": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h033": {
+  "decision": "review",
+  "note": "bare 'it'"
+ },
+ "h034": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h035": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h036": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h037": {
+  "decision": "review",
+  "note": "bare 'them'"
+ },
+ "h038": {
+  "decision": "ignore",
+  "note": "generic platitude"
+ },
+ "h039": {
+  "decision": "review",
+  "note": "bare 'it'"
+ },
+ "h040": {
+  "decision": "review",
+  "note": "bare 'its'"
+ },
+ "h041": {
+  "decision": "review",
+  "note": "bare 'it'/'her'"
+ },
+ "h042": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h043": {
+  "decision": "review",
+  "note": "'great cause' unspecified"
+ },
+ "h044": {
+  "decision": "learn",
+  "note": "goal"
+ },
+ "h045": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h046": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h047": {
+  "decision": "review",
+  "note": "accomplishment unspecified, teaser"
+ },
+ "h048": {
+  "decision": "ignore",
+  "note": "advice"
+ },
+ "h049": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h050": {
+  "decision": "learn",
+  "note": "belief about own networking"
+ },
+ "h051": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h052": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h053": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h054": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h055": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h056": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h057": {
+  "decision": "review",
+  "note": "bare 'it'"
+ },
+ "h058": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h059": {
+  "decision": "ignore",
+  "note": "platitude"
+ },
+ "h060": {
+  "decision": "ignore",
+  "note": "platitude"
+ },
+ "h061": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h062": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h063": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h064": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h065": {
+  "decision": "review",
+  "note": "bare 'it'"
+ },
+ "h066": {
+  "decision": "review",
+  "note": "bare 'it'"
+ },
+ "h067": {
+  "decision": "review",
+  "note": "bare 'they'"
+ },
+ "h068": {
+  "decision": "review",
+  "note": "bare 'it'"
+ },
+ "h069": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h070": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h071": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h072": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h073": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h074": {
+  "decision": "ignore",
+  "note": "fragment"
+ },
+ "h075": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h076": {
+  "decision": "ignore",
+  "note": "platitude"
+ },
+ "h077": {
+  "decision": "ignore",
+  "note": "compliment"
+ },
+ "h078": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h079": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h080": {
+  "decision": "ignore",
+  "note": "compliment"
+ },
+ "h081": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h082": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h083": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h084": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h085": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h086": {
+  "decision": "ignore",
+  "note": "platitude"
+ },
+ "h087": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h088": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h089": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h090": {
+  "decision": "ignore",
+  "note": "photo share"
+ },
+ "h091": {
+  "decision": "learn",
+  "note": "went to an exhibit"
+ },
+ "h092": {
+  "decision": "ignore",
+  "note": "reaction to other"
+ },
+ "h093": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h094": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h095": {
+  "decision": "ignore",
+  "note": "photo description"
+ },
+ "h096": {
+  "decision": "review",
+  "note": "bare 'this'"
+ },
+ "h097": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h098": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h099": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h100": {
+  "decision": "ignore",
+  "note": "platitude"
+ },
+ "h101": {
+  "decision": "review",
+  "note": "bare 'them'"
+ },
+ "h102": {
+  "decision": "review",
+  "note": "'should', tentative"
+ },
+ "h103": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h104": {
+  "decision": "ignore",
+  "note": "platitude"
+ },
+ "h105": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h106": {
+  "decision": "review",
+  "note": "bare 'he'/'their'"
+ },
+ "h107": {
+  "decision": "ignore",
+  "note": "encouragement"
+ },
+ "h108": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h109": {
+  "decision": "ignore",
+  "note": "generic platitude"
+ },
+ "h110": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h111": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h112": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h113": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h114": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h115": {
+  "decision": "ignore",
+  "note": ""
+ },
+ "h116": {
+  "decision": "review",
+  "note": "elliptical, depends on prior"
+ },
+ "h117": {
+  "decision": "ignore",
+  "note": "platitude"
+ },
+ "h118": {
+  "decision": "review",
+  "note": "'we' activity depends on prior"
+ },
+ "h119": {
+  "decision": "ignore",
+  "note": "generic, 'that feeling'"
+ },
+ "h120": {
+  "decision": "review",
+  "note": "'the process' bare"
+ },
+ "h121": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h122": {
+  "decision": "learn",
+  "note": "opinion asserted"
+ },
+ "h123": {
+  "decision": "ignore",
+  "note": "request"
+ },
+ "h124": {
+  "decision": "learn",
+  "note": "decision"
+ },
+ "h125": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h126": {
+  "decision": "learn",
+  "note": "considering = stated plan"
+ },
+ "h127": {
+  "decision": "ignore",
+  "note": "request"
+ },
+ "h128": {
+  "decision": "review",
+  "note": "bare 'one'"
+ },
+ "h129": {
+  "decision": "ignore",
+  "note": "request"
+ },
+ "h130": {
+  "decision": "ignore",
+  "note": "prompt material, not about self"
+ },
+ "h131": {
+  "decision": "ignore",
+  "note": "request"
+ },
+ "h132": {
+  "decision": "ignore",
+  "note": "thanks"
+ },
+ "h133": {
+  "decision": "ignore",
+  "note": "request"
+ },
+ "h134": {
+  "decision": "ignore",
+  "note": "pasted template"
+ },
+ "h135": {
+  "decision": "review",
+  "note": "'the text' bare"
+ },
+ "h136": {
+  "decision": "ignore",
+  "note": "request"
+ },
+ "h137": {
+  "decision": "ignore",
+  "note": "rhetorical"
+ },
+ "h138": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h139": {
+  "decision": "ignore",
+  "note": "thanks"
+ },
+ "h140": {
+  "decision": "learn",
+  "note": "opinion"
+ },
+ "h141": {
+  "decision": "review",
+  "note": "bare 'it'"
+ },
+ "h142": {
+  "decision": "learn",
+  "note": "decision"
+ },
+ "h143": {
+  "decision": "ignore",
+  "note": "pasted template"
+ },
+ "h144": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h145": {
+  "decision": "learn",
+  "note": ""
+ },
+ "h146": {
+  "decision": "review",
+  "note": "list item, subject missing"
+ },
+ "h147": {
+  "decision": "learn",
+  "note": "business plan requirement"
+ },
+ "h148": {
+  "decision": "ignore",
+  "note": "command"
+ },
+ "h149": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h150": {
+  "decision": "ignore",
+  "note": "request"
+ },
+ "h151": {
+  "decision": "ignore",
+  "note": "small talk"
+ },
+ "h152": {
+  "decision": "ignore",
+  "note": "question"
+ },
+ "h153": {
+  "decision": "ignore",
+  "note": "request"
+ },
+ "h154": {
+  "decision": "ignore",
+  "note": "request"
+ },
+ "h155": {
+  "decision": "ignore",
+  "note": "reaction to suggestion"
+ },
+ "h156": {
+  "decision": "ignore",
+  "note": "command"
+ },
+ "h157": {
+  "decision": "ignore",
+  "note": "thanks/compliment"
+ },
+ "h158": {
+  "decision": "learn",
+  "note": "plan"
+ },
+ "h159": {
+  "decision": "ignore",
+  "note": "request"
+ },
+ "h160": {
+  "decision": "ignore",
+  "note": "request"
+ },
+ "h161": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h162": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h163": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h164": {
+  "decision": "ignore",
+  "note": "filler"
+ },
+ "h165": {
+  "decision": "ignore",
+  "note": "filler"
+ },
+ "h166": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h167": {
+  "decision": "ignore",
+  "note": "lead-in"
+ },
+ "h168": {
+  "decision": "ignore",
+  "note": "lead-in"
+ },
+ "h169": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h170": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h171": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h172": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h173": {
+  "decision": "assistant",
+  "note": "fragment, storage fact"
+ },
+ "h174": {
+  "decision": "assistant",
+  "note": "fragment, storage fact"
+ },
+ "h175": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h176": {
+  "decision": "ignore",
+  "note": "filler summary"
+ },
+ "h177": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h178": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h179": {
+  "decision": "ignore",
+  "note": "filler summary"
+ },
+ "h180": {
+  "decision": "assistant",
+  "note": "truncated suggestion"
+ },
+ "h181": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h182": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h183": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h184": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h185": {
+  "decision": "assistant",
+  "note": "drafted message line"
+ },
+ "h186": {
+  "decision": "ignore",
+  "note": "heading"
+ },
+ "h187": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h188": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h189": {
+  "decision": "ignore",
+  "note": "filler"
+ },
+ "h190": {
+  "decision": "ignore",
+  "note": "self-disclaimer"
+ },
+ "h191": {
+  "decision": "assistant",
+  "note": "draft subject line"
+ },
+ "h192": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h193": {
+  "decision": "ignore",
+  "note": "lead-in"
+ },
+ "h194": {
+  "decision": "assistant",
+  "note": "generic advice"
+ },
+ "h195": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h196": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h197": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h198": {
+  "decision": "assistant",
+  "note": ""
+ },
+ "h199": {
+  "decision": "ignore",
+  "note": "filler"
+ },
+ "h200": {
+  "decision": "assistant",
+  "note": ""
+ }
+}

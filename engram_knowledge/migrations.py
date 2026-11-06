@@ -6,7 +6,9 @@ from .schema import SCHEMA, SCHEMA_VERSION, TABLES
 
 def _v1_to_v2(db):
     """Rebuilds the four tables with the checks of version 2. Every row is copied as it was."""
+    db.execute("PRAGMA legacy_alter_table=ON")  # renaming must not rewrite other tables' links to point at the old copies
     for t in TABLES: db.execute(f"ALTER TABLE {t} RENAME TO {t}_v1")
+    db.execute("PRAGMA legacy_alter_table=OFF")
     for t in ("entity_aliases_source", "record_evidence_source", "record_evidence_fact", "knowledge_records_subject"): db.execute(f"DROP INDEX IF EXISTS {t}")
     for statement in [s for s in SCHEMA.split(";") if s.strip()]: db.execute(statement)
     for t in TABLES:
@@ -14,7 +16,12 @@ def _v1_to_v2(db):
         db.execute(f"DROP TABLE {t}_v1")
 
 
-STEPS = {1: _v1_to_v2}
+def _v2_to_v3(db):
+    """Adds the table of who settled each change and why. Nothing existing changes."""
+    for statement in [x for x in SCHEMA.split(";") if "state_reviews" in x]: db.execute(statement)
+
+
+STEPS = {1: _v1_to_v2, 2: _v2_to_v3}
 
 
 def stored_version(db):

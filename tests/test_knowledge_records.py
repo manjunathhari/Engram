@@ -316,7 +316,7 @@ INSERT INTO sentences VALUES(1,1,0,'','A','1 May 2023','My dog is called Rex.','
     m.close()
 
 
-@pytest.mark.parametrize("other", ["3", "0", "banana"])
+@pytest.mark.parametrize("other", ["4", "0", "banana"])
 def test_a_database_of_another_version_is_refused_unchanged(path, other):
     m, kb, ids, asha, pixel = setup(path)
     fid = kb.add(beagle(asha, pixel, [ids["B1:1"]])).fact.fact_id

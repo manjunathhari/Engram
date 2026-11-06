@@ -1,6 +1,6 @@
 """The knowledge tables. Version 2 adds checks inside the database itself, so bad values are refused even by code that skips the checks in models.py,
 and lets two entities share a name or an alias."""
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 TABLES = ("entities", "entity_aliases", "knowledge_records", "record_evidence")
 
 V1_SCHEMA = """
@@ -73,6 +73,20 @@ SCHEMA = """
     CREATE TABLE IF NOT EXISTS review_queue(review_id TEXT PRIMARY KEY, candidate TEXT NOT NULL, reasons TEXT NOT NULL, created_at TEXT NOT NULL);
     CREATE TABLE IF NOT EXISTS review_sources(review_id TEXT NOT NULL, sid INTEGER NOT NULL, PRIMARY KEY(review_id, sid));
     CREATE INDEX IF NOT EXISTS review_sources_sid ON review_sources(sid);
+    CREATE TABLE IF NOT EXISTS state_reviews(
+        review_id TEXT PRIMARY KEY,
+        request_id TEXT NOT NULL UNIQUE,
+        action TEXT NOT NULL CHECK(action IN ('approve_supersession', 'mark_disputed', 'reject', 'retain')),
+        keep_fact_id TEXT NOT NULL REFERENCES knowledge_records(fact_id),
+        other_fact_id TEXT NOT NULL REFERENCES knowledge_records(fact_id),
+        reviewer TEXT NOT NULL CHECK(length(trim(reviewer)) > 0),
+        reason TEXT NOT NULL CHECK(length(trim(reason)) > 0),
+        valid_to TEXT,
+        before_state TEXT NOT NULL CHECK(json_valid(before_state)),
+        after_state TEXT NOT NULL CHECK(json_valid(after_state)),
+        created_at TEXT NOT NULL);
+    CREATE INDEX IF NOT EXISTS state_reviews_keep ON state_reviews(keep_fact_id);
+    CREATE INDEX IF NOT EXISTS state_reviews_other ON state_reviews(other_fact_id);
     CREATE INDEX IF NOT EXISTS record_evidence_source ON record_evidence(source_kind, source_id);
     CREATE INDEX IF NOT EXISTS record_evidence_fact ON record_evidence(fact_id);
     CREATE INDEX IF NOT EXISTS knowledge_records_subject ON knowledge_records(subject_id);

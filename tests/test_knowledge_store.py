@@ -147,7 +147,7 @@ def version_one(path, extra=""):
     """A database as the first release left it: version 1 tables, a sentence, and records."""
     m = E.ChatMemory(path)
     ids = fill(m, DATA)
-    for t in ("knowledge_meta", "review_sources", "review_queue", "record_evidence", "knowledge_records", "entity_aliases", "entities"): m.db.execute(f"DROP TABLE {t}")
+    for t in ("state_reviews", "knowledge_meta", "review_sources", "review_queue", "record_evidence", "knowledge_records", "entity_aliases", "entities"): m.db.execute(f"DROP TABLE {t}")
     m.db.executescript(S.V1_SCHEMA)
     m.db.execute("INSERT INTO knowledge_meta VALUES('schema_version', '1')")
     m.db.execute("INSERT INTO entities VALUES('ent_a', 'Asha', 'asha', 'person', '2026-11-06T00:00:00+00:00', '2026-11-06T00:00:00+00:00', '{\"k\": 1}', 1)")
@@ -208,7 +208,7 @@ def test_old_data_that_breaks_the_new_rules_changes_nothing(path, extra, why):
 
 def test_migrate_refuses_what_it_cannot_do(path):
     db = sqlite3.connect(path)
-    for v in ("0", "3", "banana"):
+    for v in ("0", "4", "banana"):
         with pytest.raises(RecordError, match="Nothing was changed"): migrate(db, v)
     assert migrate(db, str(S.SCHEMA_VERSION)) == []
     db.close()
@@ -268,4 +268,17 @@ def test_deleting_a_linked_sentence_works_as_for_any_evidence(path):
     kb.link_helper_fact(f, 7)
     m.forget_sentence(ids["B2:1"]); m.forget_sentence(ids["B1:1"])
     assert kb.get(f).fact.status == "needs_review" and [s.sid for s in kb.trace(f)] == [ids["B3:1"]] and kb.integrity_check() == []
+    m.close()
+
+
+def test_a_version_two_database_gains_the_decision_table_and_loses_nothing(path):
+    m, kb, ids, asha = setup(path)
+    fact(kb, asha, [ids["B1:1"]])
+    m.db.execute("DROP TABLE state_reviews"); m.db.execute("UPDATE knowledge_meta SET value='2'"); m.db.commit()
+    before = {t: m.db.execute(f"SELECT * FROM {t} ORDER BY 1").fetchall() for t in ("entities", "knowledge_records", "record_evidence")}
+    m.close()
+    m = E.ChatMemory(path)
+    assert {t: m.db.execute(f"SELECT * FROM {t} ORDER BY 1").fetchall() for t in before} == before
+    assert m.db.execute("SELECT value FROM knowledge_meta").fetchone()[0] == "3" and m.db.execute("SELECT count(*) FROM state_reviews").fetchone()[0] == 0
+    assert KnowledgeBase(m.db).integrity_check() == []
     m.close()

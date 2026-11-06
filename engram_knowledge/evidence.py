@@ -64,6 +64,7 @@ def forget_sentence(db, sid: int) -> dict:
             db.execute("DELETE FROM record_evidence WHERE fact_id=?", (fact,))
             db.execute("UPDATE knowledge_records SET status='invalidated', subject_id=NULL, predicate=NULL, object_type=NULL, object_value=NULL, object_entity_id=NULL, valid_from=NULL, valid_to=NULL, metadata='{}', note='All supporting sentences were deleted' WHERE fact_id=?", (fact,))
             invalid += 1
+            db.execute("DELETE FROM state_reviews WHERE keep_fact_id=? OR other_fact_id=?", (fact, fact))  # a decision quotes the fact, so it goes with it
     for entity in touched:
         used = db.execute("SELECT 1 FROM knowledge_records WHERE subject_id=? OR object_entity_id=? LIMIT 1", (entity, entity)).fetchone() or db.execute("SELECT 1 FROM entity_aliases WHERE entity_id=? LIMIT 1", (entity,)).fetchone()
         if not used: db.execute("DELETE FROM entities WHERE entity_id=?", (entity,))

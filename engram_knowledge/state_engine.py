@@ -55,6 +55,54 @@ class StateEngine:
         self.kb.set_status(corrected_fact_id, "superseded", note=note)
         return saved
 
+    ACTIONS = ("approve_supersession", "mark_disputed", "reject", "retain")
+
+    def settle(self, keep_fact_id, other_fact_id, action, reviewer, reason, request_id, valid_to=None):
+        """A person's decision about two facts in one slot, recorded with who, why and the state before and after.
+        approve_supersession ends the other fact (valid_to must be given, never guessed); mark_disputed marks both;
+        reject and retain record the decision and change nothing. The same request_id twice returns the first outcome."""
+        from .models import new_id, utc_now, _period
+        db = self.db
+        if action not in self.ACTIONS: raise RecordError(f"action must be one of {self.ACTIONS}")
+        if not str(reviewer or "").strip() or not str(reason or "").strip() or not str(request_id or "").strip(): raise RecordError("a decision needs a reviewer, a reason and a request id")
+        asked = dict(keep=keep_fact_id, other=other_fact_id, action=action, valid_to=valid_to)
+        prior = db.execute("SELECT keep_fact_id, other_fact_id, action, valid_to, after_state FROM state_reviews WHERE request_id=?", (request_id,)).fetchone()
+        if prior:
+            if dict(keep=prior[0], other=prior[1], action=prior[2], valid_to=prior[3]) != asked: raise RecordError("that request id was already used for a different decision")
+            return dict(replayed=True, after=json.loads(prior[4]))
+        keep, other = self.kb.get(keep_fact_id), self.kb.get(other_fact_id)
+        if keep is None or other is None: raise RecordError("no such fact")
+        if keep_fact_id == other_fact_id: raise RecordError("a decision needs two different facts")
+        if "invalidated" in (keep.fact.status, other.fact.status): raise RecordError("an invalidated fact has no content to decide about")
+        if keep.fact.subject_id != other.fact.subject_id or slot_of(keep.fact.predicate) != slot_of(other.fact.predicate): raise RecordError("the two facts are not about the same thing")
+        if action == "approve_supersession":
+            if not valid_to: raise RecordError("approving a change needs the date the earlier fact ended; it is never guessed")
+            _period(valid_to, "valid_to")
+        elif valid_to: raise RecordError("only approve_supersession takes a date")
+        look = lambda f: dict(fact_id=f.fact.fact_id, status=f.fact.status, valid_to=f.fact.valid_to)
+        before = [look(keep), look(other)]
+
+        def change():
+            db.execute("SAVEPOINT settle")
+            try:
+                if action == "approve_supersession":
+                    db.execute("UPDATE knowledge_records SET status='superseded', valid_to=?, note=? WHERE fact_id=?", (valid_to, f"Superseded by {reviewer}: {reason}"[:300], other_fact_id))
+                elif action == "mark_disputed":
+                    db.execute("UPDATE knowledge_records SET status='disputed', note=? WHERE fact_id IN (?, ?)", (f"Disputed by {reviewer}"[:300], keep_fact_id, other_fact_id))
+                after = [look(self.kb.get(keep_fact_id)), look(self.kb.get(other_fact_id))]
+                db.execute("INSERT INTO state_reviews VALUES(?,?,?,?,?,?,?,?,?,?,?)", (new_id("srv"), request_id, action, keep_fact_id, other_fact_id, reviewer.strip(), reason.strip(), valid_to, json.dumps(before), json.dumps(after), utc_now()))
+                db.execute("RELEASE settle")
+                return after
+            except Exception:
+                db.execute("ROLLBACK TO settle"); db.execute("RELEASE settle")
+                raise
+        return dict(replayed=False, after=self.kb._write(change))
+
+    def decisions(self, fact_id):
+        """Every recorded decision touching a fact, oldest first."""
+        rows = self.db.execute("SELECT request_id, action, keep_fact_id, other_fact_id, reviewer, reason, valid_to, created_at FROM state_reviews WHERE keep_fact_id=? OR other_fact_id=? ORDER BY created_at, review_id", (fact_id, fact_id)).fetchall()
+        return [dict(zip(("request_id", "action", "keep_fact_id", "other_fact_id", "reviewer", "reason", "valid_to", "created_at"), r)) for r in rows]
+
     def resolve_conflict(self, keep_fact_id, drop_fact_id, note="Settled by a person"):
         """A person decides. The dropped fact stays, marked superseded, with its evidence."""
         return self.kb.set_status(drop_fact_id, "superseded", note=note), self.kb.get(keep_fact_id)

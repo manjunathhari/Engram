@@ -4,7 +4,7 @@ import pytest
 import engram_chat as E
 from engram_knowledge import Conflict, KnowledgePipeline, KnowledgeRetriever, QueryRouter, StateEngine, Candidate
 from engram_knowledge.temporal import covers, overlaps, step_before
-from engram_records import Entity, EntityAlias, FactEvidence, FactWithEvidence, KnowledgeBase, KnowledgeFact
+from engram_records import Entity, EntityAlias, FactEvidence, FactWithEvidence, KnowledgeBase, KnowledgeFact, RecordError
 
 
 class World:
@@ -210,7 +210,7 @@ def test_state_is_derived_and_reading_writes_nothing(w):
     before = w.m.db.total_changes
     w.engine.get_current_state(w.who("Asha")); w.engine.get_state_at(w.who("Asha"), "2021"); w.engine.get_history(w.who("Asha"), "works_at"); w.ret.retrieve("Where does Asha work now?")
     assert w.m.db.total_changes == before
-    assert not [r for r in w.m.db.execute("SELECT name FROM sqlite_master WHERE name LIKE '%state%'")]
+    assert not [r for r in w.m.db.execute("SELECT name FROM sqlite_master WHERE name LIKE '%state%' AND name NOT LIKE '%state_reviews%'")]  # decisions are recorded; state never is
 
 
 def test_restart_gives_the_same_state(w, tmp_path):
@@ -319,3 +319,54 @@ def test_general_questions_use_ordinary_memory_unchanged(career):
 def test_text_for_a_model_holds_the_original_sentences(career):
     text = career.ret.evidence.text(career.ret.retrieve("Where does Asha work now?"))
     assert "Works at Globex (2024-07 to now)" in text and "Asha started_job Globex." in text
+
+
+# ---------- decisions recorded with who and why (from P5) ----------
+def two_jobs(w):
+    a, _ = w.obs("Ben", "works_at", "X", "2024", speaker="Asha")
+    b, _ = w.obs("Ben", "works_at", "Y", "2026", speaker="Ravi")
+    return a, b
+
+
+def test_approving_a_change_needs_a_stated_end_date_and_is_recorded(w):
+    a, b = two_jobs(w)
+    assert w.current("Ben")[1]
+    with pytest.raises(RecordError, match="never guessed"): w.engine.settle(b, a, "approve_supersession", "Manj", "checked", "r1")
+    out = w.engine.settle(b, a, "approve_supersession", "Manj", "Ravi's account is newer and confirmed", "r1", valid_to="2025-12")
+    assert out["replayed"] is False and w.current("Ben") == (["Y"], False) and w.kb.get(a).fact.status == "superseded" and w.kb.get(a).fact.valid_to == "2025-12"
+    d = w.engine.decisions(a)
+    assert [(x["action"], x["reviewer"], x["valid_to"]) for x in d] == [("approve_supersession", "Manj", "2025-12")] and len(w.kb.trace(a)) == 1
+
+
+def test_the_same_request_twice_is_not_applied_twice(w):
+    a, b = two_jobs(w)
+    w.engine.settle(b, a, "mark_disputed", "Manj", "both plausible", "r2")
+    assert w.engine.settle(b, a, "mark_disputed", "Manj", "both plausible", "r2")["replayed"] is True
+    assert len(w.engine.decisions(a)) == 1 and w.kb.get(a).fact.status == w.kb.get(b).fact.status == "disputed"
+    with pytest.raises(RecordError, match="different decision"): w.engine.settle(b, a, "reject", "Manj", "x", "r2")
+
+
+@pytest.mark.parametrize("action", ["reject", "retain"])
+def test_reject_and_retain_change_nothing_but_are_recorded(w, action):
+    a, b = two_jobs(w)
+    w.engine.settle(b, a, action, "Manj", "not enough to go on", "r3")
+    assert w.current("Ben")[1] and w.kb.get(a).fact.status == "active" and w.engine.decisions(b)[0]["action"] == action
+
+
+def test_bad_decisions_are_refused_and_change_nothing(w):
+    a, b = two_jobs(w)
+    c, _ = w.obs("Ben", "lives_in", "Pune", "2024", speaker="Asha")
+    d, _ = w.obs("Asha", "works_at", "Z", "2024")
+    for args, why in [((b, a, "banana", "M", "x", "q1"), "action"), ((b, a, "reject", " ", "x", "q2"), "reviewer"), ((b, a, "reject", "M", "x", "q3", "2025"), "only approve"),
+                      ((b, c, "reject", "M", "x", "q4"), "same thing"), ((b, d, "reject", "M", "x", "q5"), "same thing"), ((b, b, "reject", "M", "x", "q6"), "two different"), ((b, "fact_none", "reject", "M", "x", "q7"), "no such fact"),
+                      ((b, a, "approve_supersession", "M", "x", "q8", "last spring"), "valid_to")]:
+        with pytest.raises(RecordError, match=why): w.engine.settle(*args)
+    assert w.m.db.execute("SELECT count(*) FROM state_reviews").fetchone()[0] == 0 and w.kb.get(a).fact.status == "active"
+
+
+def test_deleting_a_fact_s_last_sentence_removes_decisions_about_it(w):
+    a, b = two_jobs(w)
+    w.engine.settle(b, a, "retain", "Manj", "keep both for now", "r4")
+    sid = w.kb.trace(a)[0].sid
+    w.m.forget_sentence(sid)
+    assert w.engine.decisions(b) == [] and w.kb.integrity_check() == []
