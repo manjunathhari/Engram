@@ -26,3 +26,17 @@ Wrong facts the validator accepted are mostly "like" used as a comparison ("It's
 back"), and wrong relations ("give those news sources a try" as gave_away). Several more are the right thing under a neighbouring
 relation (started_job for owns a store, visited for attended a parade, lost for left_job). Neither form is a usable writer.
 Any rule added from these examples must be measured on another fresh set.
+
+## Gemma 3 12B on the same 200 sentences (7 November 2026), against the rule in rule_12b.md
+
+| | 4B free | 4B forced | 12B free | 12B forced (decides) |
+|---|---|---|---|---|
+| Facts read | 14 | 187 | 108 | 172 |
+| Labelled found (of 56) | 6 | 11 | 22 | 17 |
+| Stored by the validator | 8 | 32 | 39 | 46 |
+| Of those right | 5 | 8 | 16 | 10 |
+
+Rule: forced form needs at least 3 right per wrong among stored facts, and at least 19 found. 12B forced: 10 right to 36 wrong,
+17 found. **Failed both. P2.6 is parked**: extraction stays off and unmerged. The 12B free form found more (22) but stored 16 right
+to 23 wrong, so it would also fail the first condition. In the forced form the 12B twice copied the prompt's example
+("adopted beagle, Pixel, from the shelter, yesterday") for sentences that do not mention it; the validator rejected both.

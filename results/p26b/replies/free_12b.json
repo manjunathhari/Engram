@@ -1,0 +1,1002 @@
+{
+"y001": {
+"raw": "Melanie | likes | outlet |  | \nMelanie | likes | therapy |  |",
+"finish": "stop",
+"secs": 6.36
+},
+"y002": {
+"raw": "John | likes | need |  |",
+"finish": "stop",
+"secs": 2.93
+},
+"y003": {
+"raw": "user | likes | dynamics | cultural and social | during and after World War II",
+"finish": "stop",
+"secs": 5.34
+},
+"y004": {
+"raw": "John | exploring | opportunities |  |",
+"finish": "stop",
+"secs": 2.99
+},
+"y005": {
+"raw": "John | had | games |  |",
+"finish": "stop",
+"secs": 3.49
+},
+"y006": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.36
+},
+"y007": {
+"raw": "Jon | likes | content |  | \nJon | likes | media |  |",
+"finish": "stop",
+"secs": 5.16
+},
+"y008": {
+"raw": "Nate | knows | recipe | using=coconut milk |",
+"finish": "stop",
+"secs": 3.14
+},
+"y009": {
+"raw": "Nate | is | glad |  |",
+"finish": "stop",
+"secs": 2.97
+},
+"y010": {
+"raw": "John | likes | basketball |  |",
+"finish": "stop",
+"secs": 2.91
+},
+"y011": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 3.0
+},
+"y012": {
+"raw": "John | plans | organizations |  | \nJohn | plans | programs |  |",
+"finish": "stop",
+"secs": 7.56
+},
+"y013": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 2.2
+},
+"y014": {
+"raw": "Caroline | embraces | womanhood |  |",
+"finish": "stop",
+"secs": 3.88
+},
+"y015": {
+"raw": "Tim | plans | it |  |",
+"finish": "stop",
+"secs": 2.56
+},
+"y016": {
+"raw": "Gina | plans | store |  |",
+"finish": "stop",
+"secs": 2.68
+},
+"y017": {
+"raw": "John | likes | movie | |",
+"finish": "stop",
+"secs": 3.89
+},
+"y018": {
+"raw": "Joanna | plans | posted |  |",
+"finish": "stop",
+"secs": 4.64
+},
+"y019": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.65
+},
+"y020": {
+"raw": "user | finished | books |  | recently\nuser | looking | something | new | recently",
+"finish": "stop",
+"secs": 7.13
+},
+"y021": {
+"raw": "John | attended | practice | place=recent | NONE",
+"finish": "stop",
+"secs": 4.68
+},
+"y022": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.4
+},
+"y023": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.64
+},
+"y024": {
+"raw": "user | deleted | apps | from=my phone | \nuser | avoided | logging | from=my laptop |",
+"finish": "stop",
+"secs": 22.8
+},
+"y025": {
+"raw": "Caroline | pushed | rights | for=LGBTQ |",
+"finish": "stop",
+"secs": 19.47
+},
+"y026": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.36
+},
+"y027": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 15.28
+},
+"y028": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 15.14
+},
+"y029": {
+"raw": "Nate | likes | storytelling | details: | \nNate | likes | battles | details: | \nNate | likes | world | details: |",
+"finish": "stop",
+"secs": 8.98
+},
+"y030": {
+"raw": "Caroline | got | support | from=friends and mentors |",
+"finish": "stop",
+"secs": 4.17
+},
+"y031": {
+"raw": "Maria | dislikes | kids | without=the proper stuff |",
+"finish": "stop",
+"secs": 3.49
+},
+"y032": {
+"raw": "user | took | break | place=office cafeteria | Monday at 10:30 am",
+"finish": "stop",
+"secs": 4.46
+},
+"y033": {
+"raw": "Jon | got | pic | from=the last networking event |",
+"finish": "stop",
+"secs": 2.45
+},
+"y034": {
+"raw": "John | help | future |  | \nJohn | inspire | dreams |  |",
+"finish": "stop",
+"secs": 4.16
+},
+"y035": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.11
+},
+"y036": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 3.08
+},
+"y037": {
+"raw": "user | made | curry | name=vegan lentil; turned out really well | two weeks ago",
+"finish": "stop",
+"secs": 7.6
+},
+"y038": {
+"raw": "Jon | plans | it |  |",
+"finish": "stop",
+"secs": 3.34
+},
+"y039": {
+"raw": "Caroline | attended | group |  | NONE",
+"finish": "stop",
+"secs": 3.02
+},
+"y040": {
+"raw": "John | plans | championship | number one |",
+"finish": "stop",
+"secs": 3.36
+},
+"y041": {
+"raw": "Tim | received | welcome |  | back",
+"finish": "stop",
+"secs": 4.25
+},
+"y042": {
+"raw": "user | status | oval face shape |  |",
+"finish": "stop",
+"secs": 5.3
+},
+"y043": {
+"raw": "Nate | took | turtles |  | today",
+"finish": "stop",
+"secs": 3.44
+},
+"y044": {
+"raw": "Tim | likes | stuff |  |",
+"finish": "stop",
+"secs": 5.81
+},
+"y045": {
+"raw": "Joanna | hiking | weekend | with=some buddies | this weekend",
+"finish": "stop",
+"secs": 6.03
+},
+"y046": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 2.03
+},
+"y047": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.96
+},
+"y048": {
+"raw": "John | met_back_up | teammates |  | on the 15th",
+"finish": "stop",
+"secs": 5.08
+},
+"y049": {
+"raw": "Gina | dance | it |  |",
+"finish": "stop",
+"secs": 3.0
+},
+"y050": {
+"raw": "Jon | likes | Dance |  | \nJon | plans | success |  |",
+"finish": "stop",
+"secs": 4.68
+},
+"y051": {
+"raw": "Nate | took | turtles |  | yesterday",
+"finish": "stop",
+"secs": 3.13
+},
+"y052": {
+"raw": "John | likes | education |  | \nJohn | likes | infrastructure |  |",
+"finish": "stop",
+"secs": 5.46
+},
+"y053": {
+"raw": "Joanna | likes | feelings |  | \nJoanna | likes | plots |  |",
+"finish": "stop",
+"secs": 6.31
+},
+"y054": {
+"raw": "user | stayed_at | hostel | place=the Latin Quarter | \nuser | started | day | with=a delicious croissant and cheese from a local caf\u00e9 |",
+"finish": "stop",
+"secs": 10.27
+},
+"y055": {
+"raw": "Jon | likes | risks |  | \nJon | plans | success |  |",
+"finish": "stop",
+"secs": 5.14
+},
+"y056": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.43
+},
+"y057": {
+"raw": "Caroline | sharing | story |  |",
+"finish": "stop",
+"secs": 3.33
+},
+"y058": {
+"raw": "Melanie | carries | part |  |",
+"finish": "stop",
+"secs": 3.19
+},
+"y059": {
+"raw": "user | dislikes | response |  |",
+"finish": "stop",
+"secs": 3.13
+},
+"y060": {
+"raw": "John | found | gym |  | the other day",
+"finish": "stop",
+"secs": 3.18
+},
+"y061": {
+"raw": "Jon | plans | quit |  |",
+"finish": "stop",
+"secs": 3.9
+},
+"y062": {
+"raw": "Caroline | plans | conference | place=transgender | this month",
+"finish": "stop",
+"secs": 4.97
+},
+"y063": {
+"raw": "user | likes | news | | \nuser | dislikes | headlines | overwhelming |",
+"finish": "stop",
+"secs": 6.37
+},
+"y064": {
+"raw": "user | creating | business |  |",
+"finish": "stop",
+"secs": 3.07
+},
+"y065": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.12
+},
+"y066": {
+"raw": "Jon | prepping | studio |  |",
+"finish": "stop",
+"secs": 4.1
+},
+"y067": {
+"raw": "Joanna | value | opinion |  |",
+"finish": "stop",
+"secs": 4.24
+},
+"y068": {
+"raw": "John | wants | something | back |",
+"finish": "stop",
+"secs": 5.49
+},
+"y069": {
+"raw": "Joanna | getting | turtle | third | this year",
+"finish": "stop",
+"secs": 3.76
+},
+"y070": {
+"raw": "Jon | dislikes | anything | hold |",
+"finish": "stop",
+"secs": 2.85
+},
+"y071": {
+"raw": "Tim | went | place | place=London | a few years ago",
+"finish": "stop",
+"secs": 5.2
+},
+"y072": {
+"raw": "John | plans | plan | |",
+"finish": "stop",
+"secs": 2.83
+},
+"y073": {
+"raw": "Gina | likes | dance |  | \nGina | likes | fashion |  |",
+"finish": "stop",
+"secs": 8.56
+},
+"y074": {
+"raw": "Jon | is | hanging |  | so far",
+"finish": "stop",
+"secs": 5.57
+},
+"y075": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.11
+},
+"y076": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.88
+},
+"y077": {
+"raw": "Joanna | is | me |  |",
+"finish": "stop",
+"secs": 3.94
+},
+"y078": {
+"raw": "Caroline | looking_into | agencies |  | NONE",
+"finish": "stop",
+"secs": 5.42
+},
+"y079": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.82
+},
+"y080": {
+"raw": "user | likes | tagine |  |",
+"finish": "stop",
+"secs": 5.31
+},
+"y081": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 2.0
+},
+"y082": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 2.49
+},
+"y083": {
+"raw": "user | likes | soup | with=whole grain crackers and a mixed green salad |",
+"finish": "stop",
+"secs": 6.65
+},
+"y084": {
+"raw": "Joanna | plans | updated |  |",
+"finish": "stop",
+"secs": 4.13
+},
+"y085": {
+"raw": "John | working_on | sports | supporting youth sports; fighting for fair chances |",
+"finish": "stop",
+"secs": 6.29
+},
+"y086": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.92
+},
+"y087": {
+"raw": "Joanna | likes | writing |  | now",
+"finish": "stop",
+"secs": 4.55
+},
+"y088": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.15
+},
+"y089": {
+"raw": "Joanna | likes | color |  | \nJoanna | likes | texture |  |",
+"finish": "stop",
+"secs": 5.91
+},
+"y090": {
+"raw": "user | likes | Everlane |  |",
+"finish": "stop",
+"secs": 3.84
+},
+"y091": {
+"raw": "John | dream_of | playing | place=on those big courts |",
+"finish": "stop",
+"secs": 3.82
+},
+"y092": {
+"raw": "user | having | trouble | during=afternoon |",
+"finish": "stop",
+"secs": 2.83
+},
+"y093": {
+"raw": "user | plans | sources |  |",
+"finish": "stop",
+"secs": 2.05
+},
+"y094": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.94
+},
+"y095": {
+"raw": "John | likes | energy |  | \nJohn | likes | diversity |  | \nJohn | likes | food |  |",
+"finish": "stop",
+"secs": 13.92
+},
+"y096": {
+"raw": "user | visited | Paris | place=Paris | already",
+"finish": "stop",
+"secs": 6.79
+},
+"y097": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 3.14
+},
+"y098": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 3.04
+},
+"y099": {
+"raw": "user | dislikes | character | name=unlikable | NONE",
+"finish": "stop",
+"secs": 5.18
+},
+"y100": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.72
+},
+"y101": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.91
+},
+"y102": {
+"raw": "user | plans | soup |  | this weekend",
+"finish": "stop",
+"secs": 3.73
+},
+"y103": {
+"raw": "Caroline | likes | joy | such |",
+"finish": "stop",
+"secs": 2.72
+},
+"y104": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.18
+},
+"y105": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 3.13
+},
+"y106": {
+"raw": "Gina | likes | dance |  |",
+"finish": "stop",
+"secs": 4.46
+},
+"y107": {
+"raw": "Tim | likes | time | meaning=a lot |",
+"finish": "stop",
+"secs": 6.44
+},
+"y108": {
+"raw": "Jon | rehearsed | group | with=a small group of dancers | after work",
+"finish": "stop",
+"secs": 5.79
+},
+"y109": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 2.03
+},
+"y110": {
+"raw": "user | plans | calendar |  | rest of the year",
+"finish": "stop",
+"secs": 4.39
+},
+"y111": {
+"raw": "Joanna | stayed_away | animals |  |",
+"finish": "stop",
+"secs": 4.53
+},
+"y112": {
+"raw": "user | built | Comparative |  | after realizing the analytics space was fundamentally broken",
+"finish": "stop",
+"secs": 5.67
+},
+"y113": {
+"raw": "Nate | made | ice cream |  | last Friday\nNate | shared | ice cream | with=some people; in=my vegan diet group | last Friday",
+"finish": "stop",
+"secs": 10.27
+},
+"y114": {
+"raw": "Joanna | likes | escape |  | \nJoanna | likes | feelings |  |",
+"finish": "stop",
+"secs": 5.69
+},
+"y115": {
+"raw": "user | plans | it | more appealing to the kids |",
+"finish": "stop",
+"secs": 2.69
+},
+"y116": {
+"raw": "user | plans | reminders | place=Todoist | 6:30 am",
+"finish": "stop",
+"secs": 3.7
+},
+"y117": {
+"raw": "user | made | quinoa |  | Sunday last week\nuser | had | quinoa |  | Monday\nuser | had | quinoa |  | Tuesday\nuser | had | quinoa |  | Thursday",
+"finish": "stop",
+"secs": 11.42
+},
+"y118": {
+"raw": "Tim | plans | Ireland | place=Ireland | next month",
+"finish": "stop",
+"secs": 4.39
+},
+"y119": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.22
+},
+"y120": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.86
+},
+"y121": {
+"raw": "Caroline | met_up | friends |  | last week",
+"finish": "stop",
+"secs": 3.58
+},
+"y122": {
+"raw": "John | visited | home |  | last week",
+"finish": "stop",
+"secs": 2.54
+},
+"y123": {
+"raw": "Tim | writing | novel | name=fantasy |",
+"finish": "stop",
+"secs": 2.4
+},
+"y124": {
+"raw": "John | likes | education |  | \nJohn | likes | infrastructure |  | \nJohn | likes | community |  |",
+"finish": "stop",
+"secs": 8.83
+},
+"y125": {
+"raw": "Joanna | finished | bookmark | for=one of the ladies at my writing club |",
+"finish": "stop",
+"secs": 6.06
+},
+"y126": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 2.03
+},
+"y127": {
+"raw": "user | likes | city |  |",
+"finish": "stop",
+"secs": 2.47
+},
+"y128": {
+"raw": "Tim | plans | NYC |  |",
+"finish": "stop",
+"secs": 3.62
+},
+"y129": {
+"raw": "Caroline | likes | rights | | \nCaroline | likes | community support | |",
+"finish": "stop",
+"secs": 5.87
+},
+"y130": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.16
+},
+"y131": {
+"raw": "user | likes | dumpling sauce |  | \nuser | likes | chili oil |  |",
+"finish": "stop",
+"secs": 7.74
+},
+"y132": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.54
+},
+"y133": {
+"raw": "John | plans | difference |  |",
+"finish": "stop",
+"secs": 3.13
+},
+"y134": {
+"raw": "John | remember | Harry Potter |  |",
+"finish": "stop",
+"secs": 3.14
+},
+"y135": {
+"raw": "user | job_title | CEO | name=Grailzy |",
+"finish": "stop",
+"secs": 6.46
+},
+"y136": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.82
+},
+"y137": {
+"raw": "Tim | decorated | tree | theme=Harry Potter |",
+"finish": "stop",
+"secs": 4.98
+},
+"y138": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.25
+},
+"y139": {
+"raw": "Maria | likes | it |  |",
+"finish": "stop",
+"secs": 4.25
+},
+"y140": {
+"raw": "Tim | joined | program |  | Friday",
+"finish": "stop",
+"secs": 4.25
+},
+"y141": {
+"raw": "Maria | likes | freedom |  | \nMaria | likes | connection |  |",
+"finish": "stop",
+"secs": 7.76
+},
+"y142": {
+"raw": "John | has | stories |  | NONE",
+"finish": "stop",
+"secs": 4.23
+},
+"y143": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.97
+},
+"y144": {
+"raw": "Gina | status | help |  |",
+"finish": "stop",
+"secs": 4.41
+},
+"y145": {
+"raw": "user | influenced | beliefs | details: |",
+"finish": "stop",
+"secs": 5.3
+},
+"y146": {
+"raw": "Nate | took | Max |  | the other day",
+"finish": "stop",
+"secs": 6.8
+},
+"y147": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.08
+},
+"y148": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.77
+},
+"y149": {
+"raw": "Joanna | felt | chills | |",
+"finish": "stop",
+"secs": 4.68
+},
+"y150": {
+"raw": "Caroline | is | proud | name=who I am |",
+"finish": "stop",
+"secs": 5.45
+},
+"y151": {
+"raw": "user | give_away | F |  |",
+"finish": "stop",
+"secs": 5.32
+},
+"y152": {
+"raw": "John | researching | policies |  | \nJohn | writing | thoughts |  |",
+"finish": "stop",
+"secs": 8.04
+},
+"y153": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.25
+},
+"y154": {
+"raw": "Caroline | plans | counseling | as=a career | lately",
+"finish": "stop",
+"secs": 5.45
+},
+"y155": {
+"raw": "John | motivates | change |  |",
+"finish": "stop",
+"secs": 4.3
+},
+"y156": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.78
+},
+"y157": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.21
+},
+"y158": {
+"raw": "Joanna | went | Woodhaven | place=Woodhaven | NONE",
+"finish": "stop",
+"secs": 4.13
+},
+"y159": {
+"raw": "John | works | hours |  | \nJohn | brings | work |  | sometimes",
+"finish": "stop",
+"secs": 6.06
+},
+"y160": {
+"raw": "Nate | owns | turtles |  |",
+"finish": "stop",
+"secs": 2.82
+},
+"y161": {
+"raw": "Caroline | having | show | name=LGBTQ; with=my paintings | next month",
+"finish": "stop",
+"secs": 5.98
+},
+"y162": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.74
+},
+"y163": {
+"raw": "user | likes | dumplings | filling=spinach and feta; vegetarian |",
+"finish": "stop",
+"secs": 7.82
+},
+"y164": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.37
+},
+"y165": {
+"raw": "user | likes | handbag |  | lately",
+"finish": "stop",
+"secs": 5.7
+},
+"y166": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 2.67
+},
+"y167": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 2.67
+},
+"y168": {
+"raw": "user | taking | actions | towards=achieving my goals |",
+"finish": "stop",
+"secs": 4.24
+},
+"y169": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.55
+},
+"y170": {
+"raw": "John | hobby | basketball |  | ever since I was a kid",
+"finish": "stop",
+"secs": 4.35
+},
+"y171": {
+"raw": "John | playing | scholarship | | before",
+"finish": "stop",
+"secs": 2.25
+},
+"y172": {
+"raw": "user | likes | breakfast | place=Caf\u00e9 Central |",
+"finish": "stop",
+"secs": 5.2
+},
+"y173": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.59
+},
+"y174": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.54
+},
+"y175": {
+"raw": "John | feeling | stressed |  | recently",
+"finish": "stop",
+"secs": 3.73
+},
+"y176": {
+"raw": "user | likes | Vienna's coffee culture |  |",
+"finish": "stop",
+"secs": 5.99
+},
+"y177": {
+"raw": "Joanna | plans | it |  |",
+"finish": "stop",
+"secs": 3.73
+},
+"y178": {
+"raw": "Melanie | ran | race | for=mental health | last Saturday",
+"finish": "stop",
+"secs": 4.77
+},
+"y179": {
+"raw": "user | likes | dumplings | fancy-looking |",
+"finish": "stop",
+"secs": 4.57
+},
+"y180": {
+"raw": "John | lives_in | court |  |",
+"finish": "stop",
+"secs": 4.5
+},
+"y181": {
+"raw": "user | likes | spirituality |  | \nuser | likes | mysticism |  | \nuser | dislikes | doubts | ingrained | since childhood",
+"finish": "stop",
+"secs": 9.29
+},
+"y182": {
+"raw": "Maria | tried | climbing |  | time=never",
+"finish": "stop",
+"secs": 4.48
+},
+"y183": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.95
+},
+"y184": {
+"raw": "Jon | lost | job | | \nJon | likes | what | |",
+"finish": "stop",
+"secs": 5.76
+},
+"y185": {
+"raw": "Tim | visited | agency |  |",
+"finish": "stop",
+"secs": 2.66
+},
+"y186": {
+"raw": "John | happened | stuff |  | since we last talked",
+"finish": "stop",
+"secs": 3.76
+},
+"y187": {
+"raw": "user | likes | experience | details: | \nuser | likes | Ukrainian | details: | \nuser | likes | refugee | details: | \nuser | likes | World War II | details: |",
+"finish": "stop",
+"secs": 15.2
+},
+"y188": {
+"raw": "Tim | reading | reading |  |",
+"finish": "stop",
+"secs": 2.99
+},
+"y189": {
+"raw": "user | plans | night |  | this Saturday",
+"finish": "stop",
+"secs": 3.61
+},
+"y190": {
+"raw": "John | likes | book |  |",
+"finish": "stop",
+"secs": 2.94
+},
+"y191": {
+"raw": "Joanna | crossing | fingers |  | NONE",
+"finish": "stop",
+"secs": 4.12
+},
+"y192": {
+"raw": "John | plans | pushing |  | \nJohn | plans | staying |  |",
+"finish": "stop",
+"secs": 5.4
+},
+"y193": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.25
+},
+"y194": {
+"raw": "John | plans | vacation |  |",
+"finish": "stop",
+"secs": 2.2
+},
+"y195": {
+"raw": "John | plans | know |  |",
+"finish": "stop",
+"secs": 2.43
+},
+"y196": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.34
+},
+"y197": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 3.01
+},
+"y198": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 2.93
+},
+"y199": {
+"raw": "Tim | likes | Rings | favorite |",
+"finish": "stop",
+"secs": 4.62
+},
+"y200": {
+"raw": "Joanna | plans | posted |  | NONE",
+"finish": "stop",
+"secs": 1.88
+}
+}
