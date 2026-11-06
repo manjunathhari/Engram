@@ -21,7 +21,7 @@ import numpy as np
 
 import engram
 import engram_facts as F
-import engram_knowledge as K
+import engram_state as K
 from engram import Config, Engrams
 
 STOP, TOKEN = engram.STOP, engram.TOKEN

@@ -2,7 +2,7 @@
 import json, os, sys, tempfile
 sys.path.insert(0, os.environ.get("ENGRAM", "."))
 import engram_chat as E
-import engram_knowledge as K
+import engram_state as K
 from engram import Config
 tmp = tempfile.mkdtemp()
 n = 0
