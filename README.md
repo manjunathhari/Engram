@@ -64,4 +64,11 @@ The baseline is in `tests/fixtures/retrieval_baseline.json`. If you deliberately
 
 ## Knowledge records
 
-`engram_records.py` is a standard, typed record for knowledge, stored beside the sentences and always traceable to them. It is not used by search or answers, and nothing writes records automatically yet. If a source sentence is deleted, a record with other sources is marked `needs_review`, and a record with none left has its content erased.
+`engram_records.py` is a standard, typed record for knowledge, stored beside the sentences and always traceable to them. It is not used by search or answers, and nothing writes records automatically yet.
+
+- **Four tables:** `entities`, `entity_aliases`, `knowledge_records`, `record_evidence`.
+- **Names:** an entity is found only by its exact name or a stated alias, ignoring case and spacing. Similar names are never treated as the same. An alias needs a source sentence or must be marked manual.
+- **Stated or inferred:** every fact must say which (`source_type`). There is no default, and answers about an entity show stated facts unless inferred ones are asked for. Accepting an inference does not turn it into a statement.
+- **Status and checking are separate:** `status` is the record's life (active, superseded, disputed, retracted, needs_review, invalidated); `validation_status` is whether it was checked (pending, accepted, rejected).
+- **Time:** `valid_from` and `valid_to` say when it was true; `recorded_at` says when Engram learned it.
+- **Deletion:** if a source sentence is deleted, a fact with another supporting sentence is marked `needs_review`. A fact with no support left is `invalidated` and its content erased. Aliases from that sentence go too, and an entity nothing uses any more is removed.
