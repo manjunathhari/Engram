@@ -1,8 +1,9 @@
-"""Scores the P2.6 rule writer and the validator against blind labels. Usage: p26_score.py sample.jsonl labels.json out.json"""
+"""Scores a P2.6 writer and the validator against blind labels. Usage: p26_score.py sample.jsonl labels.json out.json [model_replies.json]
+Without replies it scores the fixed-rule writer."""
 import json, os, re, sys, tempfile
 sys.path.insert(0, os.environ.get("ENGRAM", "."))
 import engram_chat as E
-from engram_knowledge.extract import RuleWriter
+from engram_knowledge.extract import RuleWriter, parse_writer_reply
 from engram_knowledge.fact_validator import ACCEPTED, REJECTED, UNCERTAIN, KnowledgePipeline
 
 DET = {"a", "an", "the", "my", "our", "some", "his", "her", "their", "new", "first"}
@@ -20,6 +21,8 @@ labels = json.load(open(sys.argv[2]))
 m = E.ChatMemory(tempfile.mkdtemp() + "/p26.db")
 pipe = KnowledgePipeline(m.db)
 writer = RuleWriter()
+replies = json.load(open(sys.argv[4])) if len(sys.argv) > 4 else None
+unread_lines = 0
 gold_n = written = right_strict = right_head = time_ok = time_n = 0
 verdicts = {ACCEPTED: [0, 0], UNCERTAIN: [0, 0], REJECTED: [0, 0]}  # [count, right by head word]
 misses, wrong = [], []
@@ -27,7 +30,10 @@ for r in rows:
     date = r["said_on"] or "1:00 pm on 1 January, 2000"
     m.open_chat(date); sid = m.add(r["speaker"], r["text"], date=r["said_on"] or "", commit=True); m.close_chat(write_note=False, sleep=False)
     gold = labels[r["id"]]["facts"]
-    facts = writer.extract(r["speaker"], r["text"], r["said_on"], sid=sid)
+    if replies is None: facts = writer.extract(r["speaker"], r["text"], r["said_on"], sid=sid)
+    else:
+        facts, unread = parse_writer_reply(replies[r["id"]]["raw"], r["speaker"], r["said_on"], sid=sid, writer="model")
+        unread_lines += len(unread)
     gold_n += len(gold); written += len(facts)
     for f in facts:
         match = next((g for g in gold if g["predicate"] == f.predicate and same_object(g["object"], f.object, False)), None)
@@ -39,7 +45,7 @@ for r in rows:
         verdicts[d.verdict][0] += 1; verdicts[d.verdict][1] += match is not None
     for g in gold:
         if not any(g["predicate"] == f.predicate and same_object(g["object"], f.object, False) for f in facts): misses.append((r["id"], g["predicate"], g["object"]))
-out = dict(sentences=len(rows), labelled_facts=gold_n, written=written, right_head_word=right_head, right_exact_object=right_strict, found_of_labelled=gold_n - len(misses),
+out = dict(writer="model replies" if replies else "fixed rules", unread_lines=unread_lines, sentences=len(rows), labelled_facts=gold_n, written=written, right_head_word=right_head, right_exact_object=right_strict, found_of_labelled=gold_n - len(misses),
            dated_and_right=[time_ok, time_n], validator={k: dict(count=v[0], right=v[1]) for k, v in verdicts.items()}, wrong=wrong, missed=misses)
 json.dump(out, open(sys.argv[3], "w"), indent=1)
 print(json.dumps({k: v for k, v in out.items() if k not in ("wrong", "missed")}, indent=1))

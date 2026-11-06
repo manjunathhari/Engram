@@ -185,3 +185,48 @@ class RuleWriter:
             if q and q.group(1).strip() and q.group(1).strip().lower() != obj.lower() and not TIME.fullmatch(q.group(1).strip()) and q.group(1).split()[0].lower() not in MONTHS:
                 qualifiers.append((role, q.group(1).strip()))
         return ExtractedFact(speaker, predicate, obj, tuple(qualifiers), time_text, resolve_time(time_text, said_on), sid, tuple(span) if span else None, self.name, self.version)
+
+
+# ---------- a model as the writer ----------
+WRITER_PROMPT = """Read one sentence said by {speaker}. Write the lasting facts it states about {speaker}, one per line, in exactly this form:
+subject | predicate | object | details | time
+
+subject: {speaker}
+predicate: exactly one of: {predicates}
+object: the shortest exact words from the sentence naming the thing.
+details: optional, copied from the sentence, as name=...; from=...; with=...; place=... Leave empty if none.
+time: the exact time phrase from the sentence, such as yesterday or last month. Leave empty if none.
+
+Only facts stated plainly about {speaker}, not about other people, and not questions, wishes or maybes. If there are none, write NONE. Write nothing else.
+
+Example sentence by Asha: "I adopted a beagle called Pixel from the shelter yesterday."
+Asha | adopted | beagle | name=Pixel; from=the shelter | yesterday
+
+Sentence: "{text}"
+The message it came from, for context only (take no facts from other sentences): "{message}"
+
+Facts:
+"""
+
+
+def writer_prompt(speaker, text, message=""):
+    return WRITER_PROMPT.format(speaker=speaker, text=text, message=message or text, predicates=", ".join(PREDICATES))
+
+
+def parse_writer_reply(reply, speaker, said_on="", sid=None, span=None, writer="model", version="1"):
+    """A model's reply as proposed facts. The date is worked out here from the time phrase, never taken from the model.
+    Lines not in the form asked, or with a predicate not in the list, give no fact. Nothing is decided here: the validator checks every field."""
+    out, unread = [], []
+    for line in (reply or "").splitlines():
+        line = line.strip().strip("*-• ")
+        if not line or line.upper().startswith("NONE"): continue
+        parts = [p.strip().strip('"') for p in line.split("|")]
+        if len(parts) < 3 or parts[1].lower().replace(" ", "_") not in PREDICATES or not parts[2]:
+            unread.append(line[:200]); continue
+        details = []
+        for item in (parts[3] if len(parts) > 3 else "").split(";"):
+            role, _, words = item.partition("=")
+            if role.strip().lower() in ("name", "from", "place", "with") and words.strip(): details.append((role.strip().lower(), words.strip()))
+        when = parts[4] if len(parts) > 4 and parts[4] and parts[4].lower() not in ("none", "unknown", "-") else None
+        out.append(ExtractedFact(parts[0] or speaker, parts[1].lower().replace(" ", "_"), parts[2], tuple(details), when, resolve_time(when, said_on), sid, tuple(span) if span else None, writer, version))
+    return out, unread
