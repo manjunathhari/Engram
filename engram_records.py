@@ -38,6 +38,9 @@ SCHEMA = """
     CREATE TABLE IF NOT EXISTS entity_aliases(alias_id TEXT PRIMARY KEY, entity_id TEXT NOT NULL, alias TEXT NOT NULL, normalized_alias TEXT NOT NULL UNIQUE, source_kind TEXT NOT NULL, source_id TEXT, created_at TEXT NOT NULL);
     CREATE TABLE IF NOT EXISTS knowledge_records(fact_id TEXT PRIMARY KEY, subject_id TEXT, predicate TEXT, object_type TEXT, object_value TEXT, object_entity_id TEXT, fact_type TEXT NOT NULL, status TEXT NOT NULL, validation_status TEXT NOT NULL, source_type TEXT NOT NULL, valid_from TEXT, valid_to TEXT, recorded_at TEXT NOT NULL, metadata TEXT NOT NULL DEFAULT '{}', note TEXT NOT NULL DEFAULT '', schema_version INTEGER NOT NULL);
     CREATE TABLE IF NOT EXISTS record_evidence(evidence_id TEXT PRIMARY KEY, fact_id TEXT NOT NULL, source_kind TEXT NOT NULL, source_id TEXT NOT NULL, evidence_role TEXT NOT NULL, extraction_method TEXT, extraction_version TEXT, created_at TEXT NOT NULL, UNIQUE(fact_id, source_kind, source_id));
+    CREATE TABLE IF NOT EXISTS review_queue(review_id TEXT PRIMARY KEY, candidate TEXT NOT NULL, reasons TEXT NOT NULL, created_at TEXT NOT NULL);
+    CREATE TABLE IF NOT EXISTS review_sources(review_id TEXT NOT NULL, sid INTEGER NOT NULL, PRIMARY KEY(review_id, sid));
+    CREATE INDEX IF NOT EXISTS review_sources_sid ON review_sources(sid);
     CREATE INDEX IF NOT EXISTS record_evidence_source ON record_evidence(source_kind, source_id);
     CREATE INDEX IF NOT EXISTS record_evidence_fact ON record_evidence(fact_id);
     CREATE INDEX IF NOT EXISTS knowledge_records_subject ON knowledge_records(subject_id);
@@ -273,7 +276,33 @@ class KnowledgeBase:
         self._write(lambda: self.db.execute("INSERT INTO entity_aliases VALUES(?,?,?,?,?,?,?)", (alias.alias_id, alias.entity_id, alias.alias, alias.normalized_alias, alias.source_kind, alias.source_id, alias.created_at)))
         return alias
 
+    # ---------- waiting for a person ----------
+    def add_review(self, candidate: str, reasons: list, sids: list) -> str:
+        """Holds an uncertain candidate. It is not knowledge: nothing reads it as a fact."""
+        review_id = new_id("rev")
+
+        def save():
+            self.db.execute("INSERT INTO review_queue VALUES(?,?,?,?)", (review_id, candidate, json.dumps(reasons), utc_now()))
+            self.db.executemany("INSERT OR IGNORE INTO review_sources VALUES(?,?)", [(review_id, s) for s in sids])
+        self._write(save)
+        return review_id
+
+    def review(self, review_id):
+        row = self.db.execute("SELECT review_id, candidate, reasons, created_at FROM review_queue WHERE review_id=?", (review_id,)).fetchone()
+        return dict(review_id=row[0], candidate=row[1], reasons=json.loads(row[2]), created_at=row[3]) if row else None
+
+    def reviews(self):
+        return [self.review(r[0]) for r in self.db.execute("SELECT review_id FROM review_queue ORDER BY created_at, review_id").fetchall()]
+
+    def drop_review(self, review_id):
+        self._write(lambda: (self.db.execute("DELETE FROM review_sources WHERE review_id=?", (review_id,)), self.db.execute("DELETE FROM review_queue WHERE review_id=?", (review_id,))))
+
     # ---------- facts ----------
+    def add_evidence(self, evidence: FactEvidence):
+        """One more sentence behind a fact already stored."""
+        if not self._sentence_exists(evidence.source_id): raise RecordError(f"source sentence does not exist: {evidence.source_id}")
+        self._write(lambda: self.db.execute("INSERT OR IGNORE INTO record_evidence VALUES(?,?,?,?,?,?,?,?)", (evidence.evidence_id, evidence.fact_id, evidence.source_kind, evidence.source_id, evidence.evidence_role, evidence.extraction_method, evidence.extraction_version, evidence.created_at)))
+
     def add(self, record: FactWithEvidence) -> FactWithEvidence:
         """Saves a fact and its evidence together. Every check comes first, so a refused record changes nothing."""
         f = record.fact
@@ -336,6 +365,9 @@ class KnowledgeBase:
 def forget_sentence(db, sid: int) -> dict:
     """Called inside ChatMemory.forget_sentence, before its commit, so a sentence and what rests on it go together."""
     source = str(sid)
+    for row in db.execute("SELECT review_id FROM review_sources WHERE sid=?", (sid,)).fetchall():  # a waiting candidate quotes its sentence
+        db.execute("DELETE FROM review_sources WHERE review_id=?", row)
+        db.execute("DELETE FROM review_queue WHERE review_id=?", row)
     touched = {r[0] for r in db.execute("SELECT entity_id FROM entity_aliases WHERE source_kind='sentence' AND source_id=?", (source,))}
     db.execute("DELETE FROM entity_aliases WHERE source_kind='sentence' AND source_id=?", (source,))
     facts = [r[0] for r in db.execute("SELECT fact_id FROM record_evidence WHERE source_kind='sentence' AND source_id=?", (source,)).fetchall()]

@@ -73,3 +73,14 @@ The baseline is in `tests/fixtures/retrieval_baseline.json`. If you deliberately
 - **Time:** `valid_from` and `valid_to` say when it was true; `recorded_at` says when Engram learned it.
 - **Version check:** a database whose knowledge records are a different version is refused before anything in it changes.
 - **Deletion:** if a source sentence is deleted, a fact with another supporting sentence is marked `needs_review`. A fact with no support left is `invalidated` and its content erased. Aliases from that sentence go too, and an entity nothing uses any more is removed.
+
+## Entity resolution and fact validation
+
+`engram_knowledge/` decides which entity a statement refers to and whether a candidate fact may be stored. Fixed rules decide; a language model can only propose. `engram_facts.py` is unchanged, and these records are not used by search or answers.
+
+- **Accepted** goes to the knowledge store. **Uncertain** waits in the review queue, where it is not treated as knowledge. **Rejected** is not saved.
+- **Names:** exact name or stated alias. "I" means the speaker. He, she and they are never guessed, and a similar name goes to review instead of being merged.
+- **Checks:** the sentence holding the object must exist, contain its words, and use a word for that kind of fact. Possible negation, questions, hypotheticals, things said by the assistant, things reported by someone else and dates not in the source all go to review.
+- **Deletion:** deleting a source sentence removes any review item that cites it.
+
+These rules read words and cannot understand meaning, so accepted facts can still be wrong.
