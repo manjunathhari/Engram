@@ -161,9 +161,18 @@ def test_values_at_overlapping_dates_cannot_be_ordered(w):
 def test_closing_events(w):
     w.obs("Asha", "works_at", "X", "2022")
     w.obs("Asha", "left_job", "Q", "2023")
-    assert w.current("Asha") == (["X"], True) or w.current("Asha")[0] == ["X"]
+    state = w.engine.get_current_state(w.who("Asha"))["works_at"]
+    assert w.current("Asha") == (["X"], False) and [c.values for c in state.unmatched] == [("Q",)]  # kept and shown, not lost
+    assert [c.kind for c in w.engine.get_history(w.who("Asha"), "works_at")["conflicts"]] == ["ended"]
     w.obs("Asha", "left_job", "X", "2024-02")
     assert w.current("Asha")[0] == [] and w.history("Asha") == [("X", "2022", "2024-02")]
+
+
+def test_returning_to_an_earlier_value_is_a_new_period(w):
+    w.obs("Asha", "works_at", "X", "2020")
+    w.obs("Asha", "works_at", "Y", "2022")
+    w.obs("Asha", "works_at", "X", "2024")
+    assert w.history("Asha") == [("X", "2020", "2021"), ("Y", "2022", "2023"), ("X", "2024", None)] and w.current("Asha") == (["X"], False)
 
 
 def test_several_values_can_hold_at_once(w):

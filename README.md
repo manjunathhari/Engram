@@ -84,3 +84,14 @@ The baseline is in `tests/fixtures/retrieval_baseline.json`. If you deliberately
 - **Deletion:** deleting a source sentence removes any review item that cites it.
 
 These rules read words and cannot understand meaning, so accepted facts can still be wrong.
+
+## Temporal state and knowledge retrieval
+
+`StateEngine` works out what is true of an entity, now and at any past date, from the stored facts each time. The state is never stored, so the facts and their sentences stay the only source of truth. The old `world_state` in `engram.py` is unchanged.
+
+- A later value from the same speaker ends the earlier one. A different value from another speaker is a conflict with both kept, until one speaker updates or a person settles it.
+- A correction marks the old fact superseded and keeps its evidence. A plan never becomes a state.
+- An unstated date stays unknown; the date the sentence was said is shown separately as `first_said`.
+- If a newer statement is waiting for review, the answer says so, because it may be out of date.
+
+`KnowledgeRetriever` sits beside ordinary memory. Its router sends a question to the records, to `ChatMemory.find`, or to both, using fixed word rules, and every returned fact carries its original sentences. `context_for` does not use it, so answers do not change. `kit_tools/knowledge_eval.py` holds the measurements.

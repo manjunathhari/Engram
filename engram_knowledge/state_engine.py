@@ -32,6 +32,7 @@ class SlotState:
     conflict: bool
     conflicts: list
     waiting: list = field(default_factory=list)  # review items that may change this answer
+    unmatched: list = field(default_factory=list)  # closing statements naming a value not held: kept and shown, but not a conflict
 
 
 class StateEngine:
@@ -155,9 +156,8 @@ class StateEngine:
         for slot in self._slots(observations):
             periods, conflicts = self._build(observations, slot)
             held = [p for p in periods if p.end_kind == "open"]
-            current = self._overlap_conflicts(slot, held, [c for c in conflicts if c.kind != "ended" or held])
-            current = [c for c in current if c.kind != "date" or any(set(c.fact_ids) & set(p.fact_ids) for p in held)]
-            out[slot] = SlotState(slot, held, bool(current), current, self._waiting(entity_id, slot))
+            current = self._overlap_conflicts(slot, held, [c for c in conflicts if c.kind == "date" and any(set(c.fact_ids) & set(p.fact_ids) for p in held)])
+            out[slot] = SlotState(slot, held, bool(current), current, self._waiting(entity_id, slot), [c for c in conflicts if c.kind == "ended"])
         for slot, items in self._all_waiting(entity_id).items():  # known only from statements still in review
             out.setdefault(slot, SlotState(slot, [], False, [], items))
         return out

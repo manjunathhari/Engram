@@ -1,0 +1,188 @@
+{
+ "questions": {
+  "current": {
+   "n": 40,
+   "ms": 0.2,
+   "plain_ms": 0.1,
+   "sentences": 1.25,
+   "plain_sentences": 5.8,
+   "right": 40,
+   "evidence_recall": 1.0,
+   "plain_evidence_recall": 0.925
+  },
+  "past": {
+   "n": 20,
+   "ms": 0.2,
+   "plain_ms": 0.1,
+   "sentences": 2,
+   "plain_sentences": 6.25,
+   "right": 20,
+   "evidence_recall": 1.0,
+   "plain_evidence_recall": 1.0
+  },
+  "change": {
+   "n": 20,
+   "ms": 0.2,
+   "plain_ms": 0.1,
+   "sentences": 1.25,
+   "plain_sentences": 8.25,
+   "right": 20,
+   "evidence_recall": 1.0,
+   "plain_evidence_recall": 0.95
+  },
+  "evidence": {
+   "n": 20,
+   "ms": 0.2,
+   "plain_ms": 0.1,
+   "sentences": 1.25,
+   "plain_sentences": 7.65,
+   "right": 20,
+   "evidence_recall": 1.0,
+   "plain_evidence_recall": 0.825
+  },
+  "original": {
+   "n": 20,
+   "ms": 0.3,
+   "plain_ms": 0.0,
+   "sentences": 1,
+   "plain_sentences": 3.25,
+   "right": 20,
+   "evidence_recall": 1.0,
+   "plain_evidence_recall": 1.0
+  },
+  "conflict": {
+   "n": 20,
+   "ms": 0.2,
+   "plain_ms": 0.1,
+   "sentences": 0.5,
+   "plain_sentences": 3.25,
+   "right": 20,
+   "evidence_recall": 1.0,
+   "plain_evidence_recall": 1.0
+  },
+  "unfamiliar": {
+   "n": 80,
+   "ms": 0.1,
+   "plain_ms": 0.1,
+   "sentences": 7.2125,
+   "plain_sentences": 7.2125,
+   "routes": [
+    [
+     "Has {p} stayed at the same firm?",
+     "general_memory"
+    ],
+    [
+     "Where was {p} a few years back?",
+     "general_memory"
+    ],
+    [
+     "Which outfit pays {p} at the moment?",
+     "current_state"
+    ],
+    [
+     "Who is {p} with these days, jobwise?",
+     "current_state"
+    ]
+   ],
+   "answered_from_records": 0
+  }
+ },
+ "updates_seen_facts_given": {
+  "wrong_with_warning": 0,
+  "wrong_total": 0,
+  "verdicts": null,
+  "current": {
+   "right": 40,
+   "wrong": 0,
+   "no_record": 0
+  },
+  "past": {
+   "right": 40,
+   "wrong": 0,
+   "no_record": 0
+  },
+  "n": 40
+ },
+ "updates_seen_after_p2_checks": {
+  "wrong_with_warning": 5,
+  "wrong_total": 5,
+  "verdicts": {
+   "accepted": 46,
+   "uncertain": 34,
+   "rejected": 0
+  },
+  "current": {
+   "right": 26,
+   "wrong": 5,
+   "no_record": 9
+  },
+  "past": {
+   "right": 20,
+   "wrong": 0,
+   "no_record": 20
+  },
+  "n": 40
+ },
+ "updates_unseen_facts_given": {
+  "wrong_with_warning": 0,
+  "wrong_total": 0,
+  "verdicts": null,
+  "current": {
+   "right": 40,
+   "wrong": 0,
+   "no_record": 0
+  },
+  "past": {
+   "right": 40,
+   "wrong": 0,
+   "no_record": 0
+  },
+  "n": 40
+ },
+ "updates_unseen_after_p2_checks": {
+  "wrong_with_warning": 9,
+  "wrong_total": 9,
+  "verdicts": {
+   "accepted": 42,
+   "uncertain": 38,
+   "rejected": 0
+  },
+  "current": {
+   "right": 19,
+   "wrong": 9,
+   "no_record": 12
+  },
+  "past": {
+   "right": 23,
+   "wrong": 0,
+   "no_record": 17
+  },
+  "n": 40
+ },
+ "old_world_state": {
+  "world_seen": {
+   "current": {
+    "right_before_stale": 0.95,
+    "top1": 0.9,
+    "n": 40
+   },
+   "past": {
+    "right_before_stale": 0.85,
+    "top1": 0.8,
+    "n": 40
+   }
+  },
+  "world_unseen": {
+   "current": {
+    "right_before_stale": 0.275,
+    "top1": 0.25,
+    "n": 40
+   },
+   "past": {
+    "right_before_stale": 0.95,
+    "top1": 0.525,
+    "n": 40
+   }
+  }
+ }
+}
