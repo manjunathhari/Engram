@@ -114,6 +114,22 @@ class FactValidator:
         return Decision(UNCERTAIN if unsure else ACCEPTED, tuple(unsure), who, word, when)
 
 
+# Hopes, ideas and maybes are not stated facts ("I love the idea of...", "I'd love to...", "I'm thinking about...").
+WISH = re.compile(r"\b(idea of|ideas? (?:for|about)|would (?:love|like|want) to|i'?d (?:love|like) to|wish(?:es|ed)? (?:to|i|that)|hop(?:e|es|ing) to|"
+                  r"dream(?:s|ing)? (?:of|about)|thinking (?:about|of)|considering|might|maybe|perhaps|someday|one day|if i (?:could|had|were))\b")
+
+
+def wish_before(sentence, obj):
+    """The wish word that governs the object, if any: one between the start of the object's clause and the object.
+    A wish elsewhere in the sentence ("I have two dogs, and I'd love a third") does not count against the dogs."""
+    text = sentence.lower()
+    at = text.find(str(obj).lower())
+    if at < 0: at = len(text)
+    clause = re.split(r"[.;!?]|,|\bbut\b|\band\b|\bso\b", text[:at])[-1]
+    m = WISH.search(clause)
+    return m[0] if m else None
+
+
 def validate_extracted(validator, fact, source_sentences):
     """Checks every field an extractor wrote, against the original sentence. Extraction itself never decides.
     who, what and which go through the usual checks; each qualifier's words and the time phrase must be in the sentence,
@@ -124,6 +140,10 @@ def validate_extracted(validator, fact, source_sentences):
     if decision.verdict == REJECTED: return decision
     reasons = list(decision.reasons)
     said = " ".join(s.text for s in source_sentences).lower()
+    for s_ in source_sentences:
+        if s_.text.rstrip().endswith("?"): return Decision(REJECTED, ("a question, not a stated fact",), decision.subject, decision.predicate)
+        wish = wish_before(s_.text, fact.object)
+        if wish: return Decision(REJECTED, (f"a hope, idea or maybe, not a stated fact ({wish})",), decision.subject, decision.predicate)
     for role, words in fact.qualifiers:
         if role not in ("name", "from", "place", "with"): return Decision(REJECTED, (f"unknown qualifier: {role}",), decision.subject, decision.predicate)
         if str(words).lower() not in said: return Decision(REJECTED, (f"qualifier {role} not in its source",), decision.subject, decision.predicate)

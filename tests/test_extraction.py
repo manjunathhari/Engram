@@ -61,3 +61,32 @@ def test_model_reply_code_fences_and_header_are_not_facts():
     from engram_knowledge.extract import parse_writer_reply
     facts, unread = parse_writer_reply("Facts:\n```\nAsha | owns | dog | | \n```", "Asha")
     assert [f.object for f in facts] == ["dog"] and unread == []
+
+
+def _validate_one(speaker, text, fact_kwargs):
+    import tempfile, engram_chat as EC
+    from engram_knowledge.extract import ExtractedFact
+    from engram_knowledge.fact_validator import KnowledgePipeline
+    m = EC.ChatMemory(tempfile.mkdtemp() + "/w.db"); pipe = KnowledgePipeline(m.db)
+    m.open_chat("1:00 pm on 8 May, 2023"); sid = m.add(speaker, text, date="1:00 pm on 8 May, 2023", commit=True); m.close_chat(write_note=False, sleep=False)
+    return pipe.process_extracted(ExtractedFact(speaker, source_sid=sid, writer="test", **fact_kwargs))[0]
+
+
+def test_wishes_and_ideas_are_rejected_but_a_plain_fact_beside_one_is_not():
+    assert _validate_one("Asha", "I love the idea of attending cultural festivals.", dict(predicate="likes", object="cultural festivals")).verdict == "rejected"
+    assert _validate_one("Asha", "I'd love to visit Japan someday.", dict(predicate="plans", object="Japan")).verdict == "rejected"
+    assert _validate_one("Asha", "Do you think I should buy a car?", dict(predicate="bought", object="car")).verdict == "rejected"
+    d = _validate_one("Asha", "I have two dogs, and I'd love to get a cat.", dict(predicate="owns", object="dogs"))
+    assert d.verdict != "rejected", d.reasons
+
+
+def test_forced_form_reply_is_read_and_bad_entries_dropped():
+    from engram_knowledge.extract import parse_writer_json, writer_schema
+    reply = '{"facts": [{"subject": "Asha", "predicate": "adopted", "object": "beagle", "name": "Pixel", "from": "", "with": "", "place": "", "time": "yesterday"},' \
+            ' {"subject": "Asha", "predicate": "is", "object": "happy"}]}'
+    facts, unread = parse_writer_json(reply, "Asha", "1:00 pm on 8 May, 2023")
+    assert [(f.predicate, f.object, f.qualifiers, f.time_value) for f in facts] == [("adopted", "beagle", (("name", "Pixel"),), "2023-05-07")]
+    assert len(unread) == 1
+    assert parse_writer_json("not json", "Asha") == ([], ["not json"])
+    s = writer_schema("Asha")["properties"]["facts"]["items"]["properties"]
+    assert s["subject"]["enum"] == ["Asha"] and "adopted" in s["predicate"]["enum"]

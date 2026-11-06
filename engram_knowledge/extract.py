@@ -230,3 +230,51 @@ def parse_writer_reply(reply, speaker, said_on="", sid=None, span=None, writer="
         when = parts[4] if len(parts) > 4 and parts[4] and parts[4].lower() not in ("none", "unknown", "-") else None
         out.append(ExtractedFact(parts[0] or speaker, parts[1].lower().replace(" ", "_"), parts[2], tuple(details), when, resolve_time(when, said_on), sid, tuple(span) if span else None, writer, version))
     return out, unread
+
+
+# The same job in a forced form: the reply must be JSON matching writer_schema, so the predicate can only come from the list
+# and the subject only the speaker's name. Ollama enforces the schema while the model writes (its "format" option).
+WRITER_PROMPT_JSON = """Read one sentence said by {speaker}. List the lasting facts it states plainly about {speaker}.
+For each fact give:
+- predicate: the closest one from the allowed list. If none fits, leave the fact out.
+- object: the shortest exact words from the sentence naming the thing.
+- name, from, with, place: optional details copied exactly from the sentence; empty if none.
+- time: the exact time phrase from the sentence, such as yesterday or last month; empty if none.
+Leave out facts about other people, questions, wishes, hopes and maybes. If there are no facts, return an empty list.
+
+Example sentence by Asha: "I adopted a beagle called Pixel from the shelter yesterday."
+{{"facts": [{{"subject": "Asha", "predicate": "adopted", "object": "beagle", "name": "Pixel", "from": "the shelter", "with": "", "place": "", "time": "yesterday"}}]}}
+
+Sentence: "{text}"
+The message it came from, for context only (take no facts from other sentences): "{message}"
+"""
+
+
+def writer_prompt_json(speaker, text, message=""):
+    return WRITER_PROMPT_JSON.format(speaker=speaker, text=text, message=message or text)
+
+
+def writer_schema(speaker):
+    """JSON schema for one reply: subject fixed to the speaker, predicate one of PREDICATES."""
+    text = {"type": "string"}
+    fact = {"type": "object", "properties": {"subject": {"type": "string", "enum": [speaker]}, "predicate": {"type": "string", "enum": list(PREDICATES)},
+                                             "object": text, "name": text, "from": text, "with": text, "place": text, "time": text},
+            "required": ["subject", "predicate", "object", "name", "from", "with", "place", "time"]}
+    return {"type": "object", "properties": {"facts": {"type": "array", "items": fact}}, "required": ["facts"]}
+
+
+def parse_writer_json(reply, speaker, said_on="", sid=None, span=None, writer="model-json", version="1"):
+    """A forced-form reply as proposed facts, with the same rules as parse_writer_reply: the date comes from the time phrase,
+    never from the model. A reply that is not valid JSON, or a fact missing a field or using a predicate not in the list, gives no fact."""
+    import json
+    try: facts = json.loads(reply or "")["facts"]
+    except Exception: return [], [str(reply)[:200]]
+    out, unread = [], []
+    for f in facts if isinstance(facts, list) else []:
+        if not isinstance(f, dict) or f.get("predicate") not in PREDICATES or not str(f.get("object") or "").strip():
+            unread.append(str(f)[:200]); continue
+        details = tuple((k, str(f[k]).strip()) for k in ("name", "from", "place", "with") if str(f.get(k) or "").strip())
+        when = str(f.get("time") or "").strip() or None
+        out.append(ExtractedFact(str(f.get("subject") or speaker).strip(), f["predicate"], str(f["object"]).strip(), details, when, resolve_time(when, said_on),
+                                 sid, tuple(span) if span else None, writer, version))
+    return out, unread
