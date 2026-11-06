@@ -14,6 +14,15 @@ memory = open_memory("my_memory.db")
 
 This uses the design that passed the LoCoMo final test and the LongMemEval test: four small channel networks trained only on LoCoMo conversations 0 to 4, stored as plain numbers with a checksum in `engram_networks.npz`, read by `engram_networks.py` (no pickle, so loading cannot run code). It gives the model exactly the same text as the tested runs. `design="light"` is the older search with no extra libraries; it did worse. `ChatMemory` on its own is unchanged.
 
+## Talking to it
+
+`engram_talk.py` is a terminal chat with the tested design: four-network search, the handover note and noted facts at chat close, with Gemma writing the replies. Run it on the server, inside the repository folder:
+
+    pip install --break-system-packages numpy wordllama spacy && python3 -m spacy download en_core_web_sm
+    python3 engram_talk.py --model gemma3:4b --name Manj
+
+If Ollama runs in Docker, add `--url http://$OLLAMA:11434/v1` as in the tests below. The memory and its log go to `~/.engram_private`, readable only by you and outside the repository, so they are never synced to GitHub. Commands: `/recall`, `/good`, `/bad`, `/close`, `/bye`, `/quit`. The reply prompt is new and untested; the search, notes and noted facts are the measured design. No patient information.
+
 ## Layout
 
 - `engram.py`: the memory system.
