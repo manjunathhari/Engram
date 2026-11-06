@@ -69,6 +69,7 @@ The knowledge store lives in `engram_knowledge/`: `models.py` (the records), `sc
 - **Checks in the database itself:** the tables refuse bad values and broken links even from code that skips the checks in `models.py`.
 - **Values keep their type:** numbers, true or false and structured values come back as they went in.
 - **Shared names:** two entities may have the same name or alias. A lookup then returns both, and nothing picks one.
+- **Helper facts:** `link_helper_fact` gives a record the source sentences of a fact noted by `engram_facts.py`. The helper's text is never turned into a record.
 - **Qualifying evidence:** a sentence can limit a fact without supporting or contradicting it. It never counts as support.
 - **Version 2:** an older database is brought up to date in one step, or left unchanged with the reason if its data breaks a new rule.
 

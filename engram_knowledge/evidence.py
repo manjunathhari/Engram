@@ -15,6 +15,26 @@ class EvidenceStore:
                                   JOIN sentences s ON s.sid = CAST(e.source_id AS INTEGER) WHERE e.fact_id=? AND e.source_kind='sentence' ORDER BY s.sid""", (fact_id,)).fetchall()
         return [SourceSentence(*r) for r in rows]
 
+    def link_helper_fact(self, fact_id, helper_fact, evidence_role="supports", extraction_version=None) -> list[FactEvidence]:
+        """Gives a record the source sentences of a fact the helper model noted (engram_facts), so they need not be found again.
+        The helper's text is never turned into a record: the record must already exist. All the links are saved together, or none."""
+        current = self.get(fact_id)
+        if current is None: raise RecordError("no such fact")
+        if current.fact.status == "invalidated": raise RecordError("an invalidated fact has no content and cannot return")
+        has = lambda t: self.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name=?", (t,)).fetchone()
+        if not (has("facts") and has("fact_sources")): raise RecordError("this database has no helper facts")
+        if not self.db.execute("SELECT 1 FROM facts WHERE fact=?", (helper_fact,)).fetchone(): raise RecordError(f"no helper fact {helper_fact}")
+        sids = [r[0] for r in self.db.execute("SELECT sid FROM fact_sources WHERE fact=? ORDER BY sid", (helper_fact,)).fetchall()]
+        if not sids: raise RecordError(f"helper fact {helper_fact} has no source sentences")
+        missing = [s for s in sids if not self._sentence_exists(s)]
+        if missing: raise RecordError(f"helper fact {helper_fact} points to sentences that do not exist: {missing}")
+        held = {e.source_id: e.evidence_role for e in current.evidence}
+        clash = [s for s in sids if str(s) in held and held[str(s)] != evidence_role]
+        if clash: raise RecordError(f"sentence {clash[0]} is already linked to this fact as {held[str(clash[0])]}")
+        new = [FactEvidence.create(fact_id, s, evidence_role=evidence_role, extraction_method="engram_facts", extraction_version=extraction_version) for s in sids if str(s) not in held]
+        self._write(lambda: self.db.executemany("INSERT INTO record_evidence VALUES(?,?,?,?,?,?,?,?)", [(e.evidence_id, e.fact_id, e.source_kind, e.source_id, e.evidence_role, e.extraction_method, e.extraction_version, e.created_at) for e in new]))
+        return new
+
     def facts_for_source(self, sid) -> list[FactWithEvidence]:
         """Every fact a sentence is evidence for, in any role."""
         rows = self.db.execute("""SELECT DISTINCT r.fact_id, r.recorded_at FROM record_evidence e JOIN knowledge_records r ON r.fact_id = e.fact_id

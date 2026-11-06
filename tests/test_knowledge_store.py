@@ -212,3 +212,60 @@ def test_migrate_refuses_what_it_cannot_do(path):
         with pytest.raises(RecordError, match="Nothing was changed"): migrate(db, v)
     assert migrate(db, str(S.SCHEMA_VERSION)) == []
     db.close()
+
+
+# ---------- helper facts linked to a record ----------
+def helper_facts(m, ids):
+    m.db.execute("INSERT INTO facts(fact, chat, text) VALUES(7, 1, 'Asha adopted a beagle called Pixel')")
+    m.db.executemany("INSERT INTO fact_sources VALUES(7, ?)", [(ids["B1:1"],), (ids["B3:1"],)])
+    m.db.execute("INSERT INTO facts(fact, chat, text) VALUES(8, 1, 'A fact with no sources')")
+    m.db.execute("INSERT INTO facts(fact, chat, text) VALUES(9, 1, 'Points at a lost sentence')")
+    m.db.executemany("INSERT INTO fact_sources VALUES(9, ?)", [(ids["B2:1"],), (99999,)])
+    m.db.commit()
+
+
+def test_a_record_takes_the_helper_fact_sentences(path):
+    m, kb, ids, asha = setup(path)
+    helper_facts(m, ids)
+    f = fact(kb, asha, [ids["B1:1"]]).fact.fact_id
+    before = m.db.execute("SELECT * FROM facts ORDER BY fact").fetchall(), m.db.execute("SELECT * FROM fact_sources ORDER BY fact, sid").fetchall()
+    new = kb.link_helper_fact(f, 7, extraction_version="1")
+    assert [e.source_id for e in new] == [str(ids["B3:1"])] and new[0].extraction_method == "engram_facts"  # B1:1 was already there
+    assert [s.text for s in kb.trace(f)] == ["I adopted a beagle called Pixel from the shelter yesterday.", "Pixel turned one and we celebrated with a walk by the lake."]
+    assert kb.link_helper_fact(f, 7) == [] and len(kb.trace(f)) == 2  # twice changes nothing
+    assert (m.db.execute("SELECT * FROM facts ORDER BY fact").fetchall(), m.db.execute("SELECT * FROM fact_sources ORDER BY fact, sid").fetchall()) == before
+    assert m.db.execute("SELECT count(*) FROM knowledge_records").fetchone()[0] == 1  # no record made from the helper's text
+    assert kb.integrity_check() == []
+    m.close()
+
+
+@pytest.mark.parametrize("helper,why", [(8, "no source sentences"), (9, "do not exist"), (42, "no helper fact")])
+def test_bad_helper_facts_link_nothing(path, helper, why):
+    m, kb, ids, asha = setup(path)
+    helper_facts(m, ids)
+    f = fact(kb, asha, [ids["B1:1"]]).fact.fact_id
+    with pytest.raises(RecordError, match=why): kb.link_helper_fact(f, helper)
+    assert len(kb.trace(f)) == 1
+    m.close()
+
+
+def test_helper_links_refuse_a_missing_or_erased_record_and_a_role_clash(path):
+    m, kb, ids, asha = setup(path)
+    helper_facts(m, ids)
+    with pytest.raises(RecordError, match="no such fact"): kb.link_helper_fact("fact_none", 7)
+    f = fact(kb, asha, [ids["B2:1"], ids["B3:1"]], roles=["supports", "contradicts"]).fact.fact_id
+    with pytest.raises(RecordError, match="already linked"): kb.link_helper_fact(f, 7)
+    assert len(kb.trace(f)) == 2  # nothing added, not even B1:1
+    m.forget_sentence(ids["B2:1"])
+    with pytest.raises(RecordError, match="invalidated"): kb.link_helper_fact(f, 7)
+    m.close()
+
+
+def test_deleting_a_linked_sentence_works_as_for_any_evidence(path):
+    m, kb, ids, asha = setup(path)
+    helper_facts(m, ids)
+    f = fact(kb, asha, [ids["B2:1"]]).fact.fact_id
+    kb.link_helper_fact(f, 7)
+    m.forget_sentence(ids["B2:1"]); m.forget_sentence(ids["B1:1"])
+    assert kb.get(f).fact.status == "needs_review" and [s.sid for s in kb.trace(f)] == [ids["B3:1"]] and kb.integrity_check() == []
+    m.close()
