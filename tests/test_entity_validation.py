@@ -214,3 +214,13 @@ def test_a_name_shared_by_two_known_entities_goes_to_review(m):
     kb.add_entity(Entity.create("Ben", "person")); kb.add_entity(Entity.create("Ben", "person"))
     d = verdict(m, "Ben", "adopted", "llama", "ben")
     assert d.verdict == UNCERTAIN and d.subject.status == "ambiguous" and any("names 2 known entities" in r for r in d.reasons)
+
+
+def test_a_speaker_called_user_is_a_name_not_an_endless_loop(tmp_path):
+    m = E.ChatMemory(str(tmp_path / "u.db")); m.open_chat(DAY)
+    sid = m.add("user", "I adopted a beagle called Pixel.", date=DAY); m.close_chat(write_note=False)
+    pipe = KnowledgePipeline(m.db)
+    for who in ("user", "I"):
+        d = pipe.validator.validate(Candidate(who, "adopted", "beagle", (sid,)), pipe.lines(Candidate(who, "adopted", "beagle", (sid,))))
+        assert d.verdict == ACCEPTED and d.subject.name == "user"
+    m.close()

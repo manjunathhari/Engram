@@ -1,0 +1,1123 @@
+{
+ "x001": {
+  "facts": [
+   {
+    "subject": "Andrew",
+    "predicate": "owns",
+    "object": "German Shephard",
+    "qualifiers": {
+     "name": "Toby"
+    },
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x002": {
+  "facts": [],
+  "note": "'love the idea of' = aspiration, skipped"
+ },
+ "x003": {
+  "facts": [],
+  "note": "opinion of a book, not a lasting fact"
+ },
+ "x004": {
+  "facts": []
+ },
+ "x005": {
+  "facts": [
+   {
+    "subject": "Deborah",
+    "predicate": "likes",
+    "object": "park with a forest trail",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x006": {
+  "facts": []
+ },
+ "x007": {
+  "facts": []
+ },
+ "x008": {
+  "facts": [
+   {
+    "subject": "Audrey",
+    "predicate": "owns",
+    "object": "fur babies",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x009": {
+  "facts": []
+ },
+ "x010": {
+  "facts": [
+   {
+    "subject": "James",
+    "predicate": "completed",
+    "object": "virtual world",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x011": {
+  "facts": []
+ },
+ "x012": {
+  "facts": []
+ },
+ "x013": {
+  "facts": []
+ },
+ "x014": {
+  "facts": [
+   {
+    "subject": "Andrew",
+    "predicate": "plans",
+    "object": "nearby park",
+    "qualifiers": {
+     "with": "Scout, Toby, and Buddy"
+    },
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x015": {
+  "facts": [
+   {
+    "subject": "John",
+    "predicate": "hobby",
+    "object": "drums",
+    "qualifiers": {},
+    "time_text": "when I was younger",
+    "time_value": null
+   }
+  ],
+  "note": "past hobby; no stopped_hobby stated"
+ },
+ "x016": {
+  "facts": []
+ },
+ "x017": {
+  "facts": []
+ },
+ "x018": {
+  "facts": []
+ },
+ "x019": {
+  "facts": [
+   {
+    "subject": "Calvin",
+    "predicate": "plans",
+    "object": "Japan",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "Calvin",
+    "predicate": "plans",
+    "object": "Boston",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x020": {
+  "facts": []
+ },
+ "x021": {
+  "facts": []
+ },
+ "x022": {
+  "facts": []
+ },
+ "x023": {
+  "facts": []
+ },
+ "x024": {
+  "facts": [
+   {
+    "subject": "Jolene",
+    "predicate": "likes",
+    "object": "being outside",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x025": {
+  "facts": []
+ },
+ "x026": {
+  "facts": []
+ },
+ "x027": {
+  "facts": [
+   {
+    "subject": "Evan",
+    "predicate": "hobby",
+    "object": "gym",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "Evan",
+    "predicate": "owns",
+    "object": "car",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x028": {
+  "facts": []
+ },
+ "x029": {
+  "facts": [
+   {
+    "subject": "James",
+    "predicate": "plans",
+    "object": "make more games",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": "'ready to make more games' read as plans"
+ },
+ "x030": {
+  "facts": []
+ },
+ "x031": {
+  "facts": []
+ },
+ "x032": {
+  "facts": []
+ },
+ "x033": {
+  "facts": [
+   {
+    "subject": "Calvin",
+    "predicate": "likes",
+    "object": "rush and connection with the crowd",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x034": {
+  "facts": [],
+  "note": "'like the idea' skipped"
+ },
+ "x035": {
+  "facts": [],
+  "note": "opinion of a book"
+ },
+ "x036": {
+  "facts": []
+ },
+ "x037": {
+  "facts": [
+   {
+    "subject": "James",
+    "predicate": "owns",
+    "object": "puppy",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": "clinic visit yesterday is one-off, skipped"
+ },
+ "x038": {
+  "facts": []
+ },
+ "x039": {
+  "facts": [
+   {
+    "subject": "Audrey",
+    "predicate": "owns",
+    "object": "dogs",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x040": {
+  "facts": []
+ },
+ "x041": {
+  "facts": []
+ },
+ "x042": {
+  "facts": [
+   {
+    "subject": "James",
+    "predicate": "completed",
+    "object": "game world",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x043": {
+  "facts": []
+ },
+ "x044": {
+  "facts": []
+ },
+ "x045": {
+  "facts": []
+ },
+ "x046": {
+  "facts": []
+ },
+ "x047": {
+  "facts": []
+ },
+ "x048": {
+  "facts": [
+   {
+    "subject": "James",
+    "predicate": "owns",
+    "object": "dogs",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x049": {
+  "facts": [],
+  "note": "'my classes' ambiguous (teaches yoga?)"
+ },
+ "x050": {
+  "facts": []
+ },
+ "x051": {
+  "facts": []
+ },
+ "x052": {
+  "facts": []
+ },
+ "x053": {
+  "facts": []
+ },
+ "x054": {
+  "facts": []
+ },
+ "x055": {
+  "facts": []
+ },
+ "x056": {
+  "facts": []
+ },
+ "x057": {
+  "facts": []
+ },
+ "x058": {
+  "facts": [
+   {
+    "subject": "James",
+    "predicate": "hobby",
+    "object": "gaming",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x059": {
+  "facts": [
+   {
+    "subject": "Audrey",
+    "predicate": "owns",
+    "object": "furry friends",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x060": {
+  "facts": []
+ },
+ "x061": {
+  "facts": []
+ },
+ "x062": {
+  "facts": [],
+  "note": "has a sister; no predicate"
+ },
+ "x063": {
+  "facts": []
+ },
+ "x064": {
+  "facts": []
+ },
+ "x065": {
+  "facts": []
+ },
+ "x066": {
+  "facts": [
+   {
+    "subject": "Evan",
+    "predicate": "plans",
+    "object": "ski",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x067": {
+  "facts": []
+ },
+ "x068": {
+  "facts": []
+ },
+ "x069": {
+  "facts": [
+   {
+    "subject": "Dave",
+    "predicate": "owns",
+    "object": "car",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x070": {
+  "facts": []
+ },
+ "x071": {
+  "facts": []
+ },
+ "x072": {
+  "facts": []
+ },
+ "x073": {
+  "facts": []
+ },
+ "x074": {
+  "facts": [
+   {
+    "subject": "Dave",
+    "predicate": "attended",
+    "object": "car workshop",
+    "qualifiers": {
+     "place": "San Francisco"
+    },
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x075": {
+  "facts": []
+ },
+ "x076": {
+  "facts": []
+ },
+ "x077": {
+  "facts": []
+ },
+ "x078": {
+  "facts": []
+ },
+ "x079": {
+  "facts": []
+ },
+ "x080": {
+  "facts": []
+ },
+ "x081": {
+  "facts": [
+   {
+    "subject": "Dave",
+    "predicate": "completed",
+    "object": "car project",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x082": {
+  "facts": [],
+  "note": "opinion of a book"
+ },
+ "x083": {
+  "facts": []
+ },
+ "x084": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "likes",
+    "object": "watching clouds",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x085": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "works_at",
+    "object": "Comparative",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": "co-founded -> works_at"
+ },
+ "x086": {
+  "facts": []
+ },
+ "x087": {
+  "facts": []
+ },
+ "x088": {
+  "facts": []
+ },
+ "x089": {
+  "facts": []
+ },
+ "x090": {
+  "facts": []
+ },
+ "x091": {
+  "facts": []
+ },
+ "x092": {
+  "facts": []
+ },
+ "x093": {
+  "facts": []
+ },
+ "x094": {
+  "facts": []
+ },
+ "x095": {
+  "facts": [
+   {
+    "subject": "Audrey",
+    "predicate": "owns",
+    "object": "veggie patch",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x096": {
+  "facts": [
+   {
+    "subject": "Andrew",
+    "predicate": "lives_in",
+    "object": "city",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "Andrew",
+    "predicate": "owns",
+    "object": "dogs",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x097": {
+  "facts": []
+ },
+ "x098": {
+  "facts": []
+ },
+ "x099": {
+  "facts": []
+ },
+ "x100": {
+  "facts": []
+ },
+ "x101": {
+  "facts": []
+ },
+ "x102": {
+  "facts": []
+ },
+ "x103": {
+  "facts": []
+ },
+ "x104": {
+  "facts": []
+ },
+ "x105": {
+  "facts": [
+   {
+    "subject": "Deborah",
+    "predicate": "hobby",
+    "object": "Yoga",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x106": {
+  "facts": []
+ },
+ "x107": {
+  "facts": []
+ },
+ "x108": {
+  "facts": [
+   {
+    "subject": "Andrew",
+    "predicate": "owns",
+    "object": "binos",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x109": {
+  "facts": []
+ },
+ "x110": {
+  "facts": [],
+  "note": "implies student with finals; no plain fact"
+ },
+ "x111": {
+  "facts": [
+   {
+    "subject": "John",
+    "predicate": "hobby",
+    "object": "drums",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x112": {
+  "facts": [
+   {
+    "subject": "Jolene",
+    "predicate": "hobby",
+    "object": "yoga",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "Jolene",
+    "predicate": "visited",
+    "object": "mount Talkeetna",
+    "qualifiers": {},
+    "time_text": "yesterday morning",
+    "time_value": "2023-06-05"
+   }
+  ]
+ },
+ "x113": {
+  "facts": []
+ },
+ "x114": {
+  "facts": []
+ },
+ "x115": {
+  "facts": []
+ },
+ "x116": {
+  "facts": [
+   {
+    "subject": "Audrey",
+    "predicate": "plans",
+    "object": "workshop",
+    "qualifiers": {},
+    "time_text": "next month",
+    "time_value": "2023-06"
+   }
+  ]
+ },
+ "x117": {
+  "facts": []
+ },
+ "x118": {
+  "facts": []
+ },
+ "x119": {
+  "facts": []
+ },
+ "x120": {
+  "facts": []
+ },
+ "x121": {
+  "facts": []
+ },
+ "x122": {
+  "facts": [
+   {
+    "subject": "Audrey",
+    "predicate": "owns",
+    "object": "dogs",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x123": {
+  "facts": []
+ },
+ "x124": {
+  "facts": []
+ },
+ "x125": {
+  "facts": [
+   {
+    "subject": "Dave",
+    "predicate": "hobby",
+    "object": "refurbishing",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x126": {
+  "facts": []
+ },
+ "x127": {
+  "facts": []
+ },
+ "x128": {
+  "facts": []
+ },
+ "x129": {
+  "facts": []
+ },
+ "x130": {
+  "facts": []
+ },
+ "x131": {
+  "facts": []
+ },
+ "x132": {
+  "facts": []
+ },
+ "x133": {
+  "facts": [
+   {
+    "subject": "Audrey",
+    "predicate": "owns",
+    "object": "furry friends",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x134": {
+  "facts": [],
+  "note": "'little ones' = pets, too vague"
+ },
+ "x135": {
+  "facts": []
+ },
+ "x136": {
+  "facts": []
+ },
+ "x137": {
+  "facts": [
+   {
+    "subject": "John",
+    "predicate": "completed",
+    "object": "software tool",
+    "qualifiers": {
+     "with": "one charitable foundation"
+    },
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x138": {
+  "facts": []
+ },
+ "x139": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "works_at",
+    "object": "Comparative",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "user",
+    "predicate": "job_title",
+    "object": "founders",
+    "qualifiers": {
+     "place": "Comparative"
+    },
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": "founder of Comparative; job_title object copied as 'founders'"
+ },
+ "x140": {
+  "facts": []
+ },
+ "x141": {
+  "facts": [
+   {
+    "subject": "Evan",
+    "predicate": "left_job",
+    "object": "company",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": "laid off in downsizing -> left_job"
+ },
+ "x142": {
+  "facts": [
+   {
+    "subject": "Evan",
+    "predicate": "owns",
+    "object": "Prius",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x143": {
+  "facts": [],
+  "note": "owns a pet but object is only 'her'"
+ },
+ "x144": {
+  "facts": [
+   {
+    "subject": "John",
+    "predicate": "likes",
+    "object": "megacities",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x145": {
+  "facts": []
+ },
+ "x146": {
+  "facts": []
+ },
+ "x147": {
+  "facts": []
+ },
+ "x148": {
+  "facts": [
+   {
+    "subject": "Evan",
+    "predicate": "parent_of",
+    "object": "first child",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x149": {
+  "facts": []
+ },
+ "x150": {
+  "facts": []
+ },
+ "x151": {
+  "facts": []
+ },
+ "x152": {
+  "facts": [
+   {
+    "subject": "Jolene",
+    "predicate": "likes",
+    "object": "reptiles",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": "implies owns a reptile pet; only liking stated"
+ },
+ "x153": {
+  "facts": []
+ },
+ "x154": {
+  "facts": []
+ },
+ "x155": {
+  "facts": [
+   {
+    "subject": "Dave",
+    "predicate": "likes",
+    "object": "their music",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x156": {
+  "facts": []
+ },
+ "x157": {
+  "facts": []
+ },
+ "x158": {
+  "facts": []
+ },
+ "x159": {
+  "facts": []
+ },
+ "x160": {
+  "facts": []
+ },
+ "x161": {
+  "facts": []
+ },
+ "x162": {
+  "facts": [
+   {
+    "subject": "John",
+    "predicate": "bought",
+    "object": "new books",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "John",
+    "predicate": "owns",
+    "object": "bookcase",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x163": {
+  "facts": []
+ },
+ "x164": {
+  "facts": []
+ },
+ "x165": {
+  "facts": [
+   {
+    "subject": "James",
+    "predicate": "completed",
+    "object": "Unity strategy game",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x166": {
+  "facts": []
+ },
+ "x167": {
+  "facts": []
+ },
+ "x168": {
+  "facts": []
+ },
+ "x169": {
+  "facts": []
+ },
+ "x170": {
+  "facts": [],
+  "note": "implies he works at a car shop, not stated plainly"
+ },
+ "x171": {
+  "facts": []
+ },
+ "x172": {
+  "facts": []
+ },
+ "x173": {
+  "facts": []
+ },
+ "x174": {
+  "facts": []
+ },
+ "x175": {
+  "facts": []
+ },
+ "x176": {
+  "facts": []
+ },
+ "x177": {
+  "facts": [],
+  "note": "'like the idea' skipped"
+ },
+ "x178": {
+  "facts": [
+   {
+    "subject": "Andrew",
+    "predicate": "hobby",
+    "object": "walks",
+    "qualifiers": {
+     "with": "Buddy"
+    },
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x179": {
+  "facts": []
+ },
+ "x180": {
+  "facts": []
+ },
+ "x181": {
+  "facts": []
+ },
+ "x182": {
+  "facts": []
+ },
+ "x183": {
+  "facts": []
+ },
+ "x184": {
+  "facts": []
+ },
+ "x185": {
+  "facts": []
+ },
+ "x186": {
+  "facts": [],
+  "note": "has girlfriend; no predicate"
+ },
+ "x187": {
+  "facts": []
+ },
+ "x188": {
+  "facts": [
+   {
+    "subject": "Andrew",
+    "predicate": "likes",
+    "object": "being outdoors",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x189": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "owns",
+    "object": "Instant Pot",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x190": {
+  "facts": []
+ },
+ "x191": {
+  "facts": []
+ },
+ "x192": {
+  "facts": [
+   {
+    "subject": "Deborah",
+    "predicate": "likes",
+    "object": "Exercise and nature",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "Deborah",
+    "predicate": "hobby",
+    "object": "run in the park",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x193": {
+  "facts": []
+ },
+ "x194": {
+  "facts": []
+ },
+ "x195": {
+  "facts": []
+ },
+ "x196": {
+  "facts": []
+ },
+ "x197": {
+  "facts": []
+ },
+ "x198": {
+  "facts": []
+ },
+ "x199": {
+  "facts": [
+   {
+    "subject": "Audrey",
+    "predicate": "likes",
+    "object": "going with the flow in the kitchen",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ]
+ },
+ "x200": {
+  "facts": [],
+  "note": "owns pets but object is only 'them'"
+ }
+}

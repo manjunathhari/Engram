@@ -1,0 +1,361 @@
+{
+ "sentences": 200,
+ "labelled_facts": 55,
+ "written": 13,
+ "right_head_word": 2,
+ "right_exact_object": 1,
+ "found_of_labelled": 2,
+ "dated_and_right": [
+  0,
+  0
+ ],
+ "validator": {
+  "accepted": {
+   "count": 13,
+   "right": 2
+  },
+  "uncertain": {
+   "count": 0,
+   "right": 0
+  },
+  "rejected": {
+   "count": 0,
+   "right": 0
+  }
+ },
+ "wrong": [
+  [
+   "x001",
+   "owns",
+   "pup",
+   "My pup Toby is German Shephard and loves cute sweaters!"
+  ],
+  [
+   "x002",
+   "likes",
+   "idea of attending cultural festivals",
+   "I love the idea of attending cultural festivals to explore different forms of ar"
+  ],
+  [
+   "x026",
+   "likes",
+   "lesson it teaches",
+   "I love the lesson it teaches about following your dreams no matter what others s"
+  ],
+  [
+   "x033",
+   "likes",
+   "rush",
+   "I love the rush and connection with the crowd, the feeling's indescribable\u2014it's "
+  ],
+  [
+   "x034",
+   "likes",
+   "and making it fun",
+   "I especially like the idea of finding an exercise I enjoy and making it fun."
+  ],
+  [
+   "x047",
+   "started_hobby",
+   "focusing more",
+   "I started focusing more on my well-being rather than fixating on quick results."
+  ],
+  [
+   "x084",
+   "hobby",
+   "watching clouds",
+   "I love watching clouds!"
+  ],
+  [
+   "x101",
+   "likes",
+   "sound of the muffin tin frittatas",
+   "I like the sound of the muffin tin frittatas and the breakfast burritos."
+  ],
+  [
+   "x116",
+   "joined",
+   "workshop",
+   "I signed up for a workshop about bonding with my pet next month."
+  ],
+  [
+   "x188",
+   "hobby",
+   "being outdoors",
+   "I love being outdoors and seeing others enjoy it too."
+  ],
+  [
+   "x199",
+   "hobby",
+   "throwing",
+   "I love throwing on some music, pouring a glass of wine, and just going with the "
+  ]
+ ],
+ "missed": [
+  [
+   "x001",
+   "owns",
+   "German Shephard"
+  ],
+  [
+   "x005",
+   "likes",
+   "park with a forest trail"
+  ],
+  [
+   "x008",
+   "owns",
+   "fur babies"
+  ],
+  [
+   "x010",
+   "completed",
+   "virtual world"
+  ],
+  [
+   "x014",
+   "plans",
+   "nearby park"
+  ],
+  [
+   "x015",
+   "hobby",
+   "drums"
+  ],
+  [
+   "x019",
+   "plans",
+   "Japan"
+  ],
+  [
+   "x019",
+   "plans",
+   "Boston"
+  ],
+  [
+   "x024",
+   "likes",
+   "being outside"
+  ],
+  [
+   "x027",
+   "hobby",
+   "gym"
+  ],
+  [
+   "x027",
+   "owns",
+   "car"
+  ],
+  [
+   "x029",
+   "plans",
+   "make more games"
+  ],
+  [
+   "x033",
+   "likes",
+   "rush and connection with the crowd"
+  ],
+  [
+   "x037",
+   "owns",
+   "puppy"
+  ],
+  [
+   "x039",
+   "owns",
+   "dogs"
+  ],
+  [
+   "x042",
+   "completed",
+   "game world"
+  ],
+  [
+   "x048",
+   "owns",
+   "dogs"
+  ],
+  [
+   "x058",
+   "hobby",
+   "gaming"
+  ],
+  [
+   "x059",
+   "owns",
+   "furry friends"
+  ],
+  [
+   "x069",
+   "owns",
+   "car"
+  ],
+  [
+   "x074",
+   "attended",
+   "car workshop"
+  ],
+  [
+   "x081",
+   "completed",
+   "car project"
+  ],
+  [
+   "x084",
+   "likes",
+   "watching clouds"
+  ],
+  [
+   "x085",
+   "works_at",
+   "Comparative"
+  ],
+  [
+   "x095",
+   "owns",
+   "veggie patch"
+  ],
+  [
+   "x096",
+   "lives_in",
+   "city"
+  ],
+  [
+   "x096",
+   "owns",
+   "dogs"
+  ],
+  [
+   "x105",
+   "hobby",
+   "Yoga"
+  ],
+  [
+   "x108",
+   "owns",
+   "binos"
+  ],
+  [
+   "x111",
+   "hobby",
+   "drums"
+  ],
+  [
+   "x112",
+   "hobby",
+   "yoga"
+  ],
+  [
+   "x112",
+   "visited",
+   "mount Talkeetna"
+  ],
+  [
+   "x116",
+   "plans",
+   "workshop"
+  ],
+  [
+   "x122",
+   "owns",
+   "dogs"
+  ],
+  [
+   "x125",
+   "hobby",
+   "refurbishing"
+  ],
+  [
+   "x133",
+   "owns",
+   "furry friends"
+  ],
+  [
+   "x137",
+   "completed",
+   "software tool"
+  ],
+  [
+   "x139",
+   "works_at",
+   "Comparative"
+  ],
+  [
+   "x139",
+   "job_title",
+   "founders"
+  ],
+  [
+   "x141",
+   "left_job",
+   "company"
+  ],
+  [
+   "x142",
+   "owns",
+   "Prius"
+  ],
+  [
+   "x144",
+   "likes",
+   "megacities"
+  ],
+  [
+   "x148",
+   "parent_of",
+   "first child"
+  ],
+  [
+   "x152",
+   "likes",
+   "reptiles"
+  ],
+  [
+   "x155",
+   "likes",
+   "their music"
+  ],
+  [
+   "x162",
+   "owns",
+   "bookcase"
+  ],
+  [
+   "x165",
+   "completed",
+   "Unity strategy game"
+  ],
+  [
+   "x178",
+   "hobby",
+   "walks"
+  ],
+  [
+   "x188",
+   "likes",
+   "being outdoors"
+  ],
+  [
+   "x189",
+   "owns",
+   "Instant Pot"
+  ],
+  [
+   "x192",
+   "likes",
+   "Exercise and nature"
+  ],
+  [
+   "x192",
+   "hobby",
+   "run in the park"
+  ],
+  [
+   "x199",
+   "likes",
+   "going with the flow in the kitchen"
+  ]
+ ]
+}

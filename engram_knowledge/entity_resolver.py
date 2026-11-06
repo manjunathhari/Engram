@@ -34,10 +34,13 @@ class EntityResolver:
     def resolve(self, mention, sentences):
         name, key = tidy(mention), normalize_name(mention)
         if not key: return Resolution("unresolved", why="no subject")
-        if key in FIRST_PERSON:
-            speakers = {tidy(s.speaker) for s in sentences}
+        speakers = {tidy(s.speaker) for s in sentences}
+        if key in FIRST_PERSON and not (len(speakers) == 1 and normalize_name(next(iter(speakers))) == key):  # a speaker literally called "user" is a name
             if len(speakers) != 1: return Resolution("ambiguous", why="first person across different speakers")
             return self.resolve(speakers.pop(), sentences)
+        if key in FIRST_PERSON:
+            known = self.kb.resolve(name)
+            return Resolution("known", self.kb.entity(known).canonical_name, known) if known else Resolution("new", name)
         if key in UNCLEAR: return Resolution("unresolved", why=f"'{name}' does not say who")
         several = self.kb.find(name)
         if len(several) > 1: return Resolution("ambiguous", name, why=f"'{name}' names {len(several)} known entities")

@@ -114,6 +114,29 @@ class FactValidator:
         return Decision(UNCERTAIN if unsure else ACCEPTED, tuple(unsure), who, word, when)
 
 
+def validate_extracted(validator, fact, source_sentences):
+    """Checks every field an extractor wrote, against the original sentence. Extraction itself never decides.
+    who, what and which go through the usual checks; each qualifier's words and the time phrase must be in the sentence,
+    and the date must be the one the time phrase gives from when it was said, worked out again here."""
+    from .extract import resolve_time
+    candidate = Candidate(fact.subject, fact.predicate, fact.object, (fact.source_sid,), "", fact.writer, fact.writer_version)
+    decision = validator.validate(candidate, source_sentences)
+    if decision.verdict == REJECTED: return decision
+    reasons = list(decision.reasons)
+    said = " ".join(s.text for s in source_sentences).lower()
+    for role, words in fact.qualifiers:
+        if role not in ("name", "from", "place", "with"): return Decision(REJECTED, (f"unknown qualifier: {role}",), decision.subject, decision.predicate)
+        if str(words).lower() not in said: return Decision(REJECTED, (f"qualifier {role} not in its source",), decision.subject, decision.predicate)
+    when = None
+    if fact.time_text:
+        if fact.time_text.lower() not in said: return Decision(REJECTED, ("time phrase not in its source",), decision.subject, decision.predicate)
+        when = resolve_time(fact.time_text, source_sentences[0].date if source_sentences else "")
+        if fact.time_value != when: return Decision(REJECTED, ("date does not follow from the time phrase",), decision.subject, decision.predicate)
+    elif fact.time_value:
+        return Decision(REJECTED, ("a date with no time phrase behind it",), decision.subject, decision.predicate)
+    return Decision(UNCERTAIN if reasons else ACCEPTED, tuple(reasons), decision.subject, decision.predicate, when)
+
+
 class KnowledgePipeline:
     """Candidate to validator, then to the knowledge store, the review queue, or nowhere."""
 
@@ -135,7 +158,19 @@ class KnowledgePipeline:
         if decision.verdict == UNCERTAIN: return decision, self.kb.add_review(json.dumps(candidate.__dict__ | dict(source_sids=list(candidate.source_sids))), list(decision.reasons), list(candidate.source_sids))
         return decision, None
 
-    def _store(self, candidate, decision, checked_by, entity_id=None):
+    def process_extracted(self, fact):
+        """One extracted fact: validated field by field, then stored, queued for a person, or dropped."""
+        lines = self.lines(Candidate(fact.subject, fact.predicate, fact.object, (fact.source_sid,)))
+        decision = validate_extracted(self.validator, fact, lines)
+        candidate = Candidate(fact.subject, fact.predicate, fact.object, (fact.source_sid,), fact.time_text or "", fact.writer, fact.writer_version)
+        if decision.verdict == ACCEPTED:
+            extra = dict(qualifiers=dict(fact.qualifiers), time_text=fact.time_text, writer=fact.writer, span=list(fact.span) if fact.span else None)
+            return decision, self._store(candidate, decision, "rules " + RULES_VERSION, extra=extra).fact.fact_id
+        if decision.verdict == UNCERTAIN:
+            return decision, self.kb.add_review(json.dumps(candidate.__dict__ | dict(source_sids=list(candidate.source_sids), qualifiers=dict(fact.qualifiers), time_value=fact.time_value)), list(decision.reasons), list(candidate.source_sids))
+        return decision, None
+
+    def _store(self, candidate, decision, checked_by, entity_id=None, extra=None):
         who = entity_id or decision.subject.entity_id or self.kb.add_entity(Entity.create(decision.subject.name, "unknown")).entity_id
         same = [x for x in self.kb.about(self.kb.entity(who).canonical_name, statuses=None) if x.fact.predicate == decision.predicate and normalize_name(x.fact.object_value) == normalize_name(candidate.object)]
         if same:
@@ -143,7 +178,7 @@ class KnowledgePipeline:
             return self.kb.get(same[0].fact.fact_id)
         target = self.kb.resolve(candidate.object) if decision.predicate in RELATIONS else None
         fact = KnowledgeFact.create(who, decision.predicate, "entity" if target else "text", PREDICATE_TYPES[decision.predicate], "explicit", object_value=None if target else candidate.object, object_entity_id=target,
-                                    validation_status="accepted", valid_from=decision.time, metadata=dict(checked_by=checked_by))
+                                    validation_status="accepted", valid_from=decision.time, metadata=dict(checked_by=checked_by) | {k: v for k, v in (extra or {}).items() if v})
         return self.kb.add(FactWithEvidence(fact, tuple(FactEvidence.create(fact.fact_id, s, extraction_method=candidate.method or None, extraction_version=candidate.version or None) for s in candidate.source_sids)))
 
     def approve(self, review_id, entity_name=None):
