@@ -61,3 +61,7 @@ This takes under a second and needs no model. To also replay the benchmark and c
     python3 -m pytest
 
 The baseline is in `tests/fixtures/retrieval_baseline.json`. If you deliberately change retrieval, rerun `python3 tests/record_baseline.py` and commit the new baseline with the change. Test data is made up or from the benchmark; never put personal data in the fixtures.
+
+## Knowledge records
+
+`engram_records.py` is a standard, typed record for knowledge, stored beside the sentences and always traceable to them. It is not used by search or answers, and nothing writes records automatically yet. If a source sentence is deleted, a record with other sources is marked `needs_review`, and a record with none left has its content erased.
