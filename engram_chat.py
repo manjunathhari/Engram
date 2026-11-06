@@ -182,7 +182,7 @@ class ChatMemory:
             CREATE VIRTUAL TABLE IF NOT EXISTS words_index USING fts5(words, tokenize="unicode61 remove_diacritics 0");
         """)
         self.db.executescript(F.SCHEMA)
-        self.db.executescript(R.SCHEMA)
+        R.prepare(self.db)
         self.index = Engrams(cfg=self.cfg)
         self.indexed_any = False
         self.chat = None

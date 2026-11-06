@@ -71,4 +71,5 @@ The baseline is in `tests/fixtures/retrieval_baseline.json`. If you deliberately
 - **Stated or inferred:** every fact must say which (`source_type`). There is no default, and answers about an entity show stated facts unless inferred ones are asked for. Accepting an inference does not turn it into a statement.
 - **Status and checking are separate:** `status` is the record's life (active, superseded, disputed, retracted, needs_review, invalidated); `validation_status` is whether it was checked (pending, accepted, rejected).
 - **Time:** `valid_from` and `valid_to` say when it was true; `recorded_at` says when Engram learned it.
+- **Version check:** a database whose knowledge records are a different version is refused before anything in it changes.
 - **Deletion:** if a source sentence is deleted, a fact with another supporting sentence is marked `needs_review`. A fact with no support left is `invalidated` and its content erased. Aliases from that sentence go too, and an entity nothing uses any more is removed.

@@ -33,6 +33,7 @@ ALIAS_SOURCES = ("sentence", "manual")
 DATE = re.compile(r"\d{4}(-(0[1-9]|1[0-2])(-(0[1-9]|[12]\d|3[01]))?)?")
 
 SCHEMA = """
+    CREATE TABLE IF NOT EXISTS knowledge_meta(key TEXT PRIMARY KEY, value TEXT NOT NULL);
     CREATE TABLE IF NOT EXISTS entities(entity_id TEXT PRIMARY KEY, canonical_name TEXT NOT NULL, normalized_name TEXT NOT NULL UNIQUE, entity_type TEXT NOT NULL, created_at TEXT NOT NULL, updated_at TEXT NOT NULL, metadata TEXT NOT NULL DEFAULT '{}', schema_version INTEGER NOT NULL);
     CREATE TABLE IF NOT EXISTS entity_aliases(alias_id TEXT PRIMARY KEY, entity_id TEXT NOT NULL, alias TEXT NOT NULL, normalized_alias TEXT NOT NULL UNIQUE, source_kind TEXT NOT NULL, source_id TEXT, created_at TEXT NOT NULL);
     CREATE TABLE IF NOT EXISTS knowledge_records(fact_id TEXT PRIMARY KEY, subject_id TEXT, predicate TEXT, object_type TEXT, object_value TEXT, object_entity_id TEXT, fact_type TEXT NOT NULL, status TEXT NOT NULL, validation_status TEXT NOT NULL, source_type TEXT NOT NULL, valid_from TEXT, valid_to TEXT, recorded_at TEXT NOT NULL, metadata TEXT NOT NULL DEFAULT '{}', note TEXT NOT NULL DEFAULT '', schema_version INTEGER NOT NULL);
@@ -46,6 +47,17 @@ SCHEMA = """
 
 class RecordError(ValueError):
     """A record was refused. Nothing was saved."""
+
+
+def prepare(db) -> None:
+    """Checks the version first, so a database from other code is refused before anything in it changes."""
+    if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='knowledge_meta'").fetchone():
+        row = db.execute("SELECT value FROM knowledge_meta WHERE key='schema_version'").fetchone()
+        if row and row[0] != str(SCHEMA_VERSION):
+            raise RecordError(f"this database's knowledge records are version {row[0]}, but this code uses version {SCHEMA_VERSION}. Nothing was changed.")
+    db.executescript(SCHEMA)
+    db.execute("INSERT OR IGNORE INTO knowledge_meta VALUES('schema_version', ?)", (str(SCHEMA_VERSION),))
+    db.commit()
 
 
 def new_id(prefix: str) -> str:
@@ -220,7 +232,7 @@ class KnowledgeBase:
 
     def __init__(self, db):
         self.db = db
-        db.executescript(SCHEMA)
+        prepare(db)
 
     def _sentence_exists(self, source_id) -> bool:
         return str(source_id).isdigit() and self.db.execute("SELECT 1 FROM sentences WHERE sid=?", (int(source_id),)).fetchone() is not None

@@ -312,6 +312,59 @@ INSERT INTO sentences VALUES(1,1,0,'','A','1 May 2023','My dog is called Rex.','
     m.close()
 
 
+@pytest.mark.parametrize("other", ["2", "0", "banana"])
+def test_a_database_of_another_version_is_refused_unchanged(path, other):
+    m, kb, ids, asha, pixel = setup(path)
+    fid = kb.add(beagle(asha, pixel, [ids["B1:1"]])).fact.fact_id
+    m.db.execute("UPDATE knowledge_meta SET value=? WHERE key='schema_version'", (other,))
+    m.db.commit()
+    before = record(m)
+    m.close()
+    with pytest.raises(RecordError, match="Nothing was changed"): E.ChatMemory(path)
+    raw = sqlite3.connect(path)
+    with pytest.raises(RecordError, match="Nothing was changed"): KnowledgeBase(raw)
+    assert raw.execute("SELECT value FROM knowledge_meta").fetchall() == [(other,)]
+    assert raw.execute("SELECT count(*) FROM knowledge_records WHERE fact_id=?", (fid,)).fetchone()[0] == 1
+    raw.execute("UPDATE knowledge_meta SET value=?", (str(R.SCHEMA_VERSION),))
+    raw.commit(); raw.close()
+    m = E.ChatMemory(path)
+    assert record(m) == before
+    m.close()
+
+
+def test_the_version_is_written_once_and_reopening_keeps_it(path):
+    m, kb, ids, asha, pixel = setup(path)
+    m.close()
+    m = E.ChatMemory(path)
+    KnowledgeBase(m.db)
+    assert m.db.execute("SELECT key, value FROM knowledge_meta").fetchall() == [("schema_version", str(R.SCHEMA_VERSION))]
+    m.close()
+
+
+def test_existing_rows_are_unchanged_when_records_are_added(path):
+    """Every row of every existing table, not only that the tables are still there."""
+    m = E.ChatMemory(path)
+    fill(m, DATA)
+    m.db.execute("DROP TABLE knowledge_meta")
+    for t in ("entities", "entity_aliases", "knowledge_records", "record_evidence"): m.db.execute(f"DROP TABLE {t}")
+    m.db.commit()
+    tables = [r[0] for r in m.db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE '%index%' AND name NOT LIKE 'sqlite_%'")]
+    assert {"sentences", "chats", "facts", "fact_sources"} <= set(tables)
+    dump = lambda db: {t: db.execute(f"SELECT * FROM {t}").fetchall() for t in tables}
+    m.db.execute("INSERT INTO facts(fact, chat, text) VALUES(900, 1, 'An older helper fact')")
+    m.db.execute("INSERT INTO fact_sources VALUES(900, 1)")
+    m.db.commit()
+    before = dump(m.db)
+    m.close()
+    m = E.ChatMemory(path)
+    kb = KnowledgeBase(m.db)
+    a = kb.add_entity(Entity.create("Asha", "person"))
+    f = KnowledgeFact.create(a.entity_id, "owns", "text", "relationship", "explicit", object_value="dog")
+    kb.add(FactWithEvidence(f, (FactEvidence.create(f.fact_id, 1),)))
+    assert dump(m.db) == before and before["sentences"]
+    m.close()
+
+
 def test_a_saved_record_survives_a_hard_crash(path):
     """Kills the process right after saving, with no clean close, as a power cut would."""
     code = f"""
