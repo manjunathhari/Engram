@@ -115,3 +115,10 @@ These rules read words and cannot understand meaning, so accepted facts can stil
 - If a newer statement is waiting for review, the answer says so, because it may be out of date.
 
 `KnowledgeRetriever` sits beside ordinary memory. Its router sends a question to the records, to `ChatMemory.find`, or to both, using fixed word rules, and every returned fact carries its original sentences. `context_for` does not use it, so answers do not change. `kit_tools/knowledge_eval.py` holds the measurements.
+
+## Learning from sentences, decisions and feedback
+
+- **Sentence pipeline** (`engram_knowledge/interpreter.py`, `learning.py`, `candidate.py`, `learning_queue.py`, from P2.1 to P2.3 with fixes): each stored message is split into sentences, each is labelled and judged (learn, review, ignore, or kept as said by the assistant), and kept sentences become envelopes tied to their sid and place in the message. Review envelopes join P1's one review queue. Nothing here writes a fact: that needs extraction (who, what and which), which is not built yet. On 200 held-out sentences labelled blind it agrees with the labels 146 times, against 78 for the original package; it still learns some small talk and sends too little to review (`results/p2_gate`).
+- **Decisions** (`StateEngine.settle`, from P5): a person's decision about two facts is recorded with reviewer, reason and the state before and after. An end date is never guessed. Version 3 of the store adds this table.
+- **Feedback and learning from use** (`engram_knowledge/feedback.py`, `engram_p6/`): feedback goes into P6.1's event log only, without free text. P6 learns bounded scores from it, but nothing in search reads them yet (shadow mode). Deleting a sentence removes feedback and scores that point at it. P6 data is not part of the knowledge export; P6.6 has its own.
+

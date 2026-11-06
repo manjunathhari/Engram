@@ -65,6 +65,8 @@ def forget_sentence(db, sid: int) -> dict:
             db.execute("UPDATE knowledge_records SET status='invalidated', subject_id=NULL, predicate=NULL, object_type=NULL, object_value=NULL, object_entity_id=NULL, valid_from=NULL, valid_to=NULL, metadata='{}', note='All supporting sentences were deleted' WHERE fact_id=?", (fact,))
             invalid += 1
             db.execute("DELETE FROM state_reviews WHERE keep_fact_id=? OR other_fact_id=?", (fact, fact))  # a decision quotes the fact, so it goes with it
+    from .feedback import forget_refs  # feedback and learned scores point at the sentence or an erased fact
+    forget_refs(db, {f"sentence:{sid}"} | {f"fact:{f}" for f in facts if db.execute("SELECT 1 FROM knowledge_records WHERE fact_id=? AND status='invalidated'", (f,)).fetchone()})
     for entity in touched:
         used = db.execute("SELECT 1 FROM knowledge_records WHERE subject_id=? OR object_entity_id=? LIMIT 1", (entity, entity)).fetchone() or db.execute("SELECT 1 FROM entity_aliases WHERE entity_id=? LIMIT 1", (entity,)).fetchone()
         if not used: db.execute("DELETE FROM entities WHERE entity_id=?", (entity,))
