@@ -9,10 +9,11 @@ from engram_knowledge.extract import writer_prompt, writer_prompt_json, writer_s
 
 ap = argparse.ArgumentParser(); ap.add_argument("--url", required=True); ap.add_argument("--model", required=True); ap.add_argument("--save", required=True)
 ap.add_argument("--sample", default="results/p26/sample.jsonl"); ap.add_argument("--form", choices=("free", "json"), default="free"); ap.add_argument("--threads", type=int, default=4)
+ap.add_argument("--tag", default="", help="added to the file name, such as 12b")
 a = ap.parse_args()
 rows = [json.loads(l) for l in open(a.sample)]
 name = os.path.basename(os.path.dirname(os.path.abspath(a.sample)))
-path = f"{a.save}/{name}_{a.form}_replies.json"
+path = f"{a.save}/{name}{'_' + a.tag if a.tag else ''}_{a.form}_replies.json"
 done = json.load(open(path)) if os.path.exists(path) else {}
 base = a.url.rstrip("/").removesuffix("/v1")
 
