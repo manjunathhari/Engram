@@ -113,3 +113,26 @@ def test_nothing_here_writes_a_fact(mem):
     for r in prepare_stored(mem.db, mem.ids["a"], people=("Asha",)):
         if r.envelope and r.envelope.lifecycle == "needs_review": queue_for_review(kb, r.envelope)
     assert mem.db.execute("SELECT count(*) FROM knowledge_records").fetchone()[0] == 0 and mem.db.execute("SELECT count(*) FROM entities").fetchone()[0] == 0
+
+
+# ---------- small talk and sentences that need the one before ----------
+@pytest.mark.parametrize("text,decision", [
+    ("That's awesome!", "ignore"), ("Definitely!", "ignore"), ("Congrats on finding poses that suit you.", "ignore"),
+    ("Losing a pet is tough.", "ignore"),
+    ("I highly recommend it!", "review"), ("Her books are so captivating with their detail and storytelling.", "review"),
+    ("It's tough to pick just one, but I really enjoy the upside-down poses.", "learn"),
+    ("I wish I wasn't allergic!", "review"), ("I won't give up as long as you're here.", "review"),
+    ("I adopted a beagle called Pixel.", "learn"), ("I just did", "ignore"),
+    ("breakdown the above into a table", "ignore"), ("This approach might be faster.", "review"),
+])
+def test_small_talk_and_bare_references(text, decision):
+    d = evaluate(interpret("user", text))
+    assert {"candidate": "learn"}.get(d.decision, d.decision) == decision, (d.decision, d.reason_codes)
+
+
+@pytest.mark.parametrize("text,kept", [
+    ("Brands like Tissot and Longines cost $500 to $2,000.", True), ("Therefore, 1 # 4 = 4.", True),
+    ("Here are some options to consider:", False), ("**Nars Contour Blush**", False), ("Good luck with your shopping!", False),
+    ("I apologize for any confusion earlier.", False), ("1 # 4 can be calculated as follows:", False)])
+def test_assistant_filler_is_not_kept(text, kept):
+    assert (evaluate(interpret("assistant", text)).keep_as == "assistant_statement") is kept

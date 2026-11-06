@@ -73,7 +73,7 @@ def evaluate(interpretation: Any, *, has_context: bool = False,
     if role in {"assistant", "system", "tool"}:
         out = result("ignore", "non_user_speaker", "not_user_memory")
         content = kind not in SOCIAL | {"question", "instruction_request", "unknown"} and act not in NON_LEARNING_ACTS | {"request"}
-        if role == "assistant" and content:  # what the assistant told the user can be asked about later
+        if role == "assistant" and content and "assistant_filler" not in signals:  # what the assistant told the user can be asked about later
             from dataclasses import replace
             return replace(out, reason_codes=out.reason_codes + ("kept_as_assistant_statement",), keep_as="assistant_statement", retention_hint="episodic")
         return out
@@ -100,6 +100,19 @@ def evaluate(interpretation: Any, *, has_context: bool = False,
     if stance in {"uncertain", "conditional", "unknown"} or kind == "hypothesis":
         return result("review", "uncertain_or_conditional_content",
                       human=True, validation="uncertain", score=0.3)
+    # Small talk and replies that need the sentence before them. Only for people, and only after the checks above.
+    if "short_reply" in signals:
+        return result("ignore", "short_reply")
+    if "no_first_person" in signals and attribution == "speaker":
+        if "bare_reference" in signals and len(_get(interpretation, "signals", ())) and kind not in {"instruction"}:
+            words = _get(interpretation, "word_count", 0)
+            if words == 0 or words > 6:
+                return result("review", "unresolved_context_reference", context=True, human=True, validation="uncertain", score=0.4)
+        if kind != "instruction":
+            return result("ignore", "not_about_the_speaker")
+    if "bare_reference" in signals and attribution == "speaker":
+        return result("review", "unresolved_context_reference", context=True, human=True, validation="uncertain", score=0.45)
+
     if attribution != "speaker":
         return result("review", "attribution_not_confirmed", human=True,
                       validation="uncertain", score=0.3)

@@ -24,6 +24,7 @@ class Interpretation:
     signals: tuple[str, ...]
     confidence: float
     needs_review: bool
+    word_count: int = 0
 
     def to_dict(self) -> dict[str, Any]:
         """JSON-friendly representation (tuples become lists)."""
@@ -44,7 +45,7 @@ _PATTERNS: dict[str, tuple[str, ...]] = {
     "request": (
         r"\b(can|could|would|will) you\b",
         r"^(please|kindly)\b|\bplease[.!?]?$",
-        r"^(please\s+|kindly\s+)?(tell me|show me|give me|write|draft|summari[sz]e|explain|analyse|analyze|review|compare|help me|list|suggest|recommend)\b",
+        r"^(please\s+|kindly\s+)?(tell me|show me|give me|write|draft|summari[sz]e|explain|analyse|analyze|review|compare|help me|list|suggest|recommend|add|make|create|convert|rewrite|translate|generate|provide|break ?down|format|calculate|find)\b",
         r"\b(tell me|show me|give me|help me)\b",
     ),
     "commitment": (
@@ -83,7 +84,10 @@ _THIRD_PARTY = re.compile(
     r"\b[A-Z][a-z][\w.-]*(?:\s+[A-Z][a-z][\w.-]*)+\s+"
     r"(?i:said|reported|believes|thinks|decided|stated)\b"
 )
-_CONDITIONAL = re.compile(r"\b(if|unless|assuming|suppose|in case)\b", re.I)
+_CONDITIONAL = re.compile(r"\b(if|unless|assuming|suppose|in case|as long as|i wish|i'd love to|i would love to)\b", re.I)
+_FIRST_PERSON = re.compile(r"\b(i|i'm|i've|i'll|i'd|me|my|mine|myself|we|we're|we've|we'll|us|our|ours)\b", re.I)
+_BARE_START = re.compile(r"^(it|it's|its|they|they're|them|this|that|these|those|he|she|her|his|there|most of them|some of them)\b", re.I)
+_BARE_OBJECT = re.compile(r"\b(it|them|that one|this one|those \w+|these \w+|the same)\b[.!?]*$|\b(do|did|recommend|love|loved|like|liked|try|tried|check out|use|used|got|get|buy|bought) (it|them|that|this|those|these)\b", re.I)
 
 
 def _matches(text: str, patterns: tuple[str, ...]) -> bool:
@@ -189,6 +193,16 @@ def interpret(speaker: str, text: str, date: str = "", context: str | None = Non
     else:
         attribution = "unknown"
 
+    # Shape of the sentence, for the learning gate: small talk has no first person, and a bare "it" needs the sentence before it.
+    n_words = len(clean.split())
+    if not _FIRST_PERSON.search(clean): signals.append("no_first_person")
+    if n_words <= 3: signals.append("short_reply")
+    expletive = re.match(r"^(it|it's|it is|it was)\s+(\w+\s+){0,3}?(to|that|when|how)\b", clean, re.I)  # "It's tough to pick" points at nothing earlier
+    if (_BARE_START.search(clean) and not expletive) or _BARE_OBJECT.search(clean): signals.append("bare_reference")
+    if role == "assistant" and (clean.endswith(":") or re.fullmatch(r"\*\*[^*]+\*\*[.:]?", clean) or n_words < 5
+                                or re.match(r"^(good luck|have fun|and most importantly|i apologi[sz]e|here (is|are)|now,? let's|i am always|i'm always|i hope|feel free|let me know|happy to help|you're welcome|enjoy)\b", clean, re.I)):
+        signals.append("assistant_filler")
+
     temporal = tuple(dict.fromkeys(m.group(0) for m in _TIME.finditer(clean)))
     if temporal: signals.append("temporal_expression")
     if context is not None and re.search(r"\b(it|this|that|they|he|she|there|same|other one)\b", clean, re.I):
@@ -213,6 +227,7 @@ def interpret(speaker: str, text: str, date: str = "", context: str | None = Non
         signals=tuple(signals),
         confidence=confidence,
         needs_review=needs_review,
+        word_count=n_words,
     )
 
 
