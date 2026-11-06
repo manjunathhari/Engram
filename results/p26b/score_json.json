@@ -1,0 +1,1494 @@
+{
+ "writer": "model replies",
+ "unread_lines": 0,
+ "sentences": 200,
+ "labelled_facts": 56,
+ "written": 187,
+ "right_head_word": 11,
+ "right_exact_object": 8,
+ "found_of_labelled": 11,
+ "dated_and_right": [
+  2,
+  2
+ ],
+ "details_right": [
+  0,
+  1
+ ],
+ "replies_cut_off": 0,
+ "validator": {
+  "accepted": {
+   "count": 32,
+   "right": 8
+  },
+  "uncertain": {
+   "count": 122,
+   "right": 2
+  },
+  "rejected": {
+   "count": 33,
+   "right": 1
+  }
+ },
+ "wrong": [
+  [
+   "y001",
+   "Melanie",
+   "lost",
+   "how it's both a creative outlet and a form of therapy",
+   "I love how it's both a creative outlet and a form of therapy."
+  ],
+  [
+   "y002",
+   "John",
+   "member_of",
+   "those in need",
+   "Helping those in need is important to me too."
+  ],
+  [
+   "y003",
+   "user",
+   "likes",
+   "learning",
+   "I'm interested in learning more about the cultural and social dynamics of the Uk"
+  ],
+  [
+   "y004",
+   "John",
+   "dislikes",
+   "opportunities",
+   "On a different note, exciting things are happening--I'm exploring endorsement op"
+  ],
+  [
+   "y005",
+   "John",
+   "adopted",
+   "games",
+   "I've had some thrilling games in my career."
+  ],
+  [
+   "y006",
+   "Caroline",
+   "bought",
+   "love",
+   "It really brings home how much love's in families - both blood and the ones we c"
+  ],
+  [
+   "y008",
+   "Nate",
+   "likes",
+   "recipe",
+   "Sure, I know one recipe using coconut milk."
+  ],
+  [
+   "y010",
+   "John",
+   "parent_of",
+   "beagle",
+   "I'd practice basketball outside for hours, dreaming of playing in big games."
+  ],
+  [
+   "y011",
+   "John",
+   "lost",
+   "being outdoors",
+   "We love being outdoors - going for hikes, hanging out at the park, having picnic"
+  ],
+  [
+   "y012",
+   "John",
+   "joined",
+   "local organizations",
+   "One idea I had was to join local organizations or volunteering programs."
+  ],
+  [
+   "y013",
+   "Jon",
+   "likes",
+   "backing",
+   "Having someone back us up is great."
+  ],
+  [
+   "y014",
+   "Caroline",
+   "likes",
+   "nudge",
+   "It's like a nudge to always stay true to myself and embrace my womanhood."
+  ],
+  [
+   "y015",
+   "Tim",
+   "adopted",
+   "it",
+   "Definitely adding it to my list."
+  ],
+  [
+   "y016",
+   "Gina",
+   "started_job",
+   "store",
+   "Starting my own store and taking risks is both scary and rewarding."
+  ],
+  [
+   "y017",
+   "John",
+   "attended",
+   "movie",
+   "I'm a total movie fan!"
+  ],
+  [
+   "y019",
+   "Melanie",
+   "joined",
+   "journey",
+   "We can make a real impact together!"
+  ],
+  [
+   "y020",
+   "user",
+   "started_hobby",
+   "reading",
+   "I recently finished two books during my downtime and I'm looking for something n"
+  ],
+  [
+   "y021",
+   "John",
+   "member_of",
+   "players",
+   "Here's a pic of me and some of the younger players at a recent practice."
+  ],
+  [
+   "y022",
+   "Maria",
+   "dislikes",
+   "education",
+   "I agree that education and infrastructure are key to our community's growth."
+  ],
+  [
+   "y023",
+   "John",
+   "likes",
+   "anything",
+   "With their trust, we can do anything!"
+  ],
+  [
+   "y024",
+   "user",
+   "works_at",
+   "phone",
+   "I was thinking of sharing how I deleted all the social media apps from my phone "
+  ],
+  [
+   "y025",
+   "Caroline",
+   "parent_of",
+   "people",
+   "People of all kinds celebrating love and acceptance - it really pushed me to kee"
+  ],
+  [
+   "y026",
+   "user",
+   "likes",
+   "customers",
+   "We take pride in exceeding our customers' expectations and look forward to helpi"
+  ],
+  [
+   "y029",
+   "Nate",
+   "member_of",
+   "blow",
+   "The world building, battles, and storytelling always blow me away!"
+  ],
+  [
+   "y030",
+   "Caroline",
+   "gave_away",
+   "support",
+   "I'm truly grateful for all the support I've got from friends and mentors."
+  ],
+  [
+   "y031",
+   "Maria",
+   "sold",
+   "stuff",
+   "It kills me to think about all the kids without the proper stuff they need."
+  ],
+  [
+   "y032",
+   "user",
+   "gave_away",
+   "green tea",
+   "By the way, speaking of breaks, I took a short 10-minute break at 10:30 am on Mo"
+  ],
+  [
+   "y033",
+   "Jon",
+   "got_married",
+   "pic",
+   "Check this pic I got from the last networking event!"
+  ],
+  [
+   "y035",
+   "John",
+   "member_of",
+   "me",
+   "Here's a photo of me in this pose."
+  ],
+  [
+   "y036",
+   "John",
+   "attended",
+   "people",
+   "Lots of people showed up and had a great time, plus we were able to raise some m"
+  ],
+  [
+   "y036",
+   "John",
+   "attended",
+   "time",
+   "Lots of people showed up and had a great time, plus we were able to raise some m"
+  ],
+  [
+   "y037",
+   "user",
+   "likes",
+   "vegan lentil curry",
+   "By the way, I made a vegan lentil curry two weeks ago that turned out really wel"
+  ],
+  [
+   "y038",
+   "Jon",
+   "works_at",
+   "business",
+   "Running a business isn't easy, but I'm determined to make it work."
+  ],
+  [
+   "y039",
+   "Caroline",
+   "got_married",
+   "help",
+   "I got lots of help from this adoption advice/assistance group I attended."
+  ],
+  [
+   "y040",
+   "John",
+   "status",
+   "goal",
+   "Winning a championship is my number one goal."
+  ],
+  [
+   "y042",
+   "user",
+   "adopted",
+   "oval face shape",
+   "I'm an oval face shape, so I'll focus on contouring the sides of my nose, hollow"
+  ],
+  [
+   "y043",
+   "Nate",
+   "bought",
+   "turtles",
+   "I was bored today, so I just took my turtles out for a walk."
+  ],
+  [
+   "y044",
+   "Tim",
+   "lost",
+   "passion",
+   "I love how my passion for fantasy stuff brings me closer to people from all over"
+  ],
+  [
+   "y045",
+   "Joanna",
+   "hobby",
+   "hiking",
+   "Yep, I'm hiking with some buddies this weekend."
+  ],
+  [
+   "y046",
+   "Maria",
+   "attended",
+   "meal",
+   "We organized a meal for the shelter residents and I helped with getting everythi"
+  ],
+  [
+   "y048",
+   "John",
+   "member_of",
+   "team",
+   "I met back up with my teammates on the 15th after my trip and it was amazing!"
+  ],
+  [
+   "y049",
+   "Gina",
+   "dislikes",
+   "it",
+   "And of course, I dance it out."
+  ],
+  [
+   "y051",
+   "Nate",
+   "gave_away",
+   "turtles",
+   "Anyway, I took my turtles to the beach in Tampa yesterday!"
+  ],
+  [
+   "y053",
+   "Joanna",
+   "lost",
+   "getting immersed",
+   "I love getting immersed in the feelings and plots."
+  ],
+  [
+   "y054",
+   "user",
+   "visited",
+   "Paris",
+   "I stayed at a cozy hostel in the Latin Quarter, and each morning, I'd start my d"
+  ],
+  [
+   "y054",
+   "user",
+   "started_job",
+   "day",
+   "I stayed at a cozy hostel in the Latin Quarter, and each morning, I'd start my d"
+  ],
+  [
+   "y055",
+   "Jon",
+   "dislikes",
+   "9-5",
+   "Yeah, I totally agree - taking risks is key for success."
+  ],
+  [
+   "y057",
+   "Caroline",
+   "got_married",
+   "them",
+   "I even got to let them know they're not alone by sharing my story."
+  ],
+  [
+   "y058",
+   "Melanie",
+   "adopted",
+   "stroke",
+   "Each stroke carries a part of me."
+  ],
+  [
+   "y060",
+   "John",
+   "started_hobby",
+   "b-ball game",
+   "Just the other day, I found a new gym to stay on my b-ball game."
+  ],
+  [
+   "y061",
+   "Jon",
+   "works_at",
+   "quit",
+   "I won't quit, even when it's hard."
+  ],
+  [
+   "y062",
+   "Caroline",
+   "attended",
+   "conference",
+   "I'm going to a transgender conference this month."
+  ],
+  [
+   "y063",
+   "user",
+   "likes",
+   "limiting news consumption",
+   "Yeah, it definitely helps to limit my news consumption, but sometimes even the h"
+  ],
+  [
+   "y064",
+   "user",
+   "adopted",
+   "beagle",
+   "I'm creating a product photography business."
+  ],
+  [
+   "y065",
+   "John",
+   "works_at",
+   "we",
+   "With your help, we can make a real impact."
+  ],
+  [
+   "y068",
+   "John",
+   "gave_away",
+   "something",
+   "Basketball has been great to me, so I want to give something back."
+  ],
+  [
+   "y069",
+   "Joanna",
+   "got_married",
+   "third turtle",
+   "I bet just last week you would have never thought you would be getting a third t"
+  ],
+  [
+   "y070",
+   "Jon",
+   "stopped_hobby",
+   "anything",
+   "Won't let anything hold me back!"
+  ],
+  [
+   "y071",
+   "Tim",
+   "visited",
+   "place",
+   "I went to a place in London a few years ago - it was like walking into a Harry P"
+  ],
+  [
+   "y072",
+   "John",
+   "owns",
+   "workout plan",
+   "Here's my workout plan."
+  ],
+  [
+   "y073",
+   "Gina",
+   "lost",
+   "creativity",
+   "I'm passionate about dance and fashion so combining them lets me show my creativ"
+  ],
+  [
+   "y074",
+   "Jon",
+   "hobby",
+   "ride",
+   "Crazy ride so far, but I'm hanging in there."
+  ],
+  [
+   "y075",
+   "John",
+   "visited",
+   "Edinburgh",
+   "I haven't been to Edinburgh yet, but it definitely sounds like a place worth con"
+  ],
+  [
+   "y077",
+   "Joanna",
+   "member_of",
+   "photo",
+   "Yeah, that's me in that photo!"
+  ],
+  [
+   "y078",
+   "Caroline",
+   "adopted",
+   "adoption agencies",
+   "And here's one of the adoption agencies I'm looking into."
+  ],
+  [
+   "y080",
+   "user",
+   "likes",
+   "sound",
+   "I like the sound of the chickpea and spinach tagine."
+  ],
+  [
+   "y083",
+   "user",
+   "likes",
+   "sound",
+   "I like the sound of the lentil soup with whole grain crackers and a mixed green "
+  ],
+  [
+   "y085",
+   "John",
+   "works_at",
+   "supporting youth sports",
+   "I've been working on supporting youth sports and fighting for fair chances in sp"
+  ],
+  [
+   "y085",
+   "John",
+   "works_at",
+   "fighting for fair chances",
+   "I've been working on supporting youth sports and fighting for fair chances in sp"
+  ],
+  [
+   "y086",
+   "John",
+   "likes",
+   "peaceful",
+   "Yeah, that's how we'll think of him - peaceful and happy."
+  ],
+  [
+   "y086",
+   "John",
+   "likes",
+   "happy",
+   "Yeah, that's how we'll think of him - peaceful and happy."
+  ],
+  [
+   "y087",
+   "Joanna",
+   "attended",
+   "writing",
+   "Writing's such a huge part of me now."
+  ],
+  [
+   "y088",
+   "Caroline",
+   "visited",
+   "parade",
+   "Last week I went to an LGBTQ+ pride parade."
+  ],
+  [
+   "y089",
+   "Joanna",
+   "lost",
+   "color",
+   "I love the color and texture."
+  ],
+  [
+   "y090",
+   "user",
+   "likes",
+   "learning",
+   "I'm interested in learning more about Everlane's pricing."
+  ],
+  [
+   "y091",
+   "John",
+   "works_at",
+   "NBA",
+   "I'd watch NBA games with my dad and dream of playing on those big courts."
+  ],
+  [
+   "y092",
+   "user",
+   "lost",
+   "focus",
+   "Speaking of focus, I've been having some trouble staying on track during my afte"
+  ],
+  [
+   "y093",
+   "user",
+   "gave_away",
+   "news sources",
+   "I'll definitely give those news sources a try."
+  ],
+  [
+   "y094",
+   "user",
+   "plans",
+   "response",
+   "I'll try to provide a shorter response to your question."
+  ],
+  [
+   "y095",
+   "John",
+   "lost",
+   "energy",
+   "I love the energy, diversity, and awesome food of this city."
+  ],
+  [
+   "y095",
+   "John",
+   "lost",
+   "diversity",
+   "I love the energy, diversity, and awesome food of this city."
+  ],
+  [
+   "y095",
+   "John",
+   "lost",
+   "food",
+   "I love the energy, diversity, and awesome food of this city."
+  ],
+  [
+   "y097",
+   "user",
+   "likes",
+   "think",
+   "I cant really think of any examples, but they influenced conservative decisions"
+  ],
+  [
+   "y099",
+   "user",
+   "member_of",
+   "character",
+   "I found Meursault to be a rather unlikable character."
+  ],
+  [
+   "y100",
+   "John",
+   "stopped_hobby",
+   "something",
+   "Lately, I've been stumped about something."
+  ],
+  [
+   "y101",
+   "John",
+   "likes",
+   "each other",
+   "We trust and rely on one another, and it's great to know that we have each other"
+  ],
+  [
+   "y103",
+   "Caroline",
+   "bought",
+   "comfort",
+   "Bringing others comfort and helping them grow brings me such joy."
+  ],
+  [
+   "y103",
+   "Caroline",
+   "bought",
+   "help",
+   "Bringing others comfort and helping them grow brings me such joy."
+  ],
+  [
+   "y104",
+   "John",
+   "member_of",
+   "us",
+   "Challenges force us to develop and become better."
+  ],
+  [
+   "y105",
+   "Melanie",
+   "sold",
+   "awareness",
+   "I'm so proud of you for spreading awareness and getting others involved in the L"
+  ],
+  [
+   "y106",
+   "Gina",
+   "likes",
+   "dance",
+   "Dance is pretty much my go-to for stress relief."
+  ],
+  [
+   "y107",
+   "Tim",
+   "member_of",
+   "family",
+   "Family time means a lot to me."
+  ],
+  [
+   "y108",
+   "Jon",
+   "dislikes",
+   "work",
+   "I rehearsed with a small group of dancers after work."
+  ],
+  [
+   "y109",
+   "Maria",
+   "lost",
+   "hand",
+   "Besides that, my cousin just had a tough time recently, so I'm lending a hand in"
+  ],
+  [
+   "y110",
+   "user",
+   "plans",
+   "calendar",
+   "I'm trying to organize my calendar for the rest of the year."
+  ],
+  [
+   "y111",
+   "Joanna",
+   "parent_of",
+   "face",
+   "My face gets all puffy and itchy when I'm around certain animals, so I've always"
+  ],
+  [
+   "y112",
+   "user",
+   "completed",
+   "Comparative",
+   "After realizing the analytics space was fundamentally broken - we built Comparat"
+  ],
+  [
+   "y113",
+   "Nate",
+   "started_hobby",
+   "vegan ice cream",
+   "On another note, I made vegan ice cream last Friday and shared it with some peop"
+  ],
+  [
+   "y114",
+   "Joanna",
+   "likes",
+   "writing",
+   "Writing has become like an escape and a way to express my feelings."
+  ],
+  [
+   "y115",
+   "user",
+   "likes",
+   "mac 'n cheese layer",
+   "I think I'll add a mac 'n cheese layer and use mild cheese to make it more appea"
+  ],
+  [
+   "y116",
+   "user",
+   "likes",
+   "Todoist",
+   "I think I can definitely use Todoist's scheduled tasks feature to set reminders "
+  ],
+  [
+   "y117",
+   "user",
+   "started_job",
+   "meal prep",
+   "By the way, speaking of meal prep, I also made a big batch of quinoa on Sunday l"
+  ],
+  [
+   "y118",
+   "Tim",
+   "got_married",
+   "study_abroad_program",
+   "Next month, I'm off to Ireland for a semester."
+  ],
+  [
+   "y119",
+   "Caroline",
+   "friend_of",
+   "Mel",
+   "Makes me feel connected."
+  ],
+  [
+   "y120",
+   "John",
+   "works_at",
+   "court",
+   "We've been putting in a lot of work and achieving our goals, which is awesome."
+  ],
+  [
+   "y121",
+   "Caroline",
+   "member_of",
+   "we",
+   "Here's a pic from when we met up last week!"
+  ],
+  [
+   "y123",
+   "Tim",
+   "works_at",
+   "fantasy novel",
+   "My writing is going well: I'm in the middle of fantasy novel and it's a bit nerv"
+  ],
+  [
+   "y124",
+   "John",
+   "lost",
+   "education",
+   "I'm passionate about improving education and infrastructure in our community."
+  ],
+  [
+   "y124",
+   "John",
+   "lost",
+   "infrastructure",
+   "I'm passionate about improving education and infrastructure in our community."
+  ],
+  [
+   "y125",
+   "Joanna",
+   "started_hobby",
+   "writing club",
+   "On another note, I just finished this cute little bookmark for one of the ladies"
+  ],
+  [
+   "y127",
+   "user",
+   "visited",
+   "city",
+   "I'm actually interested in visiting a city that's similar to Paris in terms of i"
+  ],
+  [
+   "y128",
+   "Tim",
+   "plans",
+   "NYC",
+   "Adding NYC to my travel list, sounds like a great adventure!"
+  ],
+  [
+   "y129",
+   "Caroline",
+   "joined",
+   "new LGBTQ activist group",
+   "I'm meeting so many cool people who are as passionate as I am about rights and c"
+  ],
+  [
+   "y130",
+   "user",
+   "adopted",
+   "tile work",
+   "I've heard that some of the tile work in Granada contains hidden messages."
+  ],
+  [
+   "y131",
+   "user",
+   "likes",
+   "dumpling sauce",
+   "I think I'll try the dumpling sauce and chili oil."
+  ],
+  [
+   "y132",
+   "John",
+   "member_of",
+   "we",
+   "The views were spectacular, and we had lots of fun bonding and creating amazing "
+  ],
+  [
+   "y133",
+   "John",
+   "got_married",
+   "a lot",
+   "I've still got a lot to learn, but I'm determined to make a difference."
+  ],
+  [
+   "y134",
+   "John",
+   "member_of",
+   "Harry Potter",
+   "Oh yeah, I remember you telling me about Harry Potter!"
+  ],
+  [
+   "y136",
+   "John",
+   "likes",
+   "taking us back in time",
+   "Almost like taking us back in time."
+  ],
+  [
+   "y137",
+   "Tim",
+   "member_of",
+   "this tree",
+   "I decorated this tree myself, going all out with a Harry Potter theme!"
+  ],
+  [
+   "y139",
+   "Maria",
+   "got_married",
+   "way",
+   "Gonna continue doing it - it's my way of spreading kindness and positivity."
+  ],
+  [
+   "y140",
+   "Tim",
+   "got_married",
+   "great news",
+   "On Friday, I got great news - I'm finally in the study abroad program I applied "
+  ],
+  [
+   "y141",
+   "Maria",
+   "lost",
+   "freedom",
+   "I love the freedom and connection it brings."
+  ],
+  [
+   "y141",
+   "Maria",
+   "lost",
+   "connection",
+   "I love the freedom and connection it brings."
+  ],
+  [
+   "y142",
+   "John",
+   "owns",
+   "stories",
+   "All the successes, the failures, the friends - I have so many stories to tell."
+  ],
+  [
+   "y144",
+   "Gina",
+   "hobby",
+   "help",
+   "Always here to help."
+  ],
+  [
+   "y145",
+   "user",
+   "likes",
+   "childhood",
+   "I've also been thinking about my childhood and how my parents' beliefs have infl"
+  ],
+  [
+   "y146",
+   "Nate",
+   "gave_away",
+   "Max",
+   "Here's something cool that happened the other day - I took Max for a walk and ra"
+  ],
+  [
+   "y148",
+   "Maria",
+   "bought",
+   "power",
+   "I believe in your power to make a positive difference."
+  ],
+  [
+   "y150",
+   "Caroline",
+   "got_married",
+   "self",
+   "It's a reminder to love my authentic self - it's taken a while to get here but I"
+  ],
+  [
+   "y151",
+   "user",
+   "gave_away",
+   "F",
+   "No, I will give you F in basic arithmetic."
+  ],
+  [
+   "y152",
+   "John",
+   "dislikes",
+   "political system",
+   "Digging deeper into the political system has been eye-opening, so I'm researchin"
+  ],
+  [
+   "y154",
+   "Caroline",
+   "started_job",
+   "counseling",
+   "Lately, I've been looking into counseling and mental health as a career."
+  ],
+  [
+   "y155",
+   "John",
+   "member_of",
+   "family",
+   "My family motivates me to keep striving for change."
+  ],
+  [
+   "y157",
+   "Tim",
+   "likes",
+   "goldmines",
+   "Plus, certain authors are like goldmines of inspiration for me."
+  ],
+  [
+   "y159",
+   "John",
+   "works_at",
+   "regular work hours",
+   "I usually work during regular work hours, but sometimes I bring work home too."
+  ],
+  [
+   "y160",
+   "Nate",
+   "sold",
+   "turtles",
+   "In the meantime though, I'll be sure to send you pics of my turtles so you can s"
+  ],
+  [
+   "y162",
+   "John",
+   "hobby",
+   "hiked",
+   "We hiked, swam, and made great memories."
+  ],
+  [
+   "y163",
+   "user",
+   "likes",
+   "spinach and feta filling",
+   "I'm really excited to try the spinach and feta filling for my vegetarian dumplin"
+  ],
+  [
+   "y164",
+   "Maria",
+   "sold",
+   "little girl",
+   "For me, it was when I noticed a little girl around 8 sitting all alone."
+  ],
+  [
+   "y165",
+   "user",
+   "lost",
+   "handbag",
+   "By the way, I've been really loving the handbag I got from TK Maxx, it's been my"
+  ],
+  [
+   "y166",
+   "John",
+   "parent_of",
+   "each",
+   "We push each other to be our best and the love for the game is infectious."
+  ],
+  [
+   "y166",
+   "John",
+   "parent_of",
+   "best",
+   "We push each other to be our best and the love for the game is infectious."
+  ],
+  [
+   "y166",
+   "John",
+   "lost",
+   "love",
+   "We push each other to be our best and the love for the game is infectious."
+  ],
+  [
+   "y167",
+   "user",
+   "likes",
+   "treasure hunt and charades",
+   "I think the treasure hunt and charades will be a hit with Emma and Max."
+  ],
+  [
+   "y168",
+   "user",
+   "likes",
+   "positive thinking",
+   "I realize that it's not just about positive thinking, but also about taking conc"
+  ],
+  [
+   "y168",
+   "user",
+   "likes",
+   "taking concrete actions",
+   "I realize that it's not just about positive thinking, but also about taking conc"
+  ],
+  [
+   "y168",
+   "user",
+   "works_at",
+   "achieving my goals",
+   "I realize that it's not just about positive thinking, but also about taking conc"
+  ],
+  [
+   "y169",
+   "John",
+   "member_of",
+   "support",
+   "Their support keeps me motivated."
+  ],
+  [
+   "y170",
+   "John",
+   "attended",
+   "basketball",
+   "Basketball has been a part of my life ever since I was a kid."
+  ],
+  [
+   "y171",
+   "John",
+   "started_job",
+   "playing",
+   "I kept playing through middle and high school before earning a college scholarsh"
+  ],
+  [
+   "y173",
+   "John",
+   "dislikes",
+   "respect",
+   "Showing them how to respect and appreciate those who served our country is impor"
+  ],
+  [
+   "y175",
+   "John",
+   "friend_of",
+   "Maria",
+   "Especially after I failed the military aptitude test recently, I've been feeling"
+  ],
+  [
+   "y175",
+   "John",
+   "friend_of",
+   "support",
+   "Especially after I failed the military aptitude test recently, I've been feeling"
+  ],
+  [
+   "y175",
+   "John",
+   "friend_of",
+   "means",
+   "Especially after I failed the military aptitude test recently, I've been feeling"
+  ],
+  [
+   "y175",
+   "John",
+   "friend_of",
+   "test",
+   "Especially after I failed the military aptitude test recently, I've been feeling"
+  ],
+  [
+   "y175",
+   "John",
+   "friend_of",
+   "stressed",
+   "Especially after I failed the military aptitude test recently, I've been feeling"
+  ],
+  [
+   "y178",
+   "Melanie",
+   "started_job",
+   "race",
+   "I ran a charity race for mental health last Saturday \u2013 it was really rewarding."
+  ],
+  [
+   "y179",
+   "user",
+   "works_at",
+   "friends",
+   "I want to impress my friends with some fancy-looking dumplings."
+  ],
+  [
+   "y180",
+   "John",
+   "stopped_hobby",
+   "court",
+   "Same with me on the court."
+  ],
+  [
+   "y181",
+   "user",
+   "works_at",
+   "non-profit sector",
+   "I've been wanting to explore spirituality and mysticism more, but it's hard to s"
+  ],
+  [
+   "y182",
+   "Maria",
+   "got_married",
+   "husband",
+   "I've gone camping a few times but never tried mountain climbing."
+  ],
+  [
+   "y183",
+   "user",
+   "started_hobby",
+   "understanding",
+   "You know, talking about this makes me think of my conversation with Sarah again."
+  ],
+  [
+   "y184",
+   "Jon",
+   "lost",
+   "job",
+   "Losing my job was tough but it gave me the push I needed to do what I love."
+  ],
+  [
+   "y186",
+   "John",
+   "hobby",
+   "stuff",
+   "As for me, lots of stuff happened since we last talked."
+  ],
+  [
+   "y187",
+   "user",
+   "likes",
+   "learning",
+   "I'm interested in learning more about the Ukrainian refugee experience during Wo"
+  ],
+  [
+   "y188",
+   "Tim",
+   "likes",
+   "reading",
+   "I've been reading as usual."
+  ],
+  [
+   "y190",
+   "John",
+   "likes",
+   "book",
+   "I'm currently reading a book that I really enjoy."
+  ],
+  [
+   "y191",
+   "Joanna",
+   "parent_of",
+   "effort",
+   "I put a lot of effort into it and I'm crossing my fingers."
+  ],
+  [
+   "y192",
+   "John",
+   "parent_of",
+   "each other",
+   "We'll keep pushing each other and staying motivated."
+  ],
+  [
+   "y192",
+   "John",
+   "parent_of",
+   "staying motivated",
+   "We'll keep pushing each other and staying motivated."
+  ],
+  [
+   "y194",
+   "John",
+   "visited",
+   "vacation",
+   "Here's one from our vacation!"
+  ],
+  [
+   "y196",
+   "user",
+   "lives_in",
+   "Vestal",
+   "Vestal, Syracuse, and Johnson City locals trust our dedicated staff for attentiv"
+  ],
+  [
+   "y196",
+   "user",
+   "lives_in",
+   "Syracuse",
+   "Vestal, Syracuse, and Johnson City locals trust our dedicated staff for attentiv"
+  ],
+  [
+   "y196",
+   "user",
+   "lives_in",
+   "Johnson City",
+   "Vestal, Syracuse, and Johnson City locals trust our dedicated staff for attentiv"
+  ],
+  [
+   "y198",
+   "Tim",
+   "likes",
+   "stuff",
+   "It's great to find stuff that makes us happy and feel free."
+  ]
+ ],
+ "missed": [
+  [
+   "y011",
+   "likes",
+   "being outdoors"
+  ],
+  [
+   "y011",
+   "hobby",
+   "hikes"
+  ],
+  [
+   "y011",
+   "hobby",
+   "board games"
+  ],
+  [
+   "y016",
+   "owns",
+   "store"
+  ],
+  [
+   "y017",
+   "likes",
+   "movie"
+  ],
+  [
+   "y020",
+   "completed",
+   "two books"
+  ],
+  [
+   "y033",
+   "attended",
+   "networking event"
+  ],
+  [
+   "y038",
+   "owns",
+   "business"
+  ],
+  [
+   "y039",
+   "attended",
+   "adoption advice/assistance group"
+  ],
+  [
+   "y043",
+   "owns",
+   "turtles"
+  ],
+  [
+   "y044",
+   "likes",
+   "fantasy stuff"
+  ],
+  [
+   "y045",
+   "plans",
+   "hiking"
+  ],
+  [
+   "y049",
+   "hobby",
+   "dance"
+  ],
+  [
+   "y051",
+   "owns",
+   "turtles"
+  ],
+  [
+   "y051",
+   "visited",
+   "Tampa"
+  ],
+  [
+   "y054",
+   "visited",
+   "Latin Quarter"
+  ],
+  [
+   "y062",
+   "plans",
+   "transgender conference"
+  ],
+  [
+   "y064",
+   "owns",
+   "product photography business"
+  ],
+  [
+   "y066",
+   "owns",
+   "dance studio"
+  ],
+  [
+   "y071",
+   "visited",
+   "London"
+  ],
+  [
+   "y073",
+   "likes",
+   "dance"
+  ],
+  [
+   "y073",
+   "likes",
+   "fashion"
+  ],
+  [
+   "y087",
+   "hobby",
+   "Writing"
+  ],
+  [
+   "y088",
+   "attended",
+   "LGBTQ+ pride parade"
+  ],
+  [
+   "y096",
+   "visited",
+   "Eiffel Tower"
+  ],
+  [
+   "y099",
+   "dislikes",
+   "Meursault"
+  ],
+  [
+   "y106",
+   "hobby",
+   "Dance"
+  ],
+  [
+   "y107",
+   "likes",
+   "Family time"
+  ],
+  [
+   "y112",
+   "owns",
+   "Comparative"
+  ],
+  [
+   "y113",
+   "member_of",
+   "vegan diet group"
+  ],
+  [
+   "y114",
+   "hobby",
+   "Writing"
+  ],
+  [
+   "y118",
+   "plans",
+   "Ireland"
+  ],
+  [
+   "y123",
+   "hobby",
+   "writing"
+  ],
+  [
+   "y124",
+   "likes",
+   "education and infrastructure"
+  ],
+  [
+   "y125",
+   "member_of",
+   "writing club"
+  ],
+  [
+   "y135",
+   "job_title",
+   "CEO"
+  ],
+  [
+   "y140",
+   "joined",
+   "study abroad program"
+  ],
+  [
+   "y160",
+   "owns",
+   "turtles"
+  ],
+  [
+   "y165",
+   "owns",
+   "handbag"
+  ],
+  [
+   "y165",
+   "likes",
+   "handbag"
+  ],
+  [
+   "y170",
+   "hobby",
+   "Basketball"
+  ],
+  [
+   "y178",
+   "completed",
+   "charity race"
+  ],
+  [
+   "y184",
+   "left_job",
+   "job"
+  ],
+  [
+   "y188",
+   "hobby",
+   "reading"
+  ],
+  [
+   "y199",
+   "likes",
+   "Lord of the Rings"
+  ]
+ ]
+}

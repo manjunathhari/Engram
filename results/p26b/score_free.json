@@ -1,0 +1,343 @@
+{
+ "writer": "model replies",
+ "unread_lines": 170,
+ "sentences": 200,
+ "labelled_facts": 56,
+ "written": 14,
+ "right_head_word": 6,
+ "right_exact_object": 5,
+ "found_of_labelled": 6,
+ "dated_and_right": [
+  0,
+  0
+ ],
+ "details_right": [
+  0,
+  0
+ ],
+ "replies_cut_off": 0,
+ "validator": {
+  "accepted": {
+   "count": 8,
+   "right": 5
+  },
+  "uncertain": {
+   "count": 3,
+   "right": 0
+  },
+  "rejected": {
+   "count": 3,
+   "right": 1
+  }
+ },
+ "wrong": [
+  [
+   "y007",
+   "Jon",
+   "likes",
+   "help",
+   "I'd really appreciate your help with making content and managing my social media"
+  ],
+  [
+   "y068",
+   "John",
+   "likes",
+   "basketball",
+   "Basketball has been great to me, so I want to give something back."
+  ],
+  [
+   "y080",
+   "user",
+   "likes",
+   "sound",
+   "I like the sound of the chickpea and spinach tagine."
+  ],
+  [
+   "y083",
+   "user",
+   "likes",
+   "sound",
+   "I like the sound of the lentil soup with whole grain crackers and a mixed green "
+  ],
+  [
+   "y106",
+   "Gina",
+   "likes",
+   "dance",
+   "Dance is pretty much my go-to for stress relief."
+  ],
+  [
+   "y129",
+   "Caroline",
+   "joined",
+   "group",
+   "I'm meeting so many cool people who are as passionate as I am about rights and c"
+  ],
+  [
+   "y172",
+   "user",
+   "likes",
+   "breakfast",
+   "I'd like to ask more about the traditional Viennese breakfast at Caf\u00e9 Central."
+  ],
+  [
+   "y184",
+   "Jon",
+   "lost",
+   "job",
+   "Losing my job was tough but it gave me the push I needed to do what I love."
+  ]
+ ],
+ "missed": [
+  [
+   "y011",
+   "likes",
+   "being outdoors"
+  ],
+  [
+   "y011",
+   "hobby",
+   "hikes"
+  ],
+  [
+   "y011",
+   "hobby",
+   "board games"
+  ],
+  [
+   "y016",
+   "owns",
+   "store"
+  ],
+  [
+   "y017",
+   "likes",
+   "movie"
+  ],
+  [
+   "y020",
+   "completed",
+   "two books"
+  ],
+  [
+   "y033",
+   "attended",
+   "networking event"
+  ],
+  [
+   "y038",
+   "owns",
+   "business"
+  ],
+  [
+   "y043",
+   "owns",
+   "turtles"
+  ],
+  [
+   "y044",
+   "likes",
+   "fantasy stuff"
+  ],
+  [
+   "y045",
+   "plans",
+   "hiking"
+  ],
+  [
+   "y047",
+   "attended",
+   "Pride fest"
+  ],
+  [
+   "y049",
+   "hobby",
+   "dance"
+  ],
+  [
+   "y051",
+   "owns",
+   "turtles"
+  ],
+  [
+   "y051",
+   "visited",
+   "Tampa"
+  ],
+  [
+   "y052",
+   "likes",
+   "education and infrastructure"
+  ],
+  [
+   "y054",
+   "visited",
+   "Latin Quarter"
+  ],
+  [
+   "y062",
+   "plans",
+   "transgender conference"
+  ],
+  [
+   "y064",
+   "owns",
+   "product photography business"
+  ],
+  [
+   "y066",
+   "owns",
+   "dance studio"
+  ],
+  [
+   "y071",
+   "visited",
+   "London"
+  ],
+  [
+   "y073",
+   "likes",
+   "dance"
+  ],
+  [
+   "y073",
+   "likes",
+   "fashion"
+  ],
+  [
+   "y087",
+   "hobby",
+   "Writing"
+  ],
+  [
+   "y088",
+   "attended",
+   "LGBTQ+ pride parade"
+  ],
+  [
+   "y096",
+   "visited",
+   "Eiffel Tower"
+  ],
+  [
+   "y099",
+   "dislikes",
+   "Meursault"
+  ],
+  [
+   "y102",
+   "plans",
+   "lentil soup"
+  ],
+  [
+   "y106",
+   "hobby",
+   "Dance"
+  ],
+  [
+   "y107",
+   "likes",
+   "Family time"
+  ],
+  [
+   "y112",
+   "owns",
+   "Comparative"
+  ],
+  [
+   "y113",
+   "member_of",
+   "vegan diet group"
+  ],
+  [
+   "y114",
+   "hobby",
+   "Writing"
+  ],
+  [
+   "y118",
+   "plans",
+   "Ireland"
+  ],
+  [
+   "y123",
+   "hobby",
+   "writing"
+  ],
+  [
+   "y124",
+   "likes",
+   "education and infrastructure"
+  ],
+  [
+   "y125",
+   "member_of",
+   "writing club"
+  ],
+  [
+   "y135",
+   "job_title",
+   "CEO"
+  ],
+  [
+   "y135",
+   "works_at",
+   "Grailzy"
+  ],
+  [
+   "y140",
+   "joined",
+   "study abroad program"
+  ],
+  [
+   "y158",
+   "visited",
+   "Woodhaven"
+  ],
+  [
+   "y160",
+   "owns",
+   "turtles"
+  ],
+  [
+   "y161",
+   "plans",
+   "LGBTQ art show"
+  ],
+  [
+   "y165",
+   "owns",
+   "handbag"
+  ],
+  [
+   "y170",
+   "hobby",
+   "Basketball"
+  ],
+  [
+   "y178",
+   "completed",
+   "charity race"
+  ],
+  [
+   "y184",
+   "left_job",
+   "job"
+  ],
+  [
+   "y188",
+   "hobby",
+   "reading"
+  ],
+  [
+   "y189",
+   "plans",
+   "family game night"
+  ],
+  [
+   "y199",
+   "likes",
+   "Lord of the Rings"
+  ]
+ ]
+}
