@@ -71,6 +71,14 @@ ok("lives_in" not in k.get_state("Melanie", as_of="2019-01-01")["state"], "nothi
 ch = [(c["old"], c["new"]) for c in k.explain_state("Melanie")["changes"] if c["predicate"] == "lives_in"]
 ok(ch == [(None, "austin"), ("austin", "boston"), ("boston", "denver")], "changes listed in true order")
 
+# Several values on one date all end at the next date
+m.open_chat("1 September 2023"); x1 = m.add("Dana", "Dana is proud and tired today.", date="1 September 2023", ref="n1"); m.close_chat(write_note=False, sleep=False)
+m.open_chat("2 Oct 2023"); x2 = m.add("Dana", "Dana is calm today.", date="2 Oct 2023", ref="n2"); m.close_chat(write_note=False)
+for v, src in (("proud", x1), ("tired", x1), ("calm", x2)): k.learn(dict(subject="Dana", predicate="status", value=v, sources=[src]))
+ok([e["value"] for e in k.get_state("Dana")["state"]["status"]] == ["calm"], "several values on one date all end when the next date comes")
+ok(sorted(e["value"] for e in k.get_state("Dana", as_of="2023-09-15")["state"]["status"]) == ["proud", "tired"], "both remain in history for that date")
+ok(any("same date" in u for u in k.explain_state("Dana", as_of="2023-09-15")["uncertainties"]), "two values on one date are reported as uncertain")
+ok(K.parse_date("7 Feb 2022") == "2022-02-07" and K.parse_date("Mar 2022") == "2022-03-01" and K.parse_date("3:04 pm on 8 May, 2023") == "2023-05-08", "short month names and benchmark dates are read")
 # Ending and correcting
 r = k.learn(dict(subject="Melanie", event="gave_away", object="Oliver", time="1 August 2023", sources=[sid["e1"]]))
 ok(r.get("ended") and "owns" not in k.get_state("Melanie")["state"], "giving away ends ownership")
@@ -118,7 +126,7 @@ ok(k.get_state("Nobody")["known"] is False and k.explain_state("Nobody")["uncert
 tables = ["entities", "entity_aliases", "relationships", "knowledge_facts", "events", "fact_evidence", "state_transitions"]
 stored = json.dumps([m.db.execute(f"SELECT * FROM {t}").fetchall() for t in tables])
 ok(not any(text in stored for _, text in before), "no sentence is copied into the knowledge tables")
-ok(m.db.execute("SELECT sid, text FROM sentences ORDER BY sid").fetchall() == before, "the sentences are unchanged")
+ok(m.db.execute("SELECT sid, text FROM sentences ORDER BY sid").fetchall()[:len(before)] == before, "the sentences are unchanged")
 
 # Restart
 m.close()

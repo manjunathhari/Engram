@@ -34,6 +34,7 @@ EVENTS = {"adopted": ("start", "owns"), "bought": ("start", "owns"), "sold": ("e
           "stopped_hobby": ("end", "hobby"), "attended": (None, None), "visited": (None, None), "completed": (None, None)}
 VAGUE = {"i", "me", "my", "he", "she", "they", "him", "her", "them", "we", "us", "it", "someone", "somebody", "friend", "my friend", "the kids", "kids", "family"}
 MONTHS = {m: i + 1 for i, m in enumerate("january february march april may june july august september october november december".split())}
+MONTHS.update({m[:3]: n for m, n in list(MONTHS.items())})
 WORD = re.compile(r"[a-z0-9]+")
 CHECKED = "structure only"
 
@@ -52,11 +53,11 @@ def parse_date(text):
     t = str(text).lower().strip()
     m = re.search(r"\b(\d{4})-(\d{1,2})-(\d{1,2})\b", t)
     if m: return f"{m[1]}-{int(m[2]):02d}-{int(m[3]):02d}"
-    m = re.search(r"\b(\d{1,2})\s+(" + "|".join(MONTHS) + r"),?\s+(\d{4})\b", t)
+    m = re.search(r"\b(\d{1,2})\s+(" + "|".join(sorted(MONTHS, key=len, reverse=True)) + r"),?\s+(\d{4})\b", t)
     if m: return f"{m[3]}-{MONTHS[m[2]]:02d}-{int(m[1]):02d}"
-    m = re.search(r"\b(" + "|".join(MONTHS) + r")\s+(\d{1,2}),?\s+(\d{4})\b", t)
+    m = re.search(r"\b(" + "|".join(sorted(MONTHS, key=len, reverse=True)) + r")\s+(\d{1,2}),?\s+(\d{4})\b", t)
     if m: return f"{m[3]}-{MONTHS[m[1]]:02d}-{int(m[2]):02d}"
-    m = re.search(r"\b(" + "|".join(MONTHS) + r"),?\s+(\d{4})\b", t)
+    m = re.search(r"\b(" + "|".join(sorted(MONTHS, key=len, reverse=True)) + r"),?\s+(\d{4})\b", t)
     if m: return f"{m[2]}-{MONTHS[m[1]]:02d}-01"
     m = re.fullmatch(r"(\d{4})", t)
     return f"{m[1]}-01-01" if m else None
@@ -245,9 +246,12 @@ class KnowledgeState:
         self.db.execute("DELETE FROM state_transitions WHERE entity=? AND predicate=?", (subject, predicate))
         add = lambda old, new, when, ts: self.db.execute("INSERT INTO state_transitions(entity, predicate, old, new, time, time_status) VALUES(?,?,?,?,?,?)", (subject, predicate, old, new, when, ts))
         if single:
-            for a, b in zip(dated, dated[1:]):
-                if b[2] > a[2] and (a[3] is None or a[3] > b[2]):
-                    self.db.execute(f"UPDATE {table} SET valid_to=? WHERE item=?", (b[2], a[0]))
+            dates = sorted({r[2] for r in dated})
+            following = dict(zip(dates, dates[1:]))
+            for a in dated:  # every value from one date ends at the next date, even when several share a date
+                b = following.get(a[2])
+                if b and (a[3] is None or a[3] > b):
+                    self.db.execute(f"UPDATE {table} SET valid_to=? WHERE item=?", (b, a[0]))
             previous = None
             for r in dated:
                 label = self._label(predicate, r[1])
