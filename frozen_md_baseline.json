@@ -1,0 +1,25 @@
+{
+ "name": "Engram against a plain .md memory file on LongMemEval, rule fixed on 7 November 2026 before any .md answer exists",
+ "question": "Does Engram's tested search help a small model more than the simple memory everyday chat apps use: notes written after each conversation, read back as one file?",
+ "data": "xiaowu0162/longmemeval-cleaned, longmemeval_s_cleaned.json (MIT licence); the same 470 test questions and split as frozen_design_lme.json",
+ "engram": "the recorded answers of 'networks without facts' in results/lme_answers.jsonl (47.4% in the earlier marking); nothing in Engram is run, tuned or changed",
+ "md_memory": "after each conversation Gemma 3 4B (the same model and file) writes a note of at most 40 words with the NOTE prompt in kit_tools/md_test.py; the notes, dated, oldest first, NONE left out, form the file",
+ "answer": "the same Gemma, the same answer prompt as Engram (checked against vps_kit.py), the question with today's date, 60 reply tokens, temperature 0",
+ "systems": {
+  "md_full": "the whole file; if over 3,000 tokens, the oldest notes are dropped until it fits the model's 4,096-token window",
+  "md_equal": "the latest notes within the same number of tokens Engram gave the model for that question (816 on average)"
+ },
+ "note_hours_budget": 5,
+ "min_questions": 100,
+ "how_many_questions": "the first test questions in hash order whose sessions can be noted within 5 hours at the speed measured on 24 development sessions; at least 100; fixed in md_plan.json before any test note is written",
+ "score": "blind labels by Claude agents with LongMemEval's per-type rules (kit_tools/lme_rules.md); Engram's answers on the same questions are marked again in the same mixed batches with system names hidden, so both arms are judged the same way; agreement with the earlier marks is reported",
+ "primary_measure": "Engram minus md_full, same questions, 95% interval by paired bootstrap",
+ "reading": {
+  "interval above zero": "Engram helps the small model more than a .md memory file",
+  "interval below zero": "a .md memory file helps more than Engram",
+  "interval across zero": "no difference shown; Engram's extra machinery is not justified by this test"
+ },
+ "secondary": "Engram minus md_equal (same amount of text); by question type; not-answerable questions; text given",
+ "limits_stated_now": "these questions were used once before for Engram, though nothing was tuned on them; one model; a note-per-chat file is one common kind of .md memory, not every product's; Claude marks the answers, not LongMemEval's GPT-4o judge",
+ "allowed_to_fail": "the result is reported whichever way it goes, and neither arm is changed and rerun on these questions"
+}
