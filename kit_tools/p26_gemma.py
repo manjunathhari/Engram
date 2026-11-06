@@ -17,7 +17,8 @@ def llm(prompt, max_tokens=200):
             t0 = time.time()
             req = urllib.request.Request(a.url.rstrip("/") + "/chat/completions", data=body, headers={"Content-Type": "application/json"})
             r = json.load(urllib.request.urlopen(req, timeout=600))
-            return r["choices"][0]["message"]["content"].strip(), r.get("usage", {}), time.time() - t0
+            c = r["choices"][0]
+            return c["message"]["content"].strip(), c.get("finish_reason"), time.time() - t0
         except Exception as e:
             err = e; time.sleep(3 * (attempt + 1))
     raise RuntimeError(f"model call failed after 3 tries: {err}")
@@ -25,8 +26,8 @@ print("first reply:", repr(llm("What is 2 + 2? Reply with just the number.", max
 
 
 def one(r):
-    reply, _, secs = llm(writer_prompt(r["speaker"], r["text"], r["message"]), max_tokens=200)
-    return r["id"], dict(raw=reply, secs=round(secs, 2))
+    reply, finish, secs = llm(writer_prompt(r["speaker"], r["text"], r["message"]), max_tokens=400)
+    return r["id"], dict(raw=reply, finish=finish, secs=round(secs, 2))
 
 
 todo = [r for r in rows if r["id"] not in done]
@@ -38,4 +39,5 @@ with concurrent.futures.ThreadPoolExecutor(a.threads) as pool:
             json.dump(done, open(path, "w"), indent=0)
             print(f"{n}/{len(todo)} sentences, {(time.time() - t0) / n:.1f} s each", flush=True)
 json.dump(done, open(path, "w"), indent=0)
+print("replies cut off at the length limit:", sum(v.get("finish") == "length" for v in done.values()))
 print("Done", flush=True)

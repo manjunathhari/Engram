@@ -61,7 +61,7 @@ def resolve_time(phrase, said_on):
     if explicit and re.search(r"\d{4}", p): return explicit
     if day is None: return None
     if p in ("today", "tonight", "this morning", "this afternoon", "this evening"): return day.isoformat()
-    if p in ("yesterday", "last night"): return (day - datetime.timedelta(days=1)).isoformat()
+    if p in ("yesterday", "last night") or re.fullmatch(r"yesterday (morning|afternoon|evening)", p): return (day - datetime.timedelta(days=1)).isoformat()
     if p == "last month": return f"{day.year - (day.month == 1)}-{(day.month - 2) % 12 + 1:02d}"
     if p == "last year": return str(day.year - 1)
     if p == "next year": return str(day.year + 1)
@@ -219,7 +219,7 @@ def parse_writer_reply(reply, speaker, said_on="", sid=None, span=None, writer="
     out, unread = [], []
     for line in (reply or "").splitlines():
         line = line.strip().strip("*-• ")
-        if not line or line.upper().startswith("NONE"): continue
+        if not line or line.upper().startswith("NONE") or set(line) <= set("`") or line.lower().rstrip(":") == "facts": continue
         parts = [p.strip().strip('"') for p in line.split("|")]
         if len(parts) < 3 or parts[1].lower().replace(" ", "_") not in PREDICATES or not parts[2]:
             unread.append(line[:200]); continue

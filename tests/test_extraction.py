@@ -49,3 +49,15 @@ def test_every_field_is_checked_and_a_wrong_one_is_refused(mem, change, why):
 @pytest.mark.parametrize("text", ["I never adopted a cat.", "I hate it.", "Do you like dogs?", "She adopted a dog."])
 def test_the_rule_writer_gives_no_fact_rather_than_a_guess(text):
     assert RuleWriter().extract("Asha", text, DAY) == []
+
+
+def test_yesterday_with_a_part_of_day_is_the_day_before():
+    from engram_knowledge.extract import resolve_time
+    assert resolve_time("yesterday morning", "3:56 pm on 6 June, 2023") == "2023-06-05"
+    assert resolve_time("yesterday", "") is None
+
+
+def test_model_reply_code_fences_and_header_are_not_facts():
+    from engram_knowledge.extract import parse_writer_reply
+    facts, unread = parse_writer_reply("Facts:\n```\nAsha | owns | dog | | \n```", "Asha")
+    assert [f.object for f in facts] == ["dog"] and unread == []
