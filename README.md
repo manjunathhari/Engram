@@ -12,7 +12,7 @@ from engram_memory import open_memory
 memory = open_memory("my_memory.db")
 ```
 
-This uses the design that passed the LoCoMo final test and the LongMemEval test: four small channel networks trained only on LoCoMo conversations 0 to 4, stored as plain numbers with a checksum in `engram_networks.npz` (no pickle, so loading cannot run code). It gives the model exactly the same text as the tested runs. `design="light"` is the older search with no extra libraries; it did worse. `ChatMemory` on its own is unchanged.
+This uses the design that passed the LoCoMo final test and the LongMemEval test: four small channel networks trained only on LoCoMo conversations 0 to 4, stored as plain numbers with a checksum in `engram_networks.npz`, read by `engram_networks.py` (no pickle, so loading cannot run code). It gives the model exactly the same text as the tested runs. `design="light"` is the older search with no extra libraries; it did worse. `ChatMemory` on its own is unchanged.
 
 ## Layout
 

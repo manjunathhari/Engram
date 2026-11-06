@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 
 import engram_chat as E
-import engram_parallel as P
+import engram_networks as P
 from conftest import ROOT, fill, load
 from engram_memory import open_memory, tested_config
 

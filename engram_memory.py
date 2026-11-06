@@ -30,8 +30,9 @@ def open_memory(path, design="tested", helper=None, helper_name="", tools=None, 
     if design == "light":
         return E.ChatMemory(path, cfg=tested_config(), **kw)
     try:
+        import engram_networks as N
         import engram_parallel as P
-        search = P.ChannelSearch("network", model=P.load_networks(os.path.join(HERE, P.NETWORKS_FILE)), tools=tools)
+        search = P.ChannelSearch("network", model=N.load_networks(os.path.join(HERE, N.NETWORKS_FILE)), tools=tools)
     except ImportError as e:
         raise ImportError(f"the tested design needs numpy, wordllama and spacy with en_core_web_sm ({e}). Install them, or open_memory(path, design='light').") from None
     return E.ChatMemory(path, cfg=tested_config(), search=search, helper=helper, helper_name=helper_name, use_facts=helper is not None, **kw)
