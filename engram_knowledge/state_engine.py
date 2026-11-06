@@ -5,7 +5,7 @@ The state is derived and never stored, so the facts and their evidence stay the 
 import json
 from dataclasses import dataclass, field, replace
 
-from engram_records import RecordError, normalize_name
+from .models import RecordError, normalize_name
 
 from .conflict import Conflict
 from .temporal import covers, overlaps, said_on, span, step_before

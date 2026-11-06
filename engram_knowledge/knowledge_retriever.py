@@ -1,7 +1,8 @@
 """Answers structured questions from the knowledge store, alongside ordinary memory. Engrams.retrieve and ChatMemory.find are used as they are."""
 import re
 
-from engram_records import KnowledgeBase, normalize_name
+from .database import KnowledgeBase
+from .models import normalize_name
 
 from .evidence_assembler import EvidenceAssembler
 from .query_router import QueryRouter

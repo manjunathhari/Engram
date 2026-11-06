@@ -3,7 +3,8 @@ import json
 import re
 from dataclasses import dataclass
 
-from engram_records import Entity, FactEvidence, FactWithEvidence, KnowledgeBase, KnowledgeFact, RecordError, normalize_name, tidy
+from .database import KnowledgeBase
+from .models import Entity, FactEvidence, FactWithEvidence, KnowledgeFact, RecordError, normalize_name, tidy
 
 from .entity_resolver import EntityResolver, Resolution
 from .normalizer import PREDICATE_CUES, PREDICATE_TYPES, content_stems, predicate, stem, stems, time_value, time_values_in, tokens

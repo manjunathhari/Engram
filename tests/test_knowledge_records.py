@@ -174,21 +174,25 @@ def test_alias_reaches_the_same_entity_and_similar_names_stay_apart(path):
     kb.add_alias(EntityAlias.create(asha.entity_id, "Ash", "sentence", source_id=ids["B1:1"]))
     assert kb.resolve("ash") == asha.entity_id and kb.resolve("Asha R") is None
     fid = kb.add(beagle(asha, pixel, [ids["B1:1"]])).fact.fact_id
-    assert [x.fact.fact_id for x in kb.about("ASH")] == [fid]
+    assert [x.fact.fact_id for x in kb.about("ASH")] == [fid] and [x.fact.fact_id for x in kb.about_entity(asha.entity_id)] == [fid]
     m.close()
 
 
-def test_alias_cannot_take_a_name_from_another_entity(path):
+def test_two_entities_may_share_a_name_or_an_alias_and_are_never_merged(path):
     m, kb, ids, asha, pixel = setup(path)
     before = counts(m)
-    with pytest.raises(RecordError, match="another entity"): kb.add_alias(EntityAlias.create(pixel.entity_id, "Asha", "manual"))
-    with pytest.raises(RecordError, match="already belongs"): kb.add_entity(Entity.create(" asha ", "person"))
     with pytest.raises(RecordError, match="does not exist"): kb.add_alias(EntityAlias.create(asha.entity_id, "Ash", "sentence", source_id=99999))
     with pytest.raises(RecordError, match="no such entity"): kb.add_alias(EntityAlias.create("ent_none", "Ash", "manual"))
     assert counts(m) == before
     kb.add_alias(EntityAlias.create(asha.entity_id, "Ash", "manual"))
     kb.add_alias(EntityAlias.create(asha.entity_id, "ASH", "manual"))
+    kb.add_alias(EntityAlias.create(asha.entity_id, "asha", "manual"))  # its own name
     assert counts(m)[1] == 1
+    kb.add_alias(EntityAlias.create(pixel.entity_id, "Ash", "manual"))  # another may be called Ash too
+    assert kb.find("ash") == [asha.entity_id, pixel.entity_id] and kb.resolve("Ash") is None and kb.about("Ash") == []
+    other = kb.add_entity(Entity.create(" asha ", "person"))  # a second Asha
+    assert kb.find("Asha") == [asha.entity_id, other.entity_id] and kb.resolve("Asha") is None
+    assert kb.entity(asha.entity_id).canonical_name == "Asha" and kb.entity(other.entity_id).canonical_name == "asha"
     m.close()
 
 
@@ -312,7 +316,7 @@ INSERT INTO sentences VALUES(1,1,0,'','A','1 May 2023','My dog is called Rex.','
     m.close()
 
 
-@pytest.mark.parametrize("other", ["2", "0", "banana"])
+@pytest.mark.parametrize("other", ["3", "0", "banana"])
 def test_a_database_of_another_version_is_refused_unchanged(path, other):
     m, kb, ids, asha, pixel = setup(path)
     fid = kb.add(beagle(asha, pixel, [ids["B1:1"]])).fact.fact_id

@@ -2,7 +2,7 @@
 import re
 from dataclasses import dataclass
 
-from engram_records import normalize_name, tidy
+from .models import normalize_name, tidy
 
 FIRST_PERSON = {"i", "me", "my", "myself", "user", "the user", "the speaker", "speaker"}
 UNCLEAR = {"he", "she", "they", "them", "him", "her", "his", "their", "it", "we", "us", "our", "you", "your", "someone", "somebody", "friend", "my friend", "the person", "this person", "narrator", "the narrator"}
@@ -39,6 +39,8 @@ class EntityResolver:
             if len(speakers) != 1: return Resolution("ambiguous", why="first person across different speakers")
             return self.resolve(speakers.pop(), sentences)
         if key in UNCLEAR: return Resolution("unresolved", why=f"'{name}' does not say who")
+        several = self.kb.find(name)
+        if len(several) > 1: return Resolution("ambiguous", name, why=f"'{name}' names {len(several)} known entities")
         known = self.kb.resolve(name)
         if known: return Resolution("known", self.kb.entity(known).canonical_name, known)
         if not _has_name(name, sentences): return Resolution("absent", why=f"'{name}' is not in its source")

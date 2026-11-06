@@ -207,3 +207,10 @@ def test_dates(text, want):
 
 def test_words_match_their_forms():
     assert N.stem("adopted") == N.stem("adopt") and N.stem("studies") == N.stem("study") and N.stem("houses") == N.stem("house") and N.tokens("Two dogs") == ["2", "dogs"]
+
+
+def test_a_name_shared_by_two_known_entities_goes_to_review(m):
+    kb = KnowledgeBase(m.db)
+    kb.add_entity(Entity.create("Ben", "person")); kb.add_entity(Entity.create("Ben", "person"))
+    d = verdict(m, "Ben", "adopted", "llama", "ben")
+    assert d.verdict == UNCERTAIN and d.subject.status == "ambiguous" and any("names 2 known entities" in r for r in d.reasons)

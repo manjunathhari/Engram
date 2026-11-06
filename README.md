@@ -64,6 +64,14 @@ The baseline is in `tests/fixtures/retrieval_baseline.json`. If you deliberately
 
 ## Knowledge records
 
+The knowledge store lives in `engram_knowledge/`: `models.py` (the records), `schema.py` (the tables), `database.py` (the store on Engram's own connection, and the integrity check), `entities.py`, `facts.py`, `evidence.py` and `migrations.py`. `engram_records.py` remains so older imports still work.
+
+- **Checks in the database itself:** the tables refuse bad values and broken links even from code that skips the checks in `models.py`.
+- **Values keep their type:** numbers, true or false and structured values come back as they went in.
+- **Shared names:** two entities may have the same name or alias. A lookup then returns both, and nothing picks one.
+- **Qualifying evidence:** a sentence can limit a fact without supporting or contradicting it. It never counts as support.
+- **Version 2:** an older database is brought up to date in one step, or left unchanged with the reason if its data breaks a new rule.
+
 `engram_records.py` is a standard, typed record for knowledge, stored beside the sentences and always traceable to them. It is not used by search or answers, and nothing writes records automatically yet.
 
 - **Four tables:** `entities`, `entity_aliases`, `knowledge_records`, `record_evidence`.
