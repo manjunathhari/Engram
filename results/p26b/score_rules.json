@@ -1,0 +1,370 @@
+{
+ "writer": "fixed rules",
+ "unread_lines": 0,
+ "sentences": 200,
+ "labelled_facts": 56,
+ "written": 11,
+ "right_head_word": 2,
+ "right_exact_object": 2,
+ "found_of_labelled": 2,
+ "dated_and_right": [
+  0,
+  1
+ ],
+ "details_right": [
+  0,
+  1
+ ],
+ "replies_cut_off": 0,
+ "validator": {
+  "accepted": {
+   "count": 10,
+   "right": 1
+  },
+  "uncertain": {
+   "count": 1,
+   "right": 1
+  },
+  "rejected": {
+   "count": 0,
+   "right": 0
+  }
+ },
+ "wrong": [
+  [
+   "y011",
+   "John",
+   "hobby",
+   "being outdoors - going",
+   "We love being outdoors - going for hikes, hanging out at the park, having picnic"
+  ],
+  [
+   "y053",
+   "Joanna",
+   "hobby",
+   "getting immersed",
+   "I love getting immersed in the feelings and plots."
+  ],
+  [
+   "y062",
+   "Caroline",
+   "plans",
+   "a transgender conference this month",
+   "I'm going to a transgender conference this month."
+  ],
+  [
+   "y080",
+   "user",
+   "likes",
+   "sound of the chickpea",
+   "I like the sound of the chickpea and spinach tagine."
+  ],
+  [
+   "y083",
+   "user",
+   "likes",
+   "sound of the lentil soup",
+   "I like the sound of the lentil soup with whole grain crackers and a mixed green "
+  ],
+  [
+   "y088",
+   "Caroline",
+   "visited",
+   "LGBTQ+ pride parade",
+   "Last week I went to an LGBTQ+ pride parade."
+  ],
+  [
+   "y089",
+   "Joanna",
+   "likes",
+   "color",
+   "I love the color and texture."
+  ],
+  [
+   "y095",
+   "John",
+   "likes",
+   "energy",
+   "I love the energy, diversity, and awesome food of this city."
+  ],
+  [
+   "y141",
+   "Maria",
+   "likes",
+   "freedom",
+   "I love the freedom and connection it brings."
+  ]
+ ],
+ "missed": [
+  [
+   "y011",
+   "likes",
+   "being outdoors"
+  ],
+  [
+   "y011",
+   "hobby",
+   "hikes"
+  ],
+  [
+   "y011",
+   "hobby",
+   "board games"
+  ],
+  [
+   "y016",
+   "owns",
+   "store"
+  ],
+  [
+   "y017",
+   "likes",
+   "movie"
+  ],
+  [
+   "y020",
+   "completed",
+   "two books"
+  ],
+  [
+   "y033",
+   "attended",
+   "networking event"
+  ],
+  [
+   "y038",
+   "owns",
+   "business"
+  ],
+  [
+   "y039",
+   "attended",
+   "adoption advice/assistance group"
+  ],
+  [
+   "y043",
+   "owns",
+   "turtles"
+  ],
+  [
+   "y044",
+   "likes",
+   "fantasy stuff"
+  ],
+  [
+   "y045",
+   "plans",
+   "hiking"
+  ],
+  [
+   "y047",
+   "attended",
+   "Pride fest"
+  ],
+  [
+   "y049",
+   "hobby",
+   "dance"
+  ],
+  [
+   "y050",
+   "likes",
+   "Dance"
+  ],
+  [
+   "y051",
+   "owns",
+   "turtles"
+  ],
+  [
+   "y051",
+   "visited",
+   "Tampa"
+  ],
+  [
+   "y052",
+   "likes",
+   "education and infrastructure"
+  ],
+  [
+   "y054",
+   "visited",
+   "Latin Quarter"
+  ],
+  [
+   "y062",
+   "plans",
+   "transgender conference"
+  ],
+  [
+   "y064",
+   "owns",
+   "product photography business"
+  ],
+  [
+   "y066",
+   "owns",
+   "dance studio"
+  ],
+  [
+   "y071",
+   "visited",
+   "London"
+  ],
+  [
+   "y073",
+   "likes",
+   "dance"
+  ],
+  [
+   "y073",
+   "likes",
+   "fashion"
+  ],
+  [
+   "y087",
+   "hobby",
+   "Writing"
+  ],
+  [
+   "y088",
+   "attended",
+   "LGBTQ+ pride parade"
+  ],
+  [
+   "y096",
+   "visited",
+   "Paris"
+  ],
+  [
+   "y096",
+   "visited",
+   "Eiffel Tower"
+  ],
+  [
+   "y099",
+   "dislikes",
+   "Meursault"
+  ],
+  [
+   "y102",
+   "plans",
+   "lentil soup"
+  ],
+  [
+   "y106",
+   "hobby",
+   "Dance"
+  ],
+  [
+   "y107",
+   "likes",
+   "Family time"
+  ],
+  [
+   "y112",
+   "owns",
+   "Comparative"
+  ],
+  [
+   "y113",
+   "member_of",
+   "vegan diet group"
+  ],
+  [
+   "y114",
+   "hobby",
+   "Writing"
+  ],
+  [
+   "y118",
+   "plans",
+   "Ireland"
+  ],
+  [
+   "y122",
+   "visited",
+   "home"
+  ],
+  [
+   "y123",
+   "hobby",
+   "writing"
+  ],
+  [
+   "y124",
+   "likes",
+   "education and infrastructure"
+  ],
+  [
+   "y125",
+   "member_of",
+   "writing club"
+  ],
+  [
+   "y135",
+   "job_title",
+   "CEO"
+  ],
+  [
+   "y135",
+   "works_at",
+   "Grailzy"
+  ],
+  [
+   "y140",
+   "joined",
+   "study abroad program"
+  ],
+  [
+   "y160",
+   "owns",
+   "turtles"
+  ],
+  [
+   "y161",
+   "plans",
+   "LGBTQ art show"
+  ],
+  [
+   "y165",
+   "owns",
+   "handbag"
+  ],
+  [
+   "y165",
+   "likes",
+   "handbag"
+  ],
+  [
+   "y170",
+   "hobby",
+   "Basketball"
+  ],
+  [
+   "y184",
+   "left_job",
+   "job"
+  ],
+  [
+   "y185",
+   "visited",
+   "travel agency"
+  ],
+  [
+   "y188",
+   "hobby",
+   "reading"
+  ],
+  [
+   "y189",
+   "plans",
+   "family game night"
+  ],
+  [
+   "y199",
+   "likes",
+   "Lord of the Rings"
+  ]
+ ]
+}

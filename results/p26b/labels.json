@@ -1,0 +1,1307 @@
+{
+ "y001": {
+  "facts": [],
+  "note": "'it' (art form) not named in sentence"
+ },
+ "y002": {
+  "facts": [],
+  "note": ""
+ },
+ "y003": {
+  "facts": [],
+  "note": ""
+ },
+ "y004": {
+  "facts": [],
+  "note": ""
+ },
+ "y005": {
+  "facts": [],
+  "note": ""
+ },
+ "y006": {
+  "facts": [],
+  "note": ""
+ },
+ "y007": {
+  "facts": [],
+  "note": ""
+ },
+ "y008": {
+  "facts": [],
+  "note": ""
+ },
+ "y009": {
+  "facts": [],
+  "note": ""
+ },
+ "y010": {
+  "facts": [],
+  "note": "childhood habit, skipped"
+ },
+ "y011": {
+  "facts": [
+   {
+    "subject": "John",
+    "predicate": "likes",
+    "object": "being outdoors",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "John",
+    "predicate": "hobby",
+    "object": "hikes",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "John",
+    "predicate": "hobby",
+    "object": "board games",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y012": {
+  "facts": [],
+  "note": ""
+ },
+ "y013": {
+  "facts": [],
+  "note": ""
+ },
+ "y014": {
+  "facts": [],
+  "note": ""
+ },
+ "y015": {
+  "facts": [],
+  "note": ""
+ },
+ "y016": {
+  "facts": [
+   {
+    "subject": "Gina",
+    "predicate": "owns",
+    "object": "store",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y017": {
+  "facts": [
+   {
+    "subject": "John",
+    "predicate": "likes",
+    "object": "movie",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y018": {
+  "facts": [],
+  "note": ""
+ },
+ "y019": {
+  "facts": [],
+  "note": ""
+ },
+ "y020": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "completed",
+    "object": "two books",
+    "qualifiers": {},
+    "time_text": "recently",
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y021": {
+  "facts": [],
+  "note": ""
+ },
+ "y022": {
+  "facts": [],
+  "note": ""
+ },
+ "y023": {
+  "facts": [],
+  "note": ""
+ },
+ "y024": {
+  "facts": [],
+  "note": ""
+ },
+ "y025": {
+  "facts": [],
+  "note": ""
+ },
+ "y026": {
+  "facts": [],
+  "note": ""
+ },
+ "y027": {
+  "facts": [],
+  "note": ""
+ },
+ "y028": {
+  "facts": [],
+  "note": ""
+ },
+ "y029": {
+  "facts": [],
+  "note": "object (trilogy) not in sentence"
+ },
+ "y030": {
+  "facts": [],
+  "note": ""
+ },
+ "y031": {
+  "facts": [],
+  "note": ""
+ },
+ "y032": {
+  "facts": [],
+  "note": ""
+ },
+ "y033": {
+  "facts": [
+   {
+    "subject": "Jon",
+    "predicate": "attended",
+    "object": "networking event",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y034": {
+  "facts": [],
+  "note": ""
+ },
+ "y035": {
+  "facts": [],
+  "note": ""
+ },
+ "y036": {
+  "facts": [],
+  "note": ""
+ },
+ "y037": {
+  "facts": [],
+  "note": ""
+ },
+ "y038": {
+  "facts": [
+   {
+    "subject": "Jon",
+    "predicate": "owns",
+    "object": "business",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y039": {
+  "facts": [
+   {
+    "subject": "Caroline",
+    "predicate": "attended",
+    "object": "adoption advice/assistance group",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y040": {
+  "facts": [],
+  "note": ""
+ },
+ "y041": {
+  "facts": [],
+  "note": ""
+ },
+ "y042": {
+  "facts": [],
+  "note": ""
+ },
+ "y043": {
+  "facts": [
+   {
+    "subject": "Nate",
+    "predicate": "owns",
+    "object": "turtles",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y044": {
+  "facts": [
+   {
+    "subject": "Tim",
+    "predicate": "likes",
+    "object": "fantasy stuff",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y045": {
+  "facts": [
+   {
+    "subject": "Joanna",
+    "predicate": "plans",
+    "object": "hiking",
+    "qualifiers": {
+     "with": "some buddies"
+    },
+    "time_text": "this weekend",
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y046": {
+  "facts": [],
+  "note": ""
+ },
+ "y047": {
+  "facts": [
+   {
+    "subject": "Caroline",
+    "predicate": "attended",
+    "object": "Pride fest",
+    "qualifiers": {},
+    "time_text": "last year",
+    "time_value": "2022"
+   }
+  ],
+  "note": ""
+ },
+ "y048": {
+  "facts": [],
+  "note": ""
+ },
+ "y049": {
+  "facts": [
+   {
+    "subject": "Gina",
+    "predicate": "hobby",
+    "object": "dance",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y050": {
+  "facts": [
+   {
+    "subject": "Jon",
+    "predicate": "likes",
+    "object": "Dance",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y051": {
+  "facts": [
+   {
+    "subject": "Nate",
+    "predicate": "owns",
+    "object": "turtles",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "Nate",
+    "predicate": "visited",
+    "object": "Tampa",
+    "qualifiers": {
+     "place": "beach"
+    },
+    "time_text": "yesterday",
+    "time_value": "2022-11-10"
+   }
+  ],
+  "note": ""
+ },
+ "y052": {
+  "facts": [
+   {
+    "subject": "John",
+    "predicate": "likes",
+    "object": "education and infrastructure",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y053": {
+  "facts": [],
+  "note": "object (dramas) not in sentence"
+ },
+ "y054": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "visited",
+    "object": "Latin Quarter",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y055": {
+  "facts": [],
+  "note": ""
+ },
+ "y056": {
+  "facts": [],
+  "note": ""
+ },
+ "y057": {
+  "facts": [],
+  "note": ""
+ },
+ "y058": {
+  "facts": [],
+  "note": ""
+ },
+ "y059": {
+  "facts": [],
+  "note": ""
+ },
+ "y060": {
+  "facts": [],
+  "note": "found a gym, not plainly joined"
+ },
+ "y061": {
+  "facts": [],
+  "note": ""
+ },
+ "y062": {
+  "facts": [
+   {
+    "subject": "Caroline",
+    "predicate": "plans",
+    "object": "transgender conference",
+    "qualifiers": {},
+    "time_text": "this month",
+    "time_value": "2023-07"
+   }
+  ],
+  "note": ""
+ },
+ "y063": {
+  "facts": [],
+  "note": ""
+ },
+ "y064": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "owns",
+    "object": "product photography business",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": "'creating' business treated as owns"
+ },
+ "y065": {
+  "facts": [],
+  "note": ""
+ },
+ "y066": {
+  "facts": [
+   {
+    "subject": "Jon",
+    "predicate": "owns",
+    "object": "dance studio",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y067": {
+  "facts": [],
+  "note": ""
+ },
+ "y068": {
+  "facts": [],
+  "note": ""
+ },
+ "y069": {
+  "facts": [],
+  "note": ""
+ },
+ "y070": {
+  "facts": [],
+  "note": ""
+ },
+ "y071": {
+  "facts": [
+   {
+    "subject": "Tim",
+    "predicate": "visited",
+    "object": "London",
+    "qualifiers": {},
+    "time_text": "a few years ago",
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y072": {
+  "facts": [],
+  "note": ""
+ },
+ "y073": {
+  "facts": [
+   {
+    "subject": "Gina",
+    "predicate": "likes",
+    "object": "dance",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "Gina",
+    "predicate": "likes",
+    "object": "fashion",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y074": {
+  "facts": [],
+  "note": ""
+ },
+ "y075": {
+  "facts": [],
+  "note": "negated visit"
+ },
+ "y076": {
+  "facts": [],
+  "note": ""
+ },
+ "y077": {
+  "facts": [],
+  "note": ""
+ },
+ "y078": {
+  "facts": [],
+  "note": ""
+ },
+ "y079": {
+  "facts": [],
+  "note": ""
+ },
+ "y080": {
+  "facts": [],
+  "note": "momentary recipe preference"
+ },
+ "y081": {
+  "facts": [],
+  "note": ""
+ },
+ "y082": {
+  "facts": [],
+  "note": ""
+ },
+ "y083": {
+  "facts": [],
+  "note": "momentary recipe preference"
+ },
+ "y084": {
+  "facts": [],
+  "note": ""
+ },
+ "y085": {
+  "facts": [],
+  "note": ""
+ },
+ "y086": {
+  "facts": [],
+  "note": ""
+ },
+ "y087": {
+  "facts": [
+   {
+    "subject": "Joanna",
+    "predicate": "hobby",
+    "object": "Writing",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y088": {
+  "facts": [
+   {
+    "subject": "Caroline",
+    "predicate": "attended",
+    "object": "LGBTQ+ pride parade",
+    "qualifiers": {},
+    "time_text": "Last week",
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y089": {
+  "facts": [],
+  "note": ""
+ },
+ "y090": {
+  "facts": [],
+  "note": ""
+ },
+ "y091": {
+  "facts": [],
+  "note": ""
+ },
+ "y092": {
+  "facts": [],
+  "note": ""
+ },
+ "y093": {
+  "facts": [],
+  "note": ""
+ },
+ "y094": {
+  "facts": [],
+  "note": ""
+ },
+ "y095": {
+  "facts": [],
+  "note": ""
+ },
+ "y096": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "visited",
+    "object": "Paris",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "user",
+    "predicate": "visited",
+    "object": "Eiffel Tower",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y097": {
+  "facts": [],
+  "note": ""
+ },
+ "y098": {
+  "facts": [],
+  "note": ""
+ },
+ "y099": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "dislikes",
+    "object": "Meursault",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y100": {
+  "facts": [],
+  "note": ""
+ },
+ "y101": {
+  "facts": [],
+  "note": ""
+ },
+ "y102": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "plans",
+    "object": "lentil soup",
+    "qualifiers": {},
+    "time_text": "this weekend",
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y103": {
+  "facts": [],
+  "note": ""
+ },
+ "y104": {
+  "facts": [],
+  "note": ""
+ },
+ "y105": {
+  "facts": [],
+  "note": ""
+ },
+ "y106": {
+  "facts": [
+   {
+    "subject": "Gina",
+    "predicate": "hobby",
+    "object": "Dance",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y107": {
+  "facts": [
+   {
+    "subject": "Tim",
+    "predicate": "likes",
+    "object": "Family time",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y108": {
+  "facts": [],
+  "note": ""
+ },
+ "y109": {
+  "facts": [],
+  "note": ""
+ },
+ "y110": {
+  "facts": [],
+  "note": ""
+ },
+ "y111": {
+  "facts": [],
+  "note": ""
+ },
+ "y112": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "owns",
+    "object": "Comparative",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": "'we built' company treated as owns"
+ },
+ "y113": {
+  "facts": [
+   {
+    "subject": "Nate",
+    "predicate": "member_of",
+    "object": "vegan diet group",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y114": {
+  "facts": [
+   {
+    "subject": "Joanna",
+    "predicate": "hobby",
+    "object": "Writing",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y115": {
+  "facts": [],
+  "note": ""
+ },
+ "y116": {
+  "facts": [],
+  "note": ""
+ },
+ "y117": {
+  "facts": [],
+  "note": ""
+ },
+ "y118": {
+  "facts": [
+   {
+    "subject": "Tim",
+    "predicate": "plans",
+    "object": "Ireland",
+    "qualifiers": {},
+    "time_text": "Next month",
+    "time_value": "2024-02"
+   }
+  ],
+  "note": ""
+ },
+ "y119": {
+  "facts": [],
+  "note": ""
+ },
+ "y120": {
+  "facts": [],
+  "note": ""
+ },
+ "y121": {
+  "facts": [],
+  "note": ""
+ },
+ "y122": {
+  "facts": [
+   {
+    "subject": "John",
+    "predicate": "visited",
+    "object": "home",
+    "qualifiers": {},
+    "time_text": "Last week",
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y123": {
+  "facts": [
+   {
+    "subject": "Tim",
+    "predicate": "hobby",
+    "object": "writing",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y124": {
+  "facts": [
+   {
+    "subject": "John",
+    "predicate": "likes",
+    "object": "education and infrastructure",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y125": {
+  "facts": [
+   {
+    "subject": "Joanna",
+    "predicate": "member_of",
+    "object": "writing club",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y126": {
+  "facts": [],
+  "note": ""
+ },
+ "y127": {
+  "facts": [],
+  "note": ""
+ },
+ "y128": {
+  "facts": [],
+  "note": "travel wish, not a plan"
+ },
+ "y129": {
+  "facts": [],
+  "note": ""
+ },
+ "y130": {
+  "facts": [],
+  "note": ""
+ },
+ "y131": {
+  "facts": [],
+  "note": ""
+ },
+ "y132": {
+  "facts": [],
+  "note": ""
+ },
+ "y133": {
+  "facts": [],
+  "note": ""
+ },
+ "y134": {
+  "facts": [],
+  "note": ""
+ },
+ "y135": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "job_title",
+    "object": "CEO",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "user",
+    "predicate": "works_at",
+    "object": "Grailzy",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y136": {
+  "facts": [],
+  "note": ""
+ },
+ "y137": {
+  "facts": [],
+  "note": ""
+ },
+ "y138": {
+  "facts": [],
+  "note": ""
+ },
+ "y139": {
+  "facts": [],
+  "note": ""
+ },
+ "y140": {
+  "facts": [
+   {
+    "subject": "Tim",
+    "predicate": "joined",
+    "object": "study abroad program",
+    "qualifiers": {},
+    "time_text": "On Friday",
+    "time_value": null
+   }
+  ],
+  "note": "said on a Friday; 'On Friday' ambiguous (likely 2024-01-05)"
+ },
+ "y141": {
+  "facts": [],
+  "note": "'it' (aerial yoga) not in sentence"
+ },
+ "y142": {
+  "facts": [],
+  "note": ""
+ },
+ "y143": {
+  "facts": [],
+  "note": ""
+ },
+ "y144": {
+  "facts": [],
+  "note": ""
+ },
+ "y145": {
+  "facts": [],
+  "note": ""
+ },
+ "y146": {
+  "facts": [],
+  "note": "Max likely a pet, not stated in sentence"
+ },
+ "y147": {
+  "facts": [],
+  "note": ""
+ },
+ "y148": {
+  "facts": [],
+  "note": ""
+ },
+ "y149": {
+  "facts": [],
+  "note": ""
+ },
+ "y150": {
+  "facts": [],
+  "note": ""
+ },
+ "y151": {
+  "facts": [],
+  "note": ""
+ },
+ "y152": {
+  "facts": [],
+  "note": ""
+ },
+ "y153": {
+  "facts": [],
+  "note": ""
+ },
+ "y154": {
+  "facts": [],
+  "note": ""
+ },
+ "y155": {
+  "facts": [],
+  "note": ""
+ },
+ "y156": {
+  "facts": [],
+  "note": ""
+ },
+ "y157": {
+  "facts": [],
+  "note": ""
+ },
+ "y158": {
+  "facts": [
+   {
+    "subject": "Joanna",
+    "predicate": "visited",
+    "object": "Woodhaven",
+    "qualifiers": {
+     "place": "a small town in the Midwest"
+    },
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y159": {
+  "facts": [],
+  "note": ""
+ },
+ "y160": {
+  "facts": [
+   {
+    "subject": "Nate",
+    "predicate": "owns",
+    "object": "turtles",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y161": {
+  "facts": [
+   {
+    "subject": "Caroline",
+    "predicate": "plans",
+    "object": "LGBTQ art show",
+    "qualifiers": {},
+    "time_text": "Next month",
+    "time_value": "2023-08"
+   }
+  ],
+  "note": ""
+ },
+ "y162": {
+  "facts": [],
+  "note": ""
+ },
+ "y163": {
+  "facts": [],
+  "note": ""
+ },
+ "y164": {
+  "facts": [],
+  "note": ""
+ },
+ "y165": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "owns",
+    "object": "handbag",
+    "qualifiers": {
+     "from": "TK Maxx"
+    },
+    "time_text": null,
+    "time_value": null
+   },
+   {
+    "subject": "user",
+    "predicate": "likes",
+    "object": "handbag",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y166": {
+  "facts": [],
+  "note": ""
+ },
+ "y167": {
+  "facts": [],
+  "note": ""
+ },
+ "y168": {
+  "facts": [],
+  "note": ""
+ },
+ "y169": {
+  "facts": [],
+  "note": ""
+ },
+ "y170": {
+  "facts": [
+   {
+    "subject": "John",
+    "predicate": "hobby",
+    "object": "Basketball",
+    "qualifiers": {},
+    "time_text": "ever since I was a kid",
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y171": {
+  "facts": [],
+  "note": ""
+ },
+ "y172": {
+  "facts": [],
+  "note": ""
+ },
+ "y173": {
+  "facts": [],
+  "note": ""
+ },
+ "y174": {
+  "facts": [],
+  "note": ""
+ },
+ "y175": {
+  "facts": [],
+  "note": ""
+ },
+ "y176": {
+  "facts": [],
+  "note": ""
+ },
+ "y177": {
+  "facts": [],
+  "note": ""
+ },
+ "y178": {
+  "facts": [
+   {
+    "subject": "Melanie",
+    "predicate": "completed",
+    "object": "charity race",
+    "qualifiers": {},
+    "time_text": "last Saturday",
+    "time_value": "2023-05-20"
+   }
+  ],
+  "note": ""
+ },
+ "y179": {
+  "facts": [],
+  "note": ""
+ },
+ "y180": {
+  "facts": [],
+  "note": ""
+ },
+ "y181": {
+  "facts": [],
+  "note": ""
+ },
+ "y182": {
+  "facts": [],
+  "note": "camping a few times, not plainly a hobby"
+ },
+ "y183": {
+  "facts": [],
+  "note": ""
+ },
+ "y184": {
+  "facts": [
+   {
+    "subject": "Jon",
+    "predicate": "left_job",
+    "object": "job",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": "'Losing my job' -> left_job rather than lost"
+ },
+ "y185": {
+  "facts": [
+   {
+    "subject": "Tim",
+    "predicate": "visited",
+    "object": "travel agency",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y186": {
+  "facts": [],
+  "note": ""
+ },
+ "y187": {
+  "facts": [],
+  "note": ""
+ },
+ "y188": {
+  "facts": [
+   {
+    "subject": "Tim",
+    "predicate": "hobby",
+    "object": "reading",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y189": {
+  "facts": [
+   {
+    "subject": "user",
+    "predicate": "plans",
+    "object": "family game night",
+    "qualifiers": {},
+    "time_text": "this Saturday",
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y190": {
+  "facts": [],
+  "note": ""
+ },
+ "y191": {
+  "facts": [],
+  "note": ""
+ },
+ "y192": {
+  "facts": [],
+  "note": ""
+ },
+ "y193": {
+  "facts": [],
+  "note": ""
+ },
+ "y194": {
+  "facts": [],
+  "note": ""
+ },
+ "y195": {
+  "facts": [],
+  "note": ""
+ },
+ "y196": {
+  "facts": [],
+  "note": ""
+ },
+ "y197": {
+  "facts": [],
+  "note": ""
+ },
+ "y198": {
+  "facts": [],
+  "note": ""
+ },
+ "y199": {
+  "facts": [
+   {
+    "subject": "Tim",
+    "predicate": "likes",
+    "object": "Lord of the Rings",
+    "qualifiers": {},
+    "time_text": null,
+    "time_value": null
+   }
+  ],
+  "note": ""
+ },
+ "y200": {
+  "facts": [],
+  "note": ""
+ }
+}
