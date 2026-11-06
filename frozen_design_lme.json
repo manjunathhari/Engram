@@ -1,0 +1,16 @@
+{
+ "name": "Engram fresh-data test on LongMemEval, rule fixed on 6 November 2026 before any answer from this data was seen",
+ "data": "xiaowu0162/longmemeval-cleaned, longmemeval_s_cleaned.json (MIT licence), each question with its own chat history",
+ "design": "exactly frozen_design.json: same search, same token limits, same answer prompt and model; nothing tuned on this data",
+ "training": "networks train on LoCoMo conversations 0 to 4 only, never on LongMemEval",
+ "adapter": "needed because this data differs: messages split into sentences (no words changed; longest piece 600 characters); dates written in the form Engram reads; today's date added to the question for the model, not for the search; a fact prompt over 3,000 tokens keeps user lines first, then assistant lines",
+ "development": "the 30 questions with the lowest hash of their question id, for speed and adapter checks only; never counted in the result",
+ "test_questions": "all other questions, including the not-answerable ones",
+ "ways": "current Engram and networks without facts on every test question; networks with facts on the first facts_questions test questions in hash order",
+ "facts_questions": null,
+ "facts_questions_rule": "set from pilot speed only, before any test answers exist",
+ "score": "blind labels, using LongMemEval's published per-type judging rules in kit_tools/lme_rules.md, applied by Claude agents; these are not the official GPT-4o judge, so the numbers must not be compared with published ones",
+ "primary_measure": "networks without facts against current Engram, same questions; 95% interval by paired bootstrap; success only if the interval stays above zero",
+ "secondary": "facts against no facts on the subset, reported with its interval; by question type; not-answerable questions; answer sessions and turns reached; answers of not mentioned",
+ "allowed_to_fail": "the result is reported whichever way it goes; a failure here is not followed by tuning and retesting on these questions"
+}
