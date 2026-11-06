@@ -1,0 +1,21 @@
+{"chats": [
+ {"date": "2:15 pm on 3 March, 2023", "lines": [
+  ["Asha", "I adopted a beagle called Pixel from the shelter yesterday.", "B1:1", ""],
+  ["Ravi", "Congratulations! How is Pixel settling in?", "B1:2", ""],
+  ["Asha", "Pixel sleeps all day and chews my slippers.", "B1:3", "a small dog on a sofa"],
+  ["Ravi", "I started learning the cello last week.", "B1:4", ""],
+  ["Asha", "That sounds lovely, my café’s cellist said it takes years.", "B1:5", ""]]},
+ {"date": "9:40 am on 20 April, 2023", "lines": [
+  ["Ravi", "My cello teacher, Meera, lives in Pune.", "B2:1", ""],
+  ["Asha", "I ran the Mysore half marathon in 2 hours 5 minutes.", "B2:2", ""],
+  ["Ravi", "Great time. What is next for you?", "B2:3", ""],
+  ["Asha", "I plan to visit Hampi in December.", "B2:4", ""]]},
+ {"date": "6:05 pm on 11 June, 2023", "lines": [
+  ["Asha", "Pixel turned one and we celebrated with a walk by the lake.", "B3:1", ""],
+  ["Ravi", "Meera says I can play at the recital in August.", "B3:2", ""]]}
+], "questions": [
+ {"q": "What is the name of Asha's beagle?", "expect": "B1:1"},
+ {"q": "Where does Meera live?", "expect": "B2:1"},
+ {"q": "How long did the Mysore half marathon take?", "expect": "B2:2"},
+ {"q": "Where does Asha plan to go in December?", "expect": "B2:4"}
+], "helper_reply": "B1:1 | Asha adopted a beagle called Pixel from the shelter on [2 March 2023].\nB1:4 | Ravi started learning the cello.\nB1:2 | Asha owns a spaceship factory on Jupiter.\nHere are the facts:", "accepted": 2, "rejected": 1}

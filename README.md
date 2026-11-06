@@ -49,3 +49,15 @@ Keep Ollama's port (11434) closed to the internet.
 ## Data and licence
 
 Tests use [LoCoMo](https://github.com/snap-research/locomo) (Maharana et al., 2024), licensed CC BY-NC 4.0. The data is not stored here, but `results/` contains questions and short excerpts from it, under that licence. This repository's own code has no licence yet, so its rights stay with the author unless one is added.
+
+## Regression tests
+
+From the repository root:
+
+    python3 -m pytest -m "not slow"
+
+This takes under a second and needs no model. To also replay the benchmark and compare retrieval with the recorded baseline, clone `locomo` into the repository and install wordllama, spacy and scikit-learn, then run:
+
+    python3 -m pytest
+
+The baseline is in `tests/fixtures/retrieval_baseline.json`. If you deliberately change retrieval, rerun `python3 tests/record_baseline.py` and commit the new baseline with the change. Test data is made up or from the benchmark; never put personal data in the fixtures.

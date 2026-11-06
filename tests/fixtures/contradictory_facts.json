@@ -1,0 +1,4 @@
+{"chats": [
+ {"date": "8:00 am on 1 February, 2023", "lines": [["Omar", "My sister Lina is 30 years old.", "X1:1", ""], ["Omar", "I have never been to Japan.", "X1:2", ""]]},
+ {"date": "8:00 am on 1 March, 2023", "lines": [["Omar", "Lina turned 34 this year, I was wrong before.", "X2:1", ""], ["Omar", "When I went to Japan in 2019 I loved Kyoto.", "X2:2", ""]]}
+], "keep": ["My sister Lina is 30 years old.", "I have never been to Japan.", "Lina turned 34 this year, I was wrong before.", "When I went to Japan in 2019 I loved Kyoto."]}

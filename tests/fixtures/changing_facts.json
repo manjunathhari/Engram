@@ -1,0 +1,5 @@
+{"chats": [
+ {"date": "10:00 am on 5 January, 2023", "lines": [["Nina", "I live in Chennai and work at Orbit Labs.", "C1:1", ""], ["Tom", "Do you like Chennai?", "C1:2", ""]]},
+ {"date": "10:00 am on 8 May, 2023", "lines": [["Nina", "I moved to Kochi last month for a job at Harbor Health.", "C2:1", ""], ["Tom", "Good luck in Kochi.", "C2:2", ""]]},
+ {"date": "10:00 am on 2 November, 2023", "lines": [["Nina", "I moved again, I now live in Goa and I left Harbor Health.", "C3:1", ""]]}
+], "keep": ["I live in Chennai and work at Orbit Labs.", "I moved to Kochi last month for a job at Harbor Health.", "I moved again, I now live in Goa and I left Harbor Health."]}
