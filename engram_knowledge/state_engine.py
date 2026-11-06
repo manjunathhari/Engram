@@ -167,6 +167,7 @@ class StateEngine:
         found = {}
         for item in self.kb.reviews():
             c = json.loads(item["candidate"])
+            if "predicate" not in c: continue  # a sentence waiting for extraction, not yet a fact candidate
             slot = slot_of(c["predicate"])
             if slot and self.kb.resolve(c["subject"]) == entity_id and c["predicate"] != "plans": found.setdefault(slot, []).append(item["review_id"])
         return found

@@ -151,6 +151,7 @@ class KnowledgePipeline:
         item = self.kb.review(review_id)
         if item is None: raise RecordError("no such review item")
         data = json.loads(item["candidate"])
+        if data.get("kind") == "sentence_envelope": raise RecordError("this review item is a sentence, not a fact: it needs who, what and which first")
         candidate = Candidate(**data | dict(source_sids=tuple(data["source_sids"])))
         decision = self.validator.validate(candidate, self.lines(candidate))
         if decision.verdict == REJECTED: raise RecordError("; ".join(decision.reasons))

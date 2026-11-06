@@ -1,0 +1,1202 @@
+{
+ "s001": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s002": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s003": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s004": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "announces something without saying what"
+ },
+ "s005": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s006": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s007": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s008": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "'we' teammates - partner not named in sentence"
+ },
+ "s009": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare sentiment reaction, no content"
+ },
+ "s010": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s011": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": "value statement about veterans; treated as asserted belief"
+ },
+ "s012": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s013": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "referent from earlier turn"
+ },
+ "s014": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s015": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s016": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s017": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s018": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s019": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s020": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s021": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s022": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s023": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s024": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s025": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s026": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s027": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "prediction about listener; place unnamed"
+ },
+ "s028": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s029": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s030": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s031": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s032": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s033": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s034": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s035": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "platitude / exhortation, no speaker fact"
+ },
+ "s036": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s037": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s038": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s039": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s040": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s041": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s042": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s043": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "allergen not named in sentence"
+ },
+ "s044": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s045": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s046": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s047": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s048": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s049": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s050": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s051": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s052": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s053": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s054": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s055": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s056": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s057": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s058": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare sentiment reaction, no content"
+ },
+ "s059": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s060": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s061": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s062": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s063": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "platitude / exhortation, no speaker fact"
+ },
+ "s064": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s065": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s066": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "conditional 'as long as'"
+ },
+ "s067": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s068": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s069": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s070": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s071": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s072": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "platitude / exhortation, no speaker fact"
+ },
+ "s073": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s074": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s075": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s076": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s077": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "platitude / exhortation, no speaker fact"
+ },
+ "s078": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s079": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": "generic-form preference (exploring cities); borderline vs platitude"
+ },
+ "s080": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "platitude / exhortation, no speaker fact"
+ },
+ "s081": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "vague emotional reaction; borderline learn"
+ },
+ "s082": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s083": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s084": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s085": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "referent from earlier turn"
+ },
+ "s086": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s087": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "referent from earlier turn"
+ },
+ "s088": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s089": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s090": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s091": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s092": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "platitude / exhortation, no speaker fact"
+ },
+ "s093": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s094": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s095": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s096": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s097": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s098": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s099": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s100": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s101": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s102": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s103": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s104": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s105": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s106": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s107": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s108": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s109": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "factual answer that only makes sense with prior question"
+ },
+ "s110": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s111": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "vague emotional reaction; borderline learn"
+ },
+ "s112": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s113": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare reference (it/they/this/her/the X) needs earlier context"
+ },
+ "s114": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s115": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s116": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s117": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s118": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s119": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "platitude / exhortation, no speaker fact"
+ },
+ "s120": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s121": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s122": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "puzzle working line; no lasting personal content"
+ },
+ "s123": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s124": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "puzzle working line; no lasting personal content"
+ },
+ "s125": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s126": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s127": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s128": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare they/those"
+ },
+ "s129": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s130": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s131": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "correction of earlier answer"
+ },
+ "s132": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s133": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "bare they/those"
+ },
+ "s134": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "puzzle working line; no lasting personal content"
+ },
+ "s135": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s136": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s137": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s138": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s139": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": "'tempted' - current feeling stated plainly; borderline review"
+ },
+ "s140": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "undecided ('not sure') consideration"
+ },
+ "s141": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "transient emotional state"
+ },
+ "s142": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s143": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s144": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "'options' are pillows from earlier turn"
+ },
+ "s145": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s146": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s147": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s148": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s149": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s150": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s151": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s152": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s153": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s154": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s155": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s156": {
+  "decision": "learn",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s157": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s158": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "puzzle working line; no lasting personal content"
+ },
+ "s159": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s160": {
+  "decision": "review",
+  "about_month": false,
+  "quotes": false,
+  "note": "undecided ('not sure') consideration"
+ },
+ "s161": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "generic boilerplate advice; borderline assistant"
+ },
+ "s162": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s163": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s164": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s165": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s166": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s167": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": true,
+  "note": ""
+ },
+ "s168": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s169": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s170": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s171": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s172": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s173": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s174": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s175": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s176": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s177": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s178": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": true,
+  "note": ""
+ },
+ "s179": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s180": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s181": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s182": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s183": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s184": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s185": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s186": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s187": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s188": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s189": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s190": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s191": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s192": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": "generic boilerplate advice; borderline assistant"
+ },
+ "s193": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s194": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s195": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s196": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s197": {
+  "decision": "ignore",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s198": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s199": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ },
+ "s200": {
+  "decision": "assistant",
+  "about_month": false,
+  "quotes": false,
+  "note": ""
+ }
+}
