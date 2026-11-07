@@ -164,14 +164,16 @@ class Settings:
     note_tokens: int = 300       # longest note
     fact_tokens: int = 300       # noted facts shown on top of retrieved memories, when facts are on
     fact_reply_tokens: int = 700 # longest reply the helper may write for one chat
+    filed_tokens: int = 300      # filed facts (engram_knowledge/filing.py) shown on top of retrieved memories, when filing is on
 
 
 class ChatMemory:
-    def __init__(self, path: str, cfg: Config | None = None, settings: Settings | None = None, llm=None, durable: bool = True, search=None, helper=None, helper_name: str = "", use_facts: bool = False, nlp=None):
+    def __init__(self, path: str, cfg: Config | None = None, settings: Settings | None = None, llm=None, durable: bool = True, search=None, helper=None, helper_name: str = "", use_facts: bool = False, nlp=None, filer=None, use_filed: bool = False):
         self.s, self.cfg, self.llm = settings or Settings(), cfg or Config(), llm
         self.search = search  # optional reader of past chats, see engram_parallel.py
         self.helper, self.helper_name, self.use_facts, self.nlp = helper, helper_name, use_facts, nlp  # optional, see engram_facts.py
         self.show_dates = True
+        self.filer, self.use_filed = None, use_filed  # optional whole-chat filing into the knowledge store; off unless a filer is given
         self.db = sqlite3.connect(path)
         self.db.execute("PRAGMA journal_mode=WAL")
         self.db.execute(f"PRAGMA synchronous={'FULL' if durable else 'OFF'}")
@@ -189,6 +191,7 @@ class ChatMemory:
         self.desk: deque = deque()
         self.desk_used = 0
         self._reload()
+        if filer is not None: self.filer = filer(self) if callable(filer) and not hasattr(filer, "file_chat") else filer
 
     # ---------- restart ----------
     def _reload(self):
@@ -320,6 +323,9 @@ class ChatMemory:
         if self.use_facts:
             shown = self.facts_text(question)
             if shown: parts.append(shown)
+        if self.use_filed and self.filer is not None:
+            filed = self.filer.text(question, self.s.filed_tokens)
+            if filed: parts.append(filed)
         if sids: parts.append(self.text_of(sorted(sids) if self.search is not None else sids))
         if self.desk: parts.append(self.desk_text())
         return "\n".join(parts) or "(no excerpts)", info | dict(sids=sids)
@@ -341,6 +347,8 @@ class ChatMemory:
         note = None
         if write_note and self.llm is not None: note = self.write_note(chat, chain)
         facts = self.write_facts(chat) if self.helper is not None else None
+        if self.filer is not None:
+            return dict(chat=chat, sleep_ms=ms, note=note, facts=facts, filing=self.filer.file_chat(chat))
         return dict(chat=chat, sleep_ms=ms, note=note, facts=facts)
 
     def close_if_idle(self, idle_seconds: float, **kw):

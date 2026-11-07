@@ -9,7 +9,7 @@ from .models import RecordError, normalize_name
 
 from .conflict import Conflict
 from .temporal import covers, overlaps, said_on, span, step_before
-from .transition import CLOSES, OPENS, SINGLE, slot_of
+from .transition import closes, is_single, slot_of
 
 COUNTED = ("active", "needs_review", "disputed")  # superseded, retracted and invalidated do not count
 
@@ -141,9 +141,9 @@ class StateEngine:
 
     def _build(self, observations, slot):
         """Plays one slot's observations in date order. Returns all periods and the conflicts."""
-        single = slot in SINGLE
+        single = is_single(slot)
         seen = [o for o in observations if o["slot"] == slot]
-        dated = sorted((o for o in seen if o["when"]), key=lambda o: (span(o["when"])[0], o["fact"].predicate in CLOSES))
+        dated = sorted((o for o in seen if o["when"]), key=lambda o: (span(o["when"])[0], closes(o["fact"].predicate)))
         undated = [o for o in seen if not o["when"]]
         periods, conflicts = [], []
 
@@ -158,7 +158,7 @@ class StateEngine:
             f, value = o["fact"], self._value(o["fact"])
             key = normalize_name(value)
             still = [p for p in periods if p.end_kind == "open" or (p.end_kind == "stated" and span(p.end)[1] >= span(o["when"])[0])]
-            if f.predicate in CLOSES:
+            if closes(f.predicate):
                 hit = [p for p in still if normalize_name(p.value) == key]
                 for p in hit:
                     p.end, p.end_kind = o["when"], "closed"
@@ -184,13 +184,13 @@ class StateEngine:
 
         for o in undated:  # no date of any kind: it cannot be placed in order
             f, key = o["fact"], normalize_name(self._value(o["fact"]))
-            if f.predicate in CLOSES: conflicts.append(Conflict("ended", slot, (self._value(f),), (f.fact_id,), tuple(sorted(o["speakers"]))))
+            if closes(f.predicate): conflicts.append(Conflict("ended", slot, (self._value(f),), (f.fact_id,), tuple(sorted(o["speakers"]))))
             elif not any(normalize_name(p.value) == key for p in periods): add_period(o)
         return periods, conflicts
 
     def _overlap_conflicts(self, slot, held, conflicts):
         """Different values held at once in a single-valued slot."""
-        if slot in SINGLE and len({normalize_name(p.value) for p in held}) > 1:
+        if is_single(slot) and len({normalize_name(p.value) for p in held}) > 1:
             return conflicts + [Conflict("value", slot, tuple(p.value for p in held), tuple(i for p in held for i in p.fact_ids), tuple(sorted({s for p in held for s in p.sources})))]
         return conflicts
 
@@ -238,7 +238,7 @@ class StateEngine:
 
     def _at_conflicts(self, slot, held, date):
         """Two values during one year may simply be one after the other, so only true overlaps count."""
-        if slot not in SINGLE: return []
+        if not is_single(slot): return []
         pairs = []
         for i, a in enumerate(held):
             for b in held[i + 1:]:
