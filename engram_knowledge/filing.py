@@ -377,7 +377,7 @@ class FactFiler:
                                   ORDER BY r.recorded_at, r.fact_id""").fetchall()
         return [dict(fact_id=r[0], who=r[1], predicate=r[2], thing=r[3], kind=r[4], when=r[5], note=r[6], meta=json.loads(r[7])) for r in rows]
 
-    def find(self, question, limit=10):
+    def find(self, question, limit=10, view=None):
         """Filed records for a question, best first. Records sharing a topic with the best ones follow them, so a question
         such as 'how many instruments' sees the whole collection, not one item."""
         import engram_chat as E
@@ -402,6 +402,10 @@ class FactFiler:
             for x in qw & set(ws):
                 tf = ws.count(x); b += math.log(1 + (n - df[x] + .5) / (df[x] + .5)) * tf * 2.2 / (tf + 1.2 * (.5 + .5 * len(ws) / avg))
             score[i] += b / (1 + b)
+        if view is not None:  # P2.5: hidden for this question, or moved up a little for it
+            for i, r in enumerate(recs):
+                if view.is_hidden("fact:" + r["fact_id"], question): score[i] = 0.0
+                elif score[i] > 0: score[i] += view.boost("fact:" + r["fact_id"], question)
         order = sorted(range(n), key=lambda i: -score[i])
         order = [i for i in order if score[i] > 0]
         out, seen = [], set()
@@ -412,19 +416,23 @@ class FactFiler:
             if i not in seen: seen.add(i); out.append(recs[i])
         return out[:limit]
 
-    def line(self, r):
+    def line(self, r, caution=""):
         label = KIND_WORDS.get(r["kind"], r["kind"])
         parts = ["Filed fact", label + (", ended" if r["predicate"].startswith(ENDED) else "")]
         if r["meta"].get("said_on"): parts.append("said " + _pretty(r["meta"]["said_on"]))
         if r["when"]: parts.append(("planned for " if r["kind"] == "plan" else "happened " if r["kind"] == "event" or r["predicate"].startswith(ENDED) else "since ") + _pretty(r["when"]))
+        if caution: parts.append("caution: " + caution)
         return "[" + " | ".join(parts) + "] " + r["note"]
 
-    def text(self, question, tokens=300):
-        """Filed facts for the answer model to read, within a token budget."""
-        out, used = [], 0
-        for r in self.find(question, 40):
-            ln = self.line(r)
+    def shown(self, question, tokens=300, view=None):
+        """Filed facts for the answer model to read, within a token budget, and the references of those shown."""
+        out, refs, used = [], [], 0
+        for r in self.find(question, 40, view):
+            ln = self.line(r, view.caution("fact:" + r["fact_id"]) if view is not None else "")
             t = max(1, len(ln) // 4)
             if used + t > tokens: break
-            out.append(ln); used += t
-        return "\n".join(out)
+            out.append(ln); refs.append("fact:" + r["fact_id"]); used += t
+        return "\n".join(out), refs
+
+    def text(self, question, tokens=300, view=None):
+        return self.shown(question, tokens, view)[0]

@@ -168,12 +168,13 @@ class Settings:
 
 
 class ChatMemory:
-    def __init__(self, path: str, cfg: Config | None = None, settings: Settings | None = None, llm=None, durable: bool = True, search=None, helper=None, helper_name: str = "", use_facts: bool = False, nlp=None, filer=None, use_filed: bool = False):
+    def __init__(self, path: str, cfg: Config | None = None, settings: Settings | None = None, llm=None, durable: bool = True, search=None, helper=None, helper_name: str = "", use_facts: bool = False, nlp=None, filer=None, use_filed: bool = False, use_feedback: bool = False, record_use: bool = False):
         self.s, self.cfg, self.llm = settings or Settings(), cfg or Config(), llm
         self.search = search  # optional reader of past chats, see engram_parallel.py
         self.helper, self.helper_name, self.use_facts, self.nlp = helper, helper_name, use_facts, nlp  # optional, see engram_facts.py
         self.show_dates = True
         self.filer, self.use_filed = None, use_filed  # optional whole-chat filing into the knowledge store; off unless a filer is given
+        self.use_feedback, self.record_use = use_feedback, record_use  # P2.5 cautions shown; P6 records what is shown, in shadow (engram_knowledge/recall_feedback.py)
         self.db = sqlite3.connect(path)
         self.db.execute("PRAGMA journal_mode=WAL")
         self.db.execute(f"PRAGMA synchronous={'FULL' if durable else 'OFF'}")
@@ -303,12 +304,13 @@ class ChatMemory:
     def _tokens(self, sid: int) -> int:
         return self.db.execute("SELECT tokens FROM sentences WHERE sid=?", (sid,)).fetchone()[0]
 
-    def text_of(self, sids: list[int]) -> str:
+    def text_of(self, sids: list[int], view=None) -> str:
         lines = []
         for sid in sids:
             speaker, date, text, caption = self.db.execute("SELECT speaker, date, text, caption FROM sentences WHERE sid=?", (sid,)).fetchone()
             shown = with_dates(text, date) if self.show_dates else text
-            lines.append(f"[{date}] {speaker}: {shown}" + (f" [image: {caption}]" if caption else ""))
+            caution = view.caution(f"sentence:{sid}") if view is not None else ""
+            lines.append(f"[{date}] {speaker}: {shown}" + (f" [image: {caption}]" if caption else "") + (f" [caution: {caution}]" if caution else ""))
         return "\n".join(lines)
 
     def desk_text(self) -> str:
@@ -317,18 +319,35 @@ class ChatMemory:
     def context_for(self, question: str) -> tuple[str, dict]:
         """Everything the model reads for a question: carried note, the desk, and retrieved memories."""
         sids, info = self.find(question)
-        parts = []
+        view = None
+        if self.use_feedback:
+            from engram_knowledge.recall_feedback import FeedbackView
+            view = FeedbackView(self.db)
+            sids = [s for s in sids if not view.is_hidden(f"sentence:{s}", question)]
+        parts, refs = [], []
         note = self.carried_note()
         if note: parts.append("[Handover note from the last chat]\n" + note)
         if self.use_facts:
             shown = self.facts_text(question)
             if shown: parts.append(shown)
         if self.use_filed and self.filer is not None:
-            filed = self.filer.text(question, self.s.filed_tokens)
+            filed, refs = self.filer.shown(question, self.s.filed_tokens, view)
             if filed: parts.append(filed)
-        if sids: parts.append(self.text_of(sorted(sids) if self.search is not None else sids))
+        if sids: parts.append(self.text_of(sorted(sids) if self.search is not None else sids, view))
         if self.desk: parts.append(self.desk_text())
-        return "\n".join(parts) or "(no excerpts)", info | dict(sids=sids)
+        extra = {}
+        if self.record_use:
+            from engram_knowledge.recall_feedback import record_showing
+            shown = refs + [f"sentence:{s}" for s in (sorted(sids) if self.search is not None else sids)] + [f"sentence:{s}" for s, _ in self.desk]
+            extra = dict(retrieval_event=record_showing(self.db, question, shown), shown_refs=shown)
+        return "\n".join(parts) or "(no excerpts)", info | dict(sids=sids) | extra
+
+    def give_feedback(self, target_ref: str, feedback: str, question: str, retrieval_event: str | None = None, idempotency_key: str | None = None) -> dict:
+        """Feedback on something shown: "fact:<id>" or "sentence:<sid>". Shown with the next answer when use_feedback is on."""
+        from engram_knowledge.recall_feedback import give_feedback
+        out = give_feedback(self.db, target_ref, feedback, question, retrieval_event, idempotency_key)
+        if self.filer is not None: self.filer._cache = None
+        return out
 
     # ---------- closing ----------
     def close_chat(self, write_note: bool = True, sleep: bool = True, chain: bool = True):
