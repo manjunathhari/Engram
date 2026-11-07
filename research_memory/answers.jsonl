@@ -1,0 +1,200 @@
+{"id": "Q01", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 1.3, "tokens": 1}
+{"id": "Q01", "kind": "single", "way": "search", "pred": "3 patients", "finish": "stop", "secs": 3.7, "tokens": 862}
+{"id": "Q01", "kind": "single", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 3.2, "tokens": 1222}
+{"id": "Q01", "kind": "single", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 5.7, "tokens": 788}
+{"id": "Q01", "kind": "single", "way": "both", "pred": "3", "finish": "stop", "secs": 3.2, "tokens": 1159}
+{"id": "Q02", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 3.2, "tokens": 1}
+{"id": "Q02", "kind": "single", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 4.9, "tokens": 871}
+{"id": "Q02", "kind": "single", "way": "search_more", "pred": "16.3", "finish": "stop", "secs": 4.6, "tokens": 1201}
+{"id": "Q02", "kind": "single", "way": "cabinets", "pred": "27.69 ± 12.59", "finish": "stop", "secs": 7.7, "tokens": 792}
+{"id": "Q02", "kind": "single", "way": "both", "pred": "27.69 ± 12.59", "finish": "stop", "secs": 6.1, "tokens": 1162}
+{"id": "Q03", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 1.6, "tokens": 1}
+{"id": "Q03", "kind": "single", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 2.0, "tokens": 857}
+{"id": "Q03", "kind": "single", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 2.2, "tokens": 1166}
+{"id": "Q03", "kind": "single", "way": "cabinets", "pred": "4", "finish": "stop", "secs": 2.2, "tokens": 777}
+{"id": "Q03", "kind": "single", "way": "both", "pred": "4", "finish": "stop", "secs": 3.3, "tokens": 1153}
+{"id": "Q04", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 3.1, "tokens": 1}
+{"id": "Q04", "kind": "single", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 4.1, "tokens": 904}
+{"id": "Q04", "kind": "single", "way": "search_more", "pred": "1", "finish": "stop", "secs": 5.4, "tokens": 1192}
+{"id": "Q04", "kind": "single", "way": "cabinets", "pred": "1", "finish": "stop", "secs": 3.2, "tokens": 795}
+{"id": "Q04", "kind": "single", "way": "both", "pred": "1", "finish": "stop", "secs": 5.2, "tokens": 1203}
+{"id": "Q05", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 3.2, "tokens": 1}
+{"id": "Q05", "kind": "single", "way": "search", "pred": "10 mL", "finish": "stop", "secs": 4.3, "tokens": 876}
+{"id": "Q05", "kind": "single", "way": "search_more", "pred": "10 mL", "finish": "stop", "secs": 6.7, "tokens": 1185}
+{"id": "Q05", "kind": "single", "way": "cabinets", "pred": "10 mL", "finish": "stop", "secs": 3.9, "tokens": 795}
+{"id": "Q05", "kind": "single", "way": "both", "pred": "10 mL", "finish": "stop", "secs": 4.3, "tokens": 1169}
+{"id": "Q06", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 1.9, "tokens": 1}
+{"id": "Q06", "kind": "single", "way": "search", "pred": "0.28, 0.15", "finish": "stop", "secs": 4.8, "tokens": 855}
+{"id": "Q06", "kind": "single", "way": "search_more", "pred": "0.28, 0.15", "finish": "stop", "secs": 6.1, "tokens": 1168}
+{"id": "Q06", "kind": "single", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 3.6, "tokens": 784}
+{"id": "Q06", "kind": "single", "way": "both", "pred": "0.28, 0.15", "finish": "stop", "secs": 5.8, "tokens": 1152}
+{"id": "Q07", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 0.5, "tokens": 1}
+{"id": "Q07", "kind": "single", "way": "search", "pred": "10.4%", "finish": "stop", "secs": 18.8, "tokens": 860}
+{"id": "Q07", "kind": "single", "way": "search_more", "pred": "10.4%", "finish": "stop", "secs": 19.7, "tokens": 1181}
+{"id": "Q07", "kind": "single", "way": "cabinets", "pred": "7.8%", "finish": "stop", "secs": 18.4, "tokens": 794}
+{"id": "Q07", "kind": "single", "way": "both", "pred": "7.8%", "finish": "stop", "secs": 19.6, "tokens": 1151}
+{"id": "Q08", "kind": "within", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.1, "tokens": 1}
+{"id": "Q08", "kind": "within", "way": "search", "pred": "longer operative time", "finish": "stop", "secs": 3.8, "tokens": 905}
+{"id": "Q08", "kind": "within", "way": "search_more", "pred": "A study from Korea described that the mean operative time was longer in robotic left colectomy than in the laparoscopy with complete mesocolectomy.", "finish": "stop", "secs": 11.3, "tokens": 1184}
+{"id": "Q08", "kind": "within", "way": "cabinets", "pred": "150.23 ± 43.77 min (RAH), 125.85 ± 38.67 min (LAH)", "finish": "stop", "secs": 13.8, "tokens": 793}
+{"id": "Q08", "kind": "within", "way": "both", "pred": "150.23 ± 43.77 min", "finish": "stop", "secs": 5.5, "tokens": 1200}
+{"id": "Q09", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 1.2, "tokens": 1}
+{"id": "Q09", "kind": "single", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 0.9, "tokens": 887}
+{"id": "Q09", "kind": "single", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 1.3, "tokens": 1251}
+{"id": "Q09", "kind": "single", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 2.5, "tokens": 796}
+{"id": "Q09", "kind": "single", "way": "both", "pred": "19", "finish": "stop", "secs": 2.5, "tokens": 1182}
+{"id": "Q10", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 1.6, "tokens": 1}
+{"id": "Q10", "kind": "single", "way": "search", "pred": "1 (1.8)", "finish": "stop", "secs": 4.2, "tokens": 865}
+{"id": "Q10", "kind": "single", "way": "search_more", "pred": "16.1%", "finish": "stop", "secs": 4.0, "tokens": 1175}
+{"id": "Q10", "kind": "single", "way": "cabinets", "pred": "16.1%", "finish": "stop", "secs": 5.0, "tokens": 778}
+{"id": "Q10", "kind": "single", "way": "both", "pred": "11(16.1)", "finish": "stop", "secs": 6.1, "tokens": 1163}
+{"id": "Q11", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.9, "tokens": 1}
+{"id": "Q11", "kind": "single", "way": "search", "pred": "5 (3.4%)", "finish": "stop", "secs": 5.2, "tokens": 882}
+{"id": "Q11", "kind": "single", "way": "search_more", "pred": "5", "finish": "stop", "secs": 2.4, "tokens": 1238}
+{"id": "Q11", "kind": "single", "way": "cabinets", "pred": "5", "finish": "stop", "secs": 2.3, "tokens": 787}
+{"id": "Q11", "kind": "single", "way": "both", "pred": "5", "finish": "stop", "secs": 3.5, "tokens": 1176}
+{"id": "Q12", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 4.0, "tokens": 1}
+{"id": "Q12", "kind": "single", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 5.0, "tokens": 904}
+{"id": "Q12", "kind": "single", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 4.4, "tokens": 1252}
+{"id": "Q12", "kind": "single", "way": "cabinets", "pred": "0 (0.0%)", "finish": "stop", "secs": 5.5, "tokens": 785}
+{"id": "Q12", "kind": "single", "way": "both", "pred": "not mentioned", "finish": "stop", "secs": 3.3, "tokens": 1182}
+{"id": "Q13", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.5, "tokens": 1}
+{"id": "Q13", "kind": "single", "way": "search", "pred": "267 ± 74.8 minutes", "finish": "stop", "secs": 6.3, "tokens": 881}
+{"id": "Q13", "kind": "single", "way": "search_more", "pred": "267 ± 74.8 minutes", "finish": "stop", "secs": 5.4, "tokens": 1213}
+{"id": "Q13", "kind": "single", "way": "cabinets", "pred": "353±62", "finish": "stop", "secs": 3.8, "tokens": 791}
+{"id": "Q13", "kind": "single", "way": "both", "pred": "267 ± 74.8 minutes", "finish": "stop", "secs": 5.9, "tokens": 1175}
+{"id": "Q14", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.3, "tokens": 1}
+{"id": "Q14", "kind": "single", "way": "search", "pred": "19%", "finish": "stop", "secs": 4.2, "tokens": 856}
+{"id": "Q14", "kind": "single", "way": "search_more", "pred": "14%", "finish": "stop", "secs": 4.0, "tokens": 1203}
+{"id": "Q14", "kind": "single", "way": "cabinets", "pred": "0.43", "finish": "stop", "secs": 4.3, "tokens": 788}
+{"id": "Q14", "kind": "single", "way": "both", "pred": "14%", "finish": "stop", "secs": 3.7, "tokens": 1139}
+{"id": "Q15", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.3, "tokens": 1}
+{"id": "Q15", "kind": "single", "way": "search", "pred": "116", "finish": "stop", "secs": 3.6, "tokens": 869}
+{"id": "Q15", "kind": "single", "way": "search_more", "pred": "116", "finish": "stop", "secs": 4.1, "tokens": 1217}
+{"id": "Q15", "kind": "single", "way": "cabinets", "pred": "400+", "finish": "stop", "secs": 4.0, "tokens": 780}
+{"id": "Q15", "kind": "single", "way": "both", "pred": "116", "finish": "stop", "secs": 6.3, "tokens": 1164}
+{"id": "Q16", "kind": "within", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.4, "tokens": 1}
+{"id": "Q16", "kind": "within", "way": "search", "pred": "shorten the operation time", "finish": "stop", "secs": 5.2, "tokens": 846}
+{"id": "Q16", "kind": "within", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 5.1, "tokens": 1169}
+{"id": "Q16", "kind": "within", "way": "cabinets", "pred": "180 (148.75, 206.25)", "finish": "stop", "secs": 9.1, "tokens": 791}
+{"id": "Q16", "kind": "within", "way": "both", "pred": "145 (125, 187.5)", "finish": "stop", "secs": 6.4, "tokens": 1144}
+{"id": "Q17", "kind": "within", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.0, "tokens": 1}
+{"id": "Q17", "kind": "within", "way": "search", "pred": "4 patients (2 patients in each group)", "finish": "stop", "secs": 3.5, "tokens": 882}
+{"id": "Q17", "kind": "within", "way": "search_more", "pred": "4 patients (6.4%) in robotic, 4 patients (2 patients in each group) in laparoscopic", "finish": "stop", "secs": 7.8, "tokens": 1198}
+{"id": "Q17", "kind": "within", "way": "cabinets", "pred": "RLAR: 2 (6), LLAR: 2 (7)", "finish": "stop", "secs": 8.3, "tokens": 786}
+{"id": "Q17", "kind": "within", "way": "both", "pred": "4 patients (2 in each group)", "finish": "stop", "secs": 4.9, "tokens": 1169}
+{"id": "Q18", "kind": "within", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.1, "tokens": 1}
+{"id": "Q18", "kind": "within", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 1.0, "tokens": 921}
+{"id": "Q18", "kind": "within", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 3.2, "tokens": 1208}
+{"id": "Q18", "kind": "within", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 4.2, "tokens": 789}
+{"id": "Q18", "kind": "within", "way": "both", "pred": "not mentioned", "finish": "stop", "secs": 4.2, "tokens": 1201}
+{"id": "Q19", "kind": "single", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 3.7, "tokens": 1}
+{"id": "Q19", "kind": "single", "way": "search", "pred": "248 min", "finish": "stop", "secs": 5.7, "tokens": 867}
+{"id": "Q19", "kind": "single", "way": "search_more", "pred": "248 min", "finish": "stop", "secs": 5.4, "tokens": 1237}
+{"id": "Q19", "kind": "single", "way": "cabinets", "pred": "351 (276–424)", "finish": "stop", "secs": 6.4, "tokens": 786}
+{"id": "Q19", "kind": "single", "way": "both", "pred": "351 (i.q.r. 276–424)", "finish": "stop", "secs": 9.2, "tokens": 1163}
+{"id": "Q20", "kind": "within", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 0.7, "tokens": 1}
+{"id": "Q20", "kind": "within", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 2.4, "tokens": 865}
+{"id": "Q20", "kind": "within", "way": "search_more", "pred": "no significant differences", "finish": "stop", "secs": 2.3, "tokens": 1186}
+{"id": "Q20", "kind": "within", "way": "cabinets", "pred": "0 (0.0) vs. 0 (0.0)", "finish": "stop", "secs": 6.5, "tokens": 793}
+{"id": "Q20", "kind": "within", "way": "both", "pred": "No significant differences", "finish": "stop", "secs": 3.7, "tokens": 1157}
+{"id": "Q21", "kind": "within", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.8, "tokens": 1}
+{"id": "Q21", "kind": "within", "way": "search", "pred": "3 (2.1%) in robotic, 8 (8.6%) in laparoscopic", "finish": "stop", "secs": 5.4, "tokens": 888}
+{"id": "Q21", "kind": "within", "way": "search_more", "pred": "3 patients (2.1%) in robotic, 8 patients (8.6%) in laparoscopic", "finish": "stop", "secs": 5.3, "tokens": 1177}
+{"id": "Q21", "kind": "within", "way": "cabinets", "pred": "Robotic: 3 (2.1%), Laparoscopic: 8 (8.6%)", "finish": "stop", "secs": 6.0, "tokens": 794}
+{"id": "Q21", "kind": "within", "way": "both", "pred": "3 (2.1%) vs 8 (8.6%)", "finish": "stop", "secs": 5.5, "tokens": 1181}
+{"id": "Q22", "kind": "within", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 0.6, "tokens": 1}
+{"id": "Q22", "kind": "within", "way": "search", "pred": "Shorter in RAC.", "finish": "stop", "secs": 4.2, "tokens": 845}
+{"id": "Q22", "kind": "within", "way": "search_more", "pred": "1 day shorter", "finish": "stop", "secs": 3.3, "tokens": 1171}
+{"id": "Q22", "kind": "within", "way": "cabinets", "pred": "136% vs. 124% (Huang 2026)", "finish": "stop", "secs": 9.3, "tokens": 795}
+{"id": "Q22", "kind": "within", "way": "both", "pred": "12.4 vs 13.4 days", "finish": "stop", "secs": 6.3, "tokens": 1143}
+{"id": "Q23", "kind": "within", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.6, "tokens": 1}
+{"id": "Q23", "kind": "within", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 2.8, "tokens": 868}
+{"id": "Q23", "kind": "within", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 2.2, "tokens": 1185}
+{"id": "Q23", "kind": "within", "way": "cabinets", "pred": "0.8% vs. 3.1% not mentioned", "finish": "stop", "secs": 5.0, "tokens": 791}
+{"id": "Q23", "kind": "within", "way": "both", "pred": "2:1 Matched left colectomy dataset / RoboticLeft colectomy (robotic): 161 (5.2)", "finish": "stop", "secs": 6.2, "tokens": 1155}
+{"id": "Q24", "kind": "across", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 1.9, "tokens": 1}
+{"id": "Q24", "kind": "across", "way": "search", "pred": "Gahunia 2025 (SMD 0.50 [CI 0.18–0.83], p = 0.002), Gahunia 2025 (SMD 0.48 [CI 0.12–0.84], p = 0.008), Gahunia 2025 (SMD 0.72 [CI 0.34–1.09], p = 0.0002), Gahunia 2025 (SMD 0.57 [CI 0.31–0.83], p < 0.0001), Al-Ihribat 2026 (MD = 0.161–1.049, p < 0.001)", "finish": "stop", "secs": 23.4, "tokens": 921}
+{"id": "Q24", "kind": "across", "way": "search_more", "pred": "Gahunia (2025) – SMD 0.48 [CI 0.12–0.84], p = 0.008; SMD 0.72 [CI 0.34–1.09], p = 0.0002", "finish": "stop", "secs": 7.4, "tokens": 1175}
+{"id": "Q24", "kind": "across", "way": "cabinets", "pred": "+ 23.8 (14.2 to 33.4)", "finish": "stop", "secs": 3.8, "tokens": 781}
+{"id": "Q24", "kind": "across", "way": "both", "pred": "Gahunia 2025 (SMD 0.57 [CI 0.31–0.83], p < 0.0001), Gahunia 2025 (SMD 0.77 [CI 0.17–1.37], p = 0.01), Gahunia 2025 (SMD 0.50 [CI 0.18–0.83], p = 0.002), Gahunia 2025 (SMD 0.48 [CI 0.12–0.84], p = 0.008), Gahunia 2025 (SMD 0.72 [CI 0.34–1.09], p = 0.0002", "finish": "stop", "secs": 23.7, "tokens": 1200}
+{"id": "Q25", "kind": "across", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 0.6, "tokens": 1}
+{"id": "Q25", "kind": "across", "way": "search", "pred": "Three meta-analyses: Gahunia 2025 (OR 0.41), Morini 2025 (RR 0.5), and Zou 2025 (significantly lower).", "finish": "stop", "secs": 4.1, "tokens": 882}
+{"id": "Q25", "kind": "across", "way": "search_more", "pred": "Three meta-analyses found a significant reduction: Albayati 2023 (OR 0.41), Gahunia 2025 (OR 0.41), and Zou 2025 (lower overall pooled conversion rate).", "finish": "stop", "secs": 5.7, "tokens": 1195}
+{"id": "Q25", "kind": "across", "way": "cabinets", "pred": "Muafa 2026 (OR 0.42)", "finish": "stop", "secs": 1.6, "tokens": 793}
+{"id": "Q25", "kind": "across", "way": "both", "pred": "Gahunia 2025 (OR 0.41), Albayati 2023 (OR 0.42), Zou 2025, Al-Ihribat 2026 (RR: 0.57)", "finish": "stop", "secs": 5.8, "tokens": 1175}
+{"id": "Q26", "kind": "across", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 0.6, "tokens": 1}
+{"id": "Q26", "kind": "across", "way": "search", "pred": "One (Gahunia 2025)", "finish": "stop", "secs": 1.3, "tokens": 897}
+{"id": "Q26", "kind": "across", "way": "search_more", "pred": "One (Gahunia 2025)", "finish": "stop", "secs": 2.7, "tokens": 1172}
+{"id": "Q26", "kind": "across", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 1.8, "tokens": 796}
+{"id": "Q26", "kind": "across", "way": "both", "pred": "one", "finish": "stop", "secs": 1.8, "tokens": 1193}
+{"id": "Q27", "kind": "across", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 1.6, "tokens": 1}
+{"id": "Q27", "kind": "across", "way": "search", "pred": "Reduced length of stay (SMD 0.25, p = 0.002).", "finish": "stop", "secs": 4.0, "tokens": 918}
+{"id": "Q27", "kind": "across", "way": "search_more", "pred": "Reduced length of stay (SMD 0.25, p = 0.002).", "finish": "stop", "secs": 4.2, "tokens": 1206}
+{"id": "Q27", "kind": "across", "way": "cabinets", "pred": "Slightly shorter with RAS, 7.0 days (robotic), 7.0 days (laparoscopic), 4.7 days (robotic LAR), 4.8 days (laparoscopic LAR)", "finish": "stop", "secs": 10.1, "tokens": 793}
+{"id": "Q27", "kind": "across", "way": "both", "pred": "Shorter with robotic, SMD 0.25, reduced length of stay.", "finish": "stop", "secs": 3.8, "tokens": 1201}
+{"id": "Q28", "kind": "across", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 1.3, "tokens": 1}
+{"id": "Q28", "kind": "across", "way": "search", "pred": "Morini 2025: 60 in RC group, 102 in LC group.", "finish": "stop", "secs": 5.5, "tokens": 890}
+{"id": "Q28", "kind": "across", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 2.7, "tokens": 1194}
+{"id": "Q28", "kind": "across", "way": "cabinets", "pred": "Muafa 2026: −9.7 (− 22.1 to 3.4)\nZou 2025: -12.94 (-27.57, 1.70)\nXu 2021: 84.54 ± 69.81\nStevenson 2026: 40.3 (44.7)", "finish": "stop", "secs": 28.2, "tokens": 790}
+{"id": "Q28", "kind": "across", "way": "both", "pred": "−9.7, -12.94, 84.54 ± 69.81, 88.27 ± 66.87, 60 and 102", "finish": "stop", "secs": 11.6, "tokens": 1169}
+{"id": "Q29", "kind": "across", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 0.5, "tokens": 1}
+{"id": "Q29", "kind": "across", "way": "search", "pred": "Comparable morbidity.", "finish": "stop", "secs": 0.9, "tokens": 910}
+{"id": "Q29", "kind": "across", "way": "search_more", "pred": "Comparable overall morbidity.", "finish": "stop", "secs": 2.5, "tokens": 1211}
+{"id": "Q29", "kind": "across", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 2.4, "tokens": 797}
+{"id": "Q29", "kind": "across", "way": "both", "pred": "Comparable morbidity between approaches.", "finish": "stop", "secs": 2.6, "tokens": 1207}
+{"id": "Q30", "kind": "time_design", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 1.7, "tokens": 1}
+{"id": "Q30", "kind": "time_design", "way": "search", "pred": "2017–2019", "finish": "stop", "secs": 2.5, "tokens": 859}
+{"id": "Q30", "kind": "time_design", "way": "search_more", "pred": "2017–2019", "finish": "stop", "secs": 2.7, "tokens": 1196}
+{"id": "Q30", "kind": "time_design", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 1.0, "tokens": 775}
+{"id": "Q30", "kind": "time_design", "way": "both", "pred": "2017–2019", "finish": "stop", "secs": 6.8, "tokens": 1153}
+{"id": "Q31", "kind": "time_design", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.6, "tokens": 1}
+{"id": "Q31", "kind": "time_design", "way": "search", "pred": "Five", "finish": "stop", "secs": 2.3, "tokens": 843}
+{"id": "Q31", "kind": "time_design", "way": "search_more", "pred": "five", "finish": "stop", "secs": 2.4, "tokens": 1202}
+{"id": "Q31", "kind": "time_design", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 3.2, "tokens": 787}
+{"id": "Q31", "kind": "time_design", "way": "both", "pred": "five", "finish": "stop", "secs": 1.9, "tokens": 1140}
+{"id": "Q32", "kind": "time_design", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.4, "tokens": 1}
+{"id": "Q32", "kind": "time_design", "way": "search", "pred": "9.7 months (range, 2–30)", "finish": "stop", "secs": 5.2, "tokens": 865}
+{"id": "Q32", "kind": "time_design", "way": "search_more", "pred": "9.7 months (range, 2–30)", "finish": "stop", "secs": 5.2, "tokens": 1196}
+{"id": "Q32", "kind": "time_design", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 1.7, "tokens": 795}
+{"id": "Q32", "kind": "time_design", "way": "both", "pred": "9.7 months (range, 2–30)", "finish": "stop", "secs": 4.4, "tokens": 1163}
+{"id": "Q33", "kind": "time_design", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 1.7, "tokens": 1}
+{"id": "Q33", "kind": "time_design", "way": "search", "pred": "January 2016 and March 2025", "finish": "stop", "secs": 5.7, "tokens": 920}
+{"id": "Q33", "kind": "time_design", "way": "search_more", "pred": "January 2016 and March 2025", "finish": "stop", "secs": 5.7, "tokens": 1224}
+{"id": "Q33", "kind": "time_design", "way": "cabinets", "pred": "2026", "finish": "stop", "secs": 2.9, "tokens": 794}
+{"id": "Q33", "kind": "time_design", "way": "both", "pred": "January 2016 and March 2025", "finish": "stop", "secs": 6.1, "tokens": 1217}
+{"id": "Q34", "kind": "time_design", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 1.7, "tokens": 1}
+{"id": "Q34", "kind": "time_design", "way": "search", "pred": "2015 to 2024", "finish": "stop", "secs": 5.1, "tokens": 873}
+{"id": "Q34", "kind": "time_design", "way": "search_more", "pred": "2015 to 2024", "finish": "stop", "secs": 5.6, "tokens": 1185}
+{"id": "Q34", "kind": "time_design", "way": "cabinets", "pred": "2026", "finish": "stop", "secs": 2.9, "tokens": 792}
+{"id": "Q34", "kind": "time_design", "way": "both", "pred": "2015 to 2024", "finish": "stop", "secs": 6.8, "tokens": 1166}
+{"id": "Q35", "kind": "not_answerable", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.4, "tokens": 1}
+{"id": "Q35", "kind": "not_answerable", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 2.1, "tokens": 871}
+{"id": "Q35", "kind": "not_answerable", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 3.7, "tokens": 1188}
+{"id": "Q35", "kind": "not_answerable", "way": "cabinets", "pred": "0.0 (robotic) not mentioned", "finish": "stop", "secs": 8.1, "tokens": 787}
+{"id": "Q35", "kind": "not_answerable", "way": "both", "pred": "not mentioned", "finish": "stop", "secs": 4.8, "tokens": 1160}
+{"id": "Q36", "kind": "not_answerable", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.4, "tokens": 1}
+{"id": "Q36", "kind": "not_answerable", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 3.2, "tokens": 888}
+{"id": "Q36", "kind": "not_answerable", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 3.3, "tokens": 1204}
+{"id": "Q36", "kind": "not_answerable", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 3.8, "tokens": 784}
+{"id": "Q36", "kind": "not_answerable", "way": "both", "pred": "T24 (robotic: 478,41 ± 739,25; laparoscopic: 730,24 ± 1096,42)", "finish": "stop", "secs": 23.4, "tokens": 1179}
+{"id": "Q37", "kind": "not_answerable", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 3.5, "tokens": 1}
+{"id": "Q37", "kind": "not_answerable", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 4.5, "tokens": 882}
+{"id": "Q37", "kind": "not_answerable", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 3.0, "tokens": 1221}
+{"id": "Q37", "kind": "not_answerable", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 2.9, "tokens": 792}
+{"id": "Q37", "kind": "not_answerable", "way": "both", "pred": "not mentioned", "finish": "stop", "secs": 3.3, "tokens": 1170}
+{"id": "Q38", "kind": "not_answerable", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 3.0, "tokens": 1}
+{"id": "Q38", "kind": "not_answerable", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 1.9, "tokens": 846}
+{"id": "Q38", "kind": "not_answerable", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 3.2, "tokens": 1189}
+{"id": "Q38", "kind": "not_answerable", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 3.4, "tokens": 784}
+{"id": "Q38", "kind": "not_answerable", "way": "both", "pred": "not mentioned", "finish": "stop", "secs": 2.8, "tokens": 1136}
+{"id": "Q39", "kind": "not_answerable", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.3, "tokens": 1}
+{"id": "Q39", "kind": "not_answerable", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 3.4, "tokens": 866}
+{"id": "Q39", "kind": "not_answerable", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 5.3, "tokens": 1181}
+{"id": "Q39", "kind": "not_answerable", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 3.3, "tokens": 788}
+{"id": "Q39", "kind": "not_answerable", "way": "both", "pred": "not mentioned", "finish": "stop", "secs": 3.4, "tokens": 1165}
+{"id": "Q40", "kind": "not_answerable", "way": "none", "pred": "not mentioned", "finish": "stop", "secs": 2.6, "tokens": 1}
+{"id": "Q40", "kind": "not_answerable", "way": "search", "pred": "not mentioned", "finish": "stop", "secs": 3.3, "tokens": 859}
+{"id": "Q40", "kind": "not_answerable", "way": "search_more", "pred": "not mentioned", "finish": "stop", "secs": 3.3, "tokens": 1213}
+{"id": "Q40", "kind": "not_answerable", "way": "cabinets", "pred": "not mentioned", "finish": "stop", "secs": 3.1, "tokens": 790}
+{"id": "Q40", "kind": "not_answerable", "way": "both", "pred": "not mentioned", "finish": "stop", "secs": 2.2, "tokens": 1158}
