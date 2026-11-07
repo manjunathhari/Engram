@@ -1,0 +1,21 @@
+{
+ "name": "Engram as a research memory: filing cabinets of table numbers against sentence search. Rule fixed on 7 November 2026, before any retrieval or answer.",
+ "papers": "35 papers on robotic versus laparoscopic colorectal surgery from PubMed Central (research_memory/papers.jsonl); text and tables fetched by research_memory/fetch_corpus.py; not stored in the repository because of their licences",
+ "questions": "40 questions (research_memory/questions.jsonl, sha256 starting c86b6a6b) written by another AI from the papers alone and checked by Claude for meaning; 15 single, 8 within-study, 6 across the meta-analyses, 5 time or design, 6 not answerable",
+ "memory": "every sentence and every table row of each paper saved in Engram's chat memory, one chat per paper, speaker '<first author> <year>', opened by open_memory(design='tested') with no change to the search",
+ "cabinets": "records built by fixed code from every table of every paper (research_memory/cabinets.py): paper, table caption, column heading, row label, value, and group (robotic, laparoscopic or other) by fixed label rules; no model involved; the code is not changed after any answer is seen",
+ "ways": {
+  "none": "the question alone",
+  "search": "Engram's tested search, 800 tokens",
+  "search_more": "the same search at 1,100 tokens, to match the text given in 'both'",
+  "cabinets": "the best-matching cabinet records, 800 tokens",
+  "both": "cabinet records (300 tokens) on top of the search (800 tokens), the same layout as noted facts in the tested design"
+ },
+ "answer": "Gemma 3 4B (Hugging Face Q4_K_M) on Kaggle, temperature 0, seed 7, the answer prompt of the earlier tests, 200 reply tokens because some answers list several studies",
+ "score": "blind marks by Claude agents with system names hidden. Single, within-study and time questions: right or wrong. Across questions: the share of the listed values given and attributed to the right paper. Not-answerable questions: right only if the reply says it is not mentioned or not reported.",
+ "primary_measure": "both minus search_more on the 40 questions (equal text), 95% interval by paired bootstrap",
+ "reading": {"interval above zero": "the cabinets add value over search with the same amount of text", "interval below zero": "the cabinets make answers worse", "interval across zero": "no difference shown at this size"},
+ "secondary": "cabinets alone against search; each way against none; by kind of question; evidence found (share of each question's quoted text present in what the model was given), measured before any answer",
+ "limits_stated_now": "40 questions can show only large differences (about 20 points); Claude read the questions before writing the cabinet code; one model; Claude marks the answers",
+ "allowed_to_fail": "reported whichever way it goes; no change and rerun on these questions"
+}
