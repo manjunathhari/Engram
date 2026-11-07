@@ -40,3 +40,30 @@ Rule: forced form needs at least 3 right per wrong among stored facts, and at le
 17 found. **Failed both. P2.6 is parked**: extraction stays off and unmerged. The 12B free form found more (22) but stored 16 right
 to 23 wrong, so it would also fail the first condition. In the forced form the 12B twice copied the prompt's example
 ("adopted beagle, Pixel, from the shelter, yesterday") for sentences that do not mention it; the validator rejected both.
+
+## GPT-4o on the same 200 sentences (7 November 2026), against the rule in rule_gpt4o.md
+
+Replies from the Kaggle run; rescored here from the replies with the scorer at e87d52d, identical to the notebook's scores.
+
+| | 12B forced | GPT-4o free | GPT-4o forced (decides) |
+|---|---|---|---|
+| Sentences given any fact (labels: 49) | | 13 | 106 |
+| Facts written | 172 | 14 | 135 |
+| Labelled found (of 56) | 17 | 10 | 31 |
+| Stored by the validator | 46 | 11 | 68 |
+| Of those right | 10 | 9 | 21 |
+| Right facts the validator held back as uncertain | | 1 | 10 |
+
+GPT-4o forced: found 31 (condition 2 met), stored 21 right to 47 wrong (condition 1 not met). **Failed.** Under the outcomes fixed
+beforehand this is the middle case: the writer finds facts well enough, and the checking and the relation list let wrong ones in.
+
+Where the 104 wrong forced-form facts came from (exploratory, after seeing the result):
+- 76 from sentences that hold no listed fact: feelings and states ("motivated", "bored", "proud of who I am"), opinions
+  ("likes color", "likes your opinion"), one-off events (a break, lunch, a curry made) and vague plans ("list", "workout plan").
+  GPT-4o gave facts to 106 sentences where the labels have 49.
+- 12 from sentences that hold a different fact.
+- 10 the right thing under a neighbouring relation: started_job for owns (3), attended for plans or completed, member_of for joined,
+  lost for left_job, likes against hobby (3).
+- 6 the right relation with different words for the thing.
+The free form is the opposite: GPT-4o wrote facts for only 13 sentences, 9 of 11 stored right, but found only 10.
+The validator passed 47 wrong facts and held back 10 of 31 right ones. Nothing here changes code; any fix must be measured on a fresh set.

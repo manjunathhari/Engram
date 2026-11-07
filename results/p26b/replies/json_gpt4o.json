@@ -1,0 +1,1002 @@
+{
+"y001": {
+"raw": "{\"facts\":[{\"subject\":\"Melanie\",\"predicate\":\"likes\",\"object\":\"creative outlet\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"Melanie\",\"predicate\":\"likes\",\"object\":\"form of therapy\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.71
+},
+"y002": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"status\",\"object\":\"Helping those in need is important to me too\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.67
+},
+"y003": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.52
+},
+"y004": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"plans\",\"object\":\"endorsement opportunities\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.69
+},
+"y005": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"status\",\"object\":\"thrilling games\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"job_title\",\"object\":\"career\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.79
+},
+"y006": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.67
+},
+"y007": {
+"raw": "{\"facts\":[{\"subject\":\"Jon\",\"predicate\":\"works_at\",\"object\":\"social media\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.67
+},
+"y008": {
+"raw": "{\"facts\":[{\"subject\":\"Nate\",\"predicate\":\"likes\",\"object\":\"recipe\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.65
+},
+"y009": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.59
+},
+"y010": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"hobby\",\"object\":\"basketball\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"outside\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.73
+},
+"y011": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"being outdoors\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"going for hikes\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"hanging out at the park\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"having picnics\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"playing board games\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"having movie nights at home\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 1.3
+},
+"y012": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.58
+},
+"y013": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.85
+},
+"y014": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"status\",\"object\":\"womanhood\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.7
+},
+"y015": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"plans\",\"object\":\"list\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.57
+},
+"y016": {
+"raw": "{\"facts\":[{\"subject\":\"Gina\",\"predicate\":\"started_job\",\"object\":\"store\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.69
+},
+"y017": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"status\",\"object\":\"movie fan\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.58
+},
+"y018": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.48
+},
+"y019": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.62
+},
+"y020": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"completed\",\"object\":\"two books\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"recently\"}]}",
+"finish": "stop",
+"secs": 0.59
+},
+"y021": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"attended\",\"object\":\"practice\",\"name\":\"\",\"from\":\"\",\"with\":\"some of the younger players\",\"place\":\"\",\"time\":\"recent\"}]}",
+"finish": "stop",
+"secs": 0.67
+},
+"y022": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.48
+},
+"y023": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.67
+},
+"y024": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"lost\",\"object\":\"social media apps\",\"name\":\"\",\"from\":\"my phone\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"user\",\"predicate\":\"lost\",\"object\":\"logging in\",\"name\":\"\",\"from\":\"my laptop\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.74
+},
+"y025": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"plans\",\"object\":\"keep fighting for LGBTQ rights\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.67
+},
+"y026": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.49
+},
+"y027": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.55
+},
+"y028": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.43
+},
+"y029": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.66
+},
+"y030": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.58
+},
+"y031": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.43
+},
+"y032": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"attended\",\"object\":\"break\",\"name\":\"short 10-minute break\",\"from\":\"\",\"with\":\"\",\"place\":\"office cafeteria\",\"time\":\"10:30 am on Monday\"}]}",
+"finish": "stop",
+"secs": 0.75
+},
+"y033": {
+"raw": "{\"facts\":[{\"subject\":\"Jon\",\"predicate\":\"attended\",\"object\":\"networking event\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"last\"}]}",
+"finish": "stop",
+"secs": 0.62
+},
+"y034": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.55
+},
+"y035": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.73
+},
+"y036": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.62
+},
+"y037": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"completed\",\"object\":\"vegan lentil curry\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"two weeks ago\"}]}",
+"finish": "stop",
+"secs": 0.65
+},
+"y038": {
+"raw": "{\"facts\":[{\"subject\":\"Jon\",\"predicate\":\"status\",\"object\":\"determined\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.74
+},
+"y039": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"attended\",\"object\":\"adoption advice/assistance group\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.64
+},
+"y040": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.56
+},
+"y041": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.82
+},
+"y042": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"status\",\"object\":\"oval face shape\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.66
+},
+"y043": {
+"raw": "{\"facts\":[{\"subject\":\"Nate\",\"predicate\":\"status\",\"object\":\"bored\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"today\"},{\"subject\":\"Nate\",\"predicate\":\"owns\",\"object\":\"turtles\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.77
+},
+"y044": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"likes\",\"object\":\"fantasy stuff\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.63
+},
+"y045": {
+"raw": "{\"facts\":[{\"subject\":\"Joanna\",\"predicate\":\"plans\",\"object\":\"hiking\",\"name\":\"\",\"from\":\"\",\"with\":\"some buddies\",\"place\":\"\",\"time\":\"this weekend\"}]}",
+"finish": "stop",
+"secs": 0.59
+},
+"y046": {
+"raw": "{\"facts\":[{\"subject\":\"Maria\",\"predicate\":\"attended\",\"object\":\"meal\",\"name\":\"\",\"from\":\"\",\"with\":\"getting everything ready\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.67
+},
+"y047": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"attended\",\"object\":\"Pride fest\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"last year\"}]}",
+"finish": "stop",
+"secs": 0.72
+},
+"y048": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"attended\",\"object\":\"teammates\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"on the 15th\"}]}",
+"finish": "stop",
+"secs": 0.61
+},
+"y049": {
+"raw": "{\"facts\":[{\"subject\":\"Gina\",\"predicate\":\"hobby\",\"object\":\"dance\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.61
+},
+"y050": {
+"raw": "{\"facts\":[{\"subject\":\"Jon\",\"predicate\":\"hobby\",\"object\":\"Dance\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.6
+},
+"y051": {
+"raw": "{\"facts\":[{\"subject\":\"Nate\",\"predicate\":\"moved_to\",\"object\":\"beach\",\"name\":\"\",\"from\":\"\",\"with\":\"turtles\",\"place\":\"Tampa\",\"time\":\"yesterday\"}]}",
+"finish": "stop",
+"secs": 0.74
+},
+"y052": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"education\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"infrastructure\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.66
+},
+"y053": {
+"raw": "{\"facts\":[{\"subject\":\"Joanna\",\"predicate\":\"likes\",\"object\":\"getting immersed in the feelings and plots\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.63
+},
+"y054": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"lives_in\",\"object\":\"hostel\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"Latin Quarter\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.68
+},
+"y055": {
+"raw": "{\"facts\":[{\"subject\":\"Jon\",\"predicate\":\"left_job\",\"object\":\"banker\",\"name\":\"\",\"from\":\"secure 9-5\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"Jon\",\"predicate\":\"hobby\",\"object\":\"dancing\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.77
+},
+"y056": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.46
+},
+"y057": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"completed\",\"object\":\"story\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.63
+},
+"y058": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.62
+},
+"y059": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.5
+},
+"y060": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"visited\",\"object\":\"gym\",\"name\":\"new\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"Just the other day\"}]}",
+"finish": "stop",
+"secs": 0.71
+},
+"y061": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.67
+},
+"y062": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"attended\",\"object\":\"transgender conference\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"this month\"}]}",
+"finish": "stop",
+"secs": 0.76
+},
+"y063": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"likes\",\"object\":\"limit my news consumption\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.63
+},
+"y064": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"started_job\",\"object\":\"product photography business\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.57
+},
+"y065": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.55
+},
+"y066": {
+"raw": "{\"facts\":[{\"subject\":\"Jon\",\"predicate\":\"plans\",\"object\":\"prepping\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"my dance studio\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.66
+},
+"y067": {
+"raw": "{\"facts\":[{\"subject\":\"Joanna\",\"predicate\":\"likes\",\"object\":\"your opinion\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.71
+},
+"y068": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.68
+},
+"y069": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.46
+},
+"y070": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.61
+},
+"y071": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"visited\",\"object\":\"place\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"London\",\"time\":\"a few years ago\"}]}",
+"finish": "stop",
+"secs": 0.89
+},
+"y072": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"plans\",\"object\":\"workout plan\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.8
+},
+"y073": {
+"raw": "{\"facts\":[{\"subject\":\"Gina\",\"predicate\":\"likes\",\"object\":\"dance\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"Gina\",\"predicate\":\"likes\",\"object\":\"fashion\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.78
+},
+"y074": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.55
+},
+"y075": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.53
+},
+"y076": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.48
+},
+"y077": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.47
+},
+"y078": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.59
+},
+"y079": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.66
+},
+"y080": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"likes\",\"object\":\"sound of the chickpea and spinach tagine\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.57
+},
+"y081": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.46
+},
+"y082": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.74
+},
+"y083": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"likes\",\"object\":\"lentil soup\",\"name\":\"\",\"from\":\"\",\"with\":\"whole grain crackers and a mixed green salad\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.6
+},
+"y084": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.59
+},
+"y085": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"works_at\",\"object\":\"supporting youth sports\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"friend_of\",\"object\":\"underserved communities\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 1.1
+},
+"y086": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.51
+},
+"y087": {
+"raw": "{\"facts\":[{\"subject\":\"Joanna\",\"predicate\":\"status\",\"object\":\"huge part of me\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"now\"}]}",
+"finish": "stop",
+"secs": 0.58
+},
+"y088": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"attended\",\"object\":\"LGBTQ+ pride parade\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"Last week\"}]}",
+"finish": "stop",
+"secs": 0.68
+},
+"y089": {
+"raw": "{\"facts\":[{\"subject\":\"Joanna\",\"predicate\":\"likes\",\"object\":\"color\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"Joanna\",\"predicate\":\"likes\",\"object\":\"texture\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.66
+},
+"y090": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.5
+},
+"y091": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.53
+},
+"y092": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"status\",\"object\":\"trouble staying on track\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"afternoon work sessions\"}]}",
+"finish": "stop",
+"secs": 0.59
+},
+"y093": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.54
+},
+"y094": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.47
+},
+"y095": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"energy\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"this city\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"diversity\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"this city\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"awesome food\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"this city\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.88
+},
+"y096": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"visited\",\"object\":\"Paris\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.6
+},
+"y097": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.49
+},
+"y098": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.5
+},
+"y099": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.48
+},
+"y100": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.57
+},
+"y101": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.59
+},
+"y102": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"completed\",\"object\":\"big batch of quinoa\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"Sunday last week\"}]}",
+"finish": "stop",
+"secs": 0.63
+},
+"y103": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"likes\",\"object\":\"bringing others comfort\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"Caroline\",\"predicate\":\"likes\",\"object\":\"helping them grow\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.85
+},
+"y104": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.61
+},
+"y105": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.51
+},
+"y106": {
+"raw": "{\"facts\":[{\"subject\":\"Gina\",\"predicate\":\"hobby\",\"object\":\"Dance\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.71
+},
+"y107": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"likes\",\"object\":\"Family time\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.56
+},
+"y108": {
+"raw": "{\"facts\":[{\"subject\":\"Jon\",\"predicate\":\"attended\",\"object\":\"rehearsal\",\"name\":\"\",\"from\":\"\",\"with\":\"a small group of dancers\",\"place\":\"\",\"time\":\"after work\"}]}",
+"finish": "stop",
+"secs": 0.73
+},
+"y109": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.54
+},
+"y110": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.53
+},
+"y111": {
+"raw": "{\"facts\":[{\"subject\":\"Joanna\",\"predicate\":\"dislikes\",\"object\":\"certain animals\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.61
+},
+"y112": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"started_job\",\"object\":\"Comparative\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.62
+},
+"y113": {
+"raw": "{\"facts\":[{\"subject\":\"Nate\",\"predicate\":\"completed\",\"object\":\"vegan ice cream\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"last Friday\"}]}",
+"finish": "stop",
+"secs": 0.74
+},
+"y114": {
+"raw": "{\"facts\":[{\"subject\":\"Joanna\",\"predicate\":\"hobby\",\"object\":\"writing\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.6
+},
+"y115": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.51
+},
+"y116": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"plans\",\"object\":\"use Todoist's scheduled tasks feature\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"user\",\"predicate\":\"plans\",\"object\":\"set reminders for my morning coffee break\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"6:30 am\"}]}",
+"finish": "stop",
+"secs": 0.79
+},
+"y117": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"completed\",\"object\":\"big batch of quinoa\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"Sunday last week\"},{\"subject\":\"user\",\"predicate\":\"attended\",\"object\":\"lunch\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"Monday\"},{\"subject\":\"user\",\"predicate\":\"attended\",\"object\":\"lunch\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"Tuesday\"},{\"subject\":\"user\",\"predicate\":\"attended\",\"object\":\"lunch\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"Thursday\"}]}",
+"finish": "stop",
+"secs": 1.05
+},
+"y118": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"plans\",\"object\":\"Ireland\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"Next month\"}]}",
+"finish": "stop",
+"secs": 0.6
+},
+"y119": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.6
+},
+"y120": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"works_at\",\"object\":\"court\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.65
+},
+"y121": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.56
+},
+"y122": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"visited\",\"object\":\"home\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"Last week\"}]}",
+"finish": "stop",
+"secs": 0.65
+},
+"y123": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"status\",\"object\":\"writing is going well\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"Tim\",\"predicate\":\"status\",\"object\":\"in the middle of fantasy novel\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.72
+},
+"y124": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"improving education\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"infrastructure\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.76
+},
+"y125": {
+"raw": "{\"facts\":[{\"subject\":\"Joanna\",\"predicate\":\"completed\",\"object\":\"bookmark\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"just\"}]}",
+"finish": "stop",
+"secs": 0.6
+},
+"y126": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.49
+},
+"y127": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.52
+},
+"y128": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"plans\",\"object\":\"NYC\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.6
+},
+"y129": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"joined\",\"object\":\"LGBTQ activist group\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"last Tues\"}]}",
+"finish": "stop",
+"secs": 0.68
+},
+"y130": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.53
+},
+"y131": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.49
+},
+"y132": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.51
+},
+"y133": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.57
+},
+"y134": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.53
+},
+"y135": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"job_title\",\"object\":\"CEO\",\"name\":\"Grailzy\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.58
+},
+"y136": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.51
+},
+"y137": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"hobby\",\"object\":\"decorated this tree\",\"name\":\"\",\"from\":\"\",\"with\":\"a Harry Potter theme\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.65
+},
+"y138": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.55
+},
+"y139": {
+"raw": "{\"facts\":[{\"subject\":\"Maria\",\"predicate\":\"plans\",\"object\":\"continue doing it\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.57
+},
+"y140": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"member_of\",\"object\":\"study abroad program\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"On Friday\"}]}",
+"finish": "stop",
+"secs": 0.74
+},
+"y141": {
+"raw": "{\"facts\":[{\"subject\":\"Maria\",\"predicate\":\"likes\",\"object\":\"freedom\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"Maria\",\"predicate\":\"likes\",\"object\":\"connection\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.65
+},
+"y142": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.62
+},
+"y143": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.63
+},
+"y144": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.66
+},
+"y145": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.52
+},
+"y146": {
+"raw": "{\"facts\":[{\"subject\":\"Nate\",\"predicate\":\"hobby\",\"object\":\"walk\",\"name\":\"\",\"from\":\"\",\"with\":\"Max\",\"place\":\"\",\"time\":\"the other day\"}]}",
+"finish": "stop",
+"secs": 0.71
+},
+"y147": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.45
+},
+"y148": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.46
+},
+"y149": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.46
+},
+"y150": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"status\",\"object\":\"proud of who I am\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.68
+},
+"y151": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.47
+},
+"y152": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"hobby\",\"object\":\"researching policies\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"hobby\",\"object\":\"writing\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.9
+},
+"y153": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.45
+},
+"y154": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"plans\",\"object\":\"counseling and mental health\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"Lately\"}]}",
+"finish": "stop",
+"secs": 0.75
+},
+"y155": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"status\",\"object\":\"motivated\",\"name\":\"\",\"from\":\"\",\"with\":\"family\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.58
+},
+"y156": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.58
+},
+"y157": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"likes\",\"object\":\"certain authors\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.6
+},
+"y158": {
+"raw": "{\"facts\":[{\"subject\":\"Joanna\",\"predicate\":\"visited\",\"object\":\"Woodhaven\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"a small town in the Midwest\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.59
+},
+"y159": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"works_at\",\"object\":\"regular work hours\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"works_at\",\"object\":\"home\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"sometimes\"}]}",
+"finish": "stop",
+"secs": 0.73
+},
+"y160": {
+"raw": "{\"facts\":[{\"subject\":\"Nate\",\"predicate\":\"owns\",\"object\":\"turtles\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.62
+},
+"y161": {
+"raw": "{\"facts\":[{\"subject\":\"Caroline\",\"predicate\":\"plans\",\"object\":\"LGBTQ art show\",\"name\":\"\",\"from\":\"\",\"with\":\"my paintings\",\"place\":\"\",\"time\":\"Next month\"}]}",
+"finish": "stop",
+"secs": 0.79
+},
+"y162": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"hobby\",\"object\":\"hiked\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"John\",\"predicate\":\"hobby\",\"object\":\"swam\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.74
+},
+"y163": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"plans\",\"object\":\"spinach and feta filling\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.64
+},
+"y164": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.45
+},
+"y165": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"owns\",\"object\":\"handbag\",\"name\":\"\",\"from\":\"TK Maxx\",\"with\":\"\",\"place\":\"\",\"time\":\"\"},{\"subject\":\"user\",\"predicate\":\"likes\",\"object\":\"handbag\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"lately\"}]}",
+"finish": "stop",
+"secs": 0.93
+},
+"y166": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.58
+},
+"y167": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.47
+},
+"y168": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.51
+},
+"y169": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"status\",\"object\":\"motivated\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.63
+},
+"y170": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"hobby\",\"object\":\"Basketball\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.69
+},
+"y171": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"started_hobby\",\"object\":\"playing\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"middle and high school\"},{\"subject\":\"John\",\"predicate\":\"completed\",\"object\":\"college scholarship\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.71
+},
+"y172": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.46
+},
+"y173": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.54
+},
+"y174": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.53
+},
+"y175": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"completed\",\"object\":\"military aptitude test\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"recently\"}]}",
+"finish": "stop",
+"secs": 0.67
+},
+"y176": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.63
+},
+"y177": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.62
+},
+"y178": {
+"raw": "{\"facts\":[{\"subject\":\"Melanie\",\"predicate\":\"attended\",\"object\":\"charity race\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"last Saturday\"}]}",
+"finish": "stop",
+"secs": 0.61
+},
+"y179": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.51
+},
+"y180": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"status\",\"object\":\"on the court\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.7
+},
+"y181": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.5
+},
+"y182": {
+"raw": "{\"facts\":[{\"subject\":\"Maria\",\"predicate\":\"attended\",\"object\":\"camping\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"a few times\"}]}",
+"finish": "stop",
+"secs": 0.59
+},
+"y183": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.61
+},
+"y184": {
+"raw": "{\"facts\":[{\"subject\":\"Jon\",\"predicate\":\"lost\",\"object\":\"job\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.69
+},
+"y185": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"visited\",\"object\":\"travel agency\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"just\"}]}",
+"finish": "stop",
+"secs": 0.6
+},
+"y186": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"attended\",\"object\":\"game\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"last week\"}]}",
+"finish": "stop",
+"secs": 0.63
+},
+"y187": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.5
+},
+"y188": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"hobby\",\"object\":\"reading\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.53
+},
+"y189": {
+"raw": "{\"facts\":[{\"subject\":\"user\",\"predicate\":\"plans\",\"object\":\"family game night\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"this Saturday\"}]}",
+"finish": "stop",
+"secs": 0.67
+},
+"y190": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"likes\",\"object\":\"book\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"currently\"}]}",
+"finish": "stop",
+"secs": 0.67
+},
+"y191": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.48
+},
+"y192": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.6
+},
+"y193": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.56
+},
+"y194": {
+"raw": "{\"facts\":[{\"subject\":\"John\",\"predicate\":\"attended\",\"object\":\"vacation\",\"name\":\"\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.7
+},
+"y195": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.51
+},
+"y196": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.67
+},
+"y197": {
+"raw": "{\"facts\": []}",
+"finish": "stop",
+"secs": 0.6
+},
+"y198": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.48
+},
+"y199": {
+"raw": "{\"facts\":[{\"subject\":\"Tim\",\"predicate\":\"likes\",\"object\":\"Lord of the Rings\",\"name\":\"my favorite\",\"from\":\"\",\"with\":\"\",\"place\":\"\",\"time\":\"\"}]}",
+"finish": "stop",
+"secs": 0.66
+},
+"y200": {
+"raw": "{\"facts\":[]}",
+"finish": "stop",
+"secs": 0.51
+}
+}

@@ -1,0 +1,1002 @@
+{
+"y001": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y002": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.8
+},
+"y003": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.0
+},
+"y004": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.83
+},
+"y005": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.77
+},
+"y006": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.78
+},
+"y007": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.78
+},
+"y008": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.74
+},
+"y009": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.49
+},
+"y010": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.46
+},
+"y011": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.53
+},
+"y012": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y013": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.4
+},
+"y014": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.8
+},
+"y015": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.49
+},
+"y016": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.51
+},
+"y017": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.62
+},
+"y018": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.46
+},
+"y019": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y020": {
+"raw": "user | completed | books | quantity=two | recently",
+"finish": "stop",
+"secs": 0.56
+},
+"y021": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.45
+},
+"y022": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.48
+},
+"y023": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.51
+},
+"y024": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.55
+},
+"y025": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.51
+},
+"y026": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.54
+},
+"y027": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y028": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.87
+},
+"y029": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.52
+},
+"y030": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.58
+},
+"y031": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.55
+},
+"y032": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.57
+},
+"y033": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y034": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y035": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.49
+},
+"y036": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y037": {
+"raw": "user | made | vegan lentil curry |  | two weeks ago",
+"finish": "stop",
+"secs": 0.7
+},
+"y038": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.53
+},
+"y039": {
+"raw": "Caroline | attended | adoption advice/assistance group |  |",
+"finish": "stop",
+"secs": 0.96
+},
+"y040": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.4
+},
+"y041": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y042": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.53
+},
+"y043": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.42
+},
+"y044": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.61
+},
+"y045": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y046": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.4
+},
+"y047": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y048": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.42
+},
+"y049": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.57
+},
+"y050": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.41
+},
+"y051": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y052": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.66
+},
+"y053": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.42
+},
+"y054": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.54
+},
+"y055": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.52
+},
+"y056": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.59
+},
+"y057": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y058": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y059": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.57
+},
+"y060": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.51
+},
+"y061": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.57
+},
+"y062": {
+"raw": "Caroline | plans | transgender conference |  | this month",
+"finish": "stop",
+"secs": 0.5
+},
+"y063": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.54
+},
+"y064": {
+"raw": "user | plans | product photography business |  |",
+"finish": "stop",
+"secs": 0.58
+},
+"y065": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.43
+},
+"y066": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.52
+},
+"y067": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.49
+},
+"y068": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.45
+},
+"y069": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.4
+},
+"y070": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.49
+},
+"y071": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.54
+},
+"y072": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.48
+},
+"y073": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y074": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.56
+},
+"y075": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y076": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.58
+},
+"y077": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.45
+},
+"y078": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y079": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.48
+},
+"y080": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.55
+},
+"y081": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.58
+},
+"y082": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.52
+},
+"y083": {
+"raw": "user | likes | sound of the lentil soup with whole grain crackers and a mixed green salad |  |",
+"finish": "stop",
+"secs": 0.69
+},
+"y084": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.51
+},
+"y085": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.52
+},
+"y086": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.55
+},
+"y087": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.63
+},
+"y088": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y089": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.49
+},
+"y090": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.55
+},
+"y091": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y092": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.62
+},
+"y093": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.61
+},
+"y094": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.59
+},
+"y095": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.42
+},
+"y096": {
+"raw": "user | visited | Paris |  |",
+"finish": "stop",
+"secs": 0.64
+},
+"y097": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 1.07
+},
+"y098": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.48
+},
+"y099": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.56
+},
+"y100": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y101": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.43
+},
+"y102": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.68
+},
+"y103": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.51
+},
+"y104": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.53
+},
+"y105": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.45
+},
+"y106": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.51
+},
+"y107": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.52
+},
+"y108": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.43
+},
+"y109": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.43
+},
+"y110": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.48
+},
+"y111": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.46
+},
+"y112": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.55
+},
+"y113": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.48
+},
+"y114": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.59
+},
+"y115": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.52
+},
+"y116": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.54
+},
+"y117": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.51
+},
+"y118": {
+"raw": "Tim | plans | Ireland | for a semester | next month",
+"finish": "stop",
+"secs": 0.56
+},
+"y119": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.45
+},
+"y120": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y121": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.49
+},
+"y122": {
+"raw": "John | visited | home |  | last week",
+"finish": "stop",
+"secs": 0.57
+},
+"y123": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y124": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y125": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.42
+},
+"y126": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.48
+},
+"y127": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.45
+},
+"y128": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.54
+},
+"y129": {
+"raw": "Caroline | joined | LGBTQ activist group |  | last Tues",
+"finish": "stop",
+"secs": 0.5
+},
+"y130": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.58
+},
+"y131": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.56
+},
+"y132": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.46
+},
+"y133": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y134": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y135": {
+"raw": "user | job_title | CEO | of Grailzy, an auction site for Watches |",
+"finish": "stop",
+"secs": 0.61
+},
+"y136": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.58
+},
+"y137": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.43
+},
+"y138": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.46
+},
+"y139": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y140": {
+"raw": "Tim | status | in the study abroad program |  | Friday",
+"finish": "stop",
+"secs": 0.73
+},
+"y141": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.42
+},
+"y142": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.42
+},
+"y143": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y144": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.48
+},
+"y145": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.6
+},
+"y146": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.46
+},
+"y147": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y148": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.59
+},
+"y149": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.45
+},
+"y150": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y151": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.7
+},
+"y152": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.53
+},
+"y153": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.56
+},
+"y154": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.45
+},
+"y155": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.53
+},
+"y156": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.63
+},
+"y157": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y158": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.46
+},
+"y159": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.49
+},
+"y160": {
+"raw": "Nate | owns | turtles |  |",
+"finish": "stop",
+"secs": 0.48
+},
+"y161": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y162": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.42
+},
+"y163": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.61
+},
+"y164": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.42
+},
+"y165": {
+"raw": "user | likes | handbag | from=TK Maxx | lately",
+"finish": "stop",
+"secs": 0.6
+},
+"y166": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y167": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.53
+},
+"y168": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.6
+},
+"y169": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.48
+},
+"y170": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.45
+},
+"y171": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y172": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y173": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.45
+},
+"y174": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y175": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.47
+},
+"y176": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.48
+},
+"y177": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.46
+},
+"y178": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.53
+},
+"y179": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.56
+},
+"y180": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.43
+},
+"y181": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.52
+},
+"y182": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y183": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y184": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.46
+},
+"y185": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.58
+},
+"y186": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.48
+},
+"y187": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.53
+},
+"y188": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.54
+},
+"y189": {
+"raw": "user | plans | family game night |  | this Saturday",
+"finish": "stop",
+"secs": 0.58
+},
+"y190": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.54
+},
+"y191": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.42
+},
+"y192": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.44
+},
+"y193": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.97
+},
+"y194": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.51
+},
+"y195": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.5
+},
+"y196": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.51
+},
+"y197": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.46
+},
+"y198": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.38
+},
+"y199": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.45
+},
+"y200": {
+"raw": "NONE",
+"finish": "stop",
+"secs": 0.46
+}
+}
