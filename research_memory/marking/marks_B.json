@@ -1,0 +1,802 @@
+{
+ "r002": {
+  "mark": 1,
+  "why": "Same period, different format"
+ },
+ "r032": {
+  "mark": 1,
+  "why": "Same period, different format"
+ },
+ "r065": {
+  "mark": 1,
+  "why": "Same period, different format"
+ },
+ "r004": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r013": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r019": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r020": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r021": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r024": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r029": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r035": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r039": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r071": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r076": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r087": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r094": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r097": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r100": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r102": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r108": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r113": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r116": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r141": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r150": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r159": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r162": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r167": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r184": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r186": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r189": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r194": {
+  "mark": 1,
+  "why": "Correctly says not reported"
+ },
+ "r003": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r005": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r006": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r007": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r009": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r011": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r012": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r014": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r016": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r017": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r018": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r025": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r026": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r031": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r038": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r048": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r050": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r051": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r052": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r053": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r058": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r060": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r066": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r070": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r077": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r078": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r081": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r085": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r088": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r090": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r096": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r101": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r103": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r105": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r107": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r109": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r110": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r114": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r118": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r119": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r126": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r129": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r131": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r135": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r137": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r139": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r144": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r146": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r147": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r148": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r157": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r161": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r163": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r165": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r168": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r175": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r176": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r177": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r185": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r190": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r193": {
+  "mark": 0,
+  "why": "Says not mentioned; reference has value"
+ },
+ "r001": {
+  "mark": 0,
+  "why": "Only one unattributed value given"
+ },
+ "r008": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r023": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r028": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r045": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r054": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r056": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r069": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r075": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r086": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r093": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r111": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r121": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r125": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r127": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r133": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r136": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r138": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r152": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r153": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r174": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r191": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r010": {
+  "mark": 1,
+  "why": "Median 10 mL correct; IQR omitted"
+ },
+ "r041": {
+  "mark": 1,
+  "why": "Median 10 mL correct; IQR omitted"
+ },
+ "r043": {
+  "mark": 1,
+  "why": "Median 10 mL correct; IQR omitted"
+ },
+ "r124": {
+  "mark": 1,
+  "why": "Median 10 mL correct; IQR omitted"
+ },
+ "r015": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r036": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r037": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r042": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r044": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r062": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r073": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r080": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r106": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r130": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r155": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r160": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r180": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r196": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r033": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r030": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r064": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r179": {
+  "mark": 1,
+  "why": "Matches reference value"
+ },
+ "r059": {
+  "mark": 1,
+  "why": "Count correct, percentage omitted"
+ },
+ "r074": {
+  "mark": 1,
+  "why": "Count correct, percentage omitted"
+ },
+ "r143": {
+  "mark": 1,
+  "why": "Count correct, percentage omitted"
+ },
+ "r181": {
+  "mark": 1,
+  "why": "Count correct, percentage omitted"
+ },
+ "r183": {
+  "mark": 1,
+  "why": "Count correct, percentage omitted"
+ },
+ "r188": {
+  "mark": 1,
+  "why": "Count correct, percentage omitted"
+ },
+ "r173": {
+  "mark": 1,
+  "why": "Count correct, percentage omitted"
+ },
+ "r057": {
+  "mark": 1,
+  "why": "Same period, different format"
+ },
+ "r063": {
+  "mark": 1,
+  "why": "Same period, different format"
+ },
+ "r082": {
+  "mark": 1,
+  "why": "Same period, different format"
+ },
+ "r170": {
+  "mark": 1,
+  "why": "Same period, different format"
+ },
+ "r171": {
+  "mark": 1,
+  "why": "Same period, different format"
+ },
+ "r199": {
+  "mark": 1,
+  "why": "Same period, different format"
+ },
+ "r099": {
+  "mark": 1,
+  "why": "Five hospitals, correct"
+ },
+ "r142": {
+  "mark": 1,
+  "why": "Five hospitals, correct"
+ },
+ "r169": {
+  "mark": 1,
+  "why": "Five hospitals, correct"
+ },
+ "r049": {
+  "mark": 1,
+  "why": "Both groups correct and attributed"
+ },
+ "r079": {
+  "mark": 1,
+  "why": "Both groups correct and attributed"
+ },
+ "r122": {
+  "mark": 1,
+  "why": "Both groups correct and attributed"
+ },
+ "r182": {
+  "mark": 1,
+  "why": "Both groups correct and attributed"
+ },
+ "r120": {
+  "mark": 1,
+  "why": "Both groups correct and attributed"
+ },
+ "r195": {
+  "mark": 1,
+  "why": "Both groups correct and attributed"
+ },
+ "r022": {
+  "mark": 0,
+  "why": "No values given"
+ },
+ "r198": {
+  "mark": 0,
+  "why": "No values given"
+ },
+ "r027": {
+  "mark": 0,
+  "why": "Direction only, no values"
+ },
+ "r061": {
+  "mark": 0,
+  "why": "Direction only, no values"
+ },
+ "r098": {
+  "mark": 0,
+  "why": "Direction only, no values"
+ },
+ "r034": {
+  "mark": 0,
+  "why": "Direction only, no values"
+ },
+ "r091": {
+  "mark": 0,
+  "why": "Direction only, no values"
+ },
+ "r072": {
+  "mark": 0,
+  "why": "Laparoscopic value wrong"
+ },
+ "r055": {
+  "mark": 0,
+  "why": "Robotic value wrong, garbled"
+ },
+ "r134": {
+  "mark": 1,
+  "why": "2 per group correct; percentages omitted"
+ },
+ "r178": {
+  "mark": 1,
+  "why": "2 per group correct; percentages omitted"
+ },
+ "r112": {
+  "mark": 0,
+  "why": "Values wrong"
+ },
+ "r172": {
+  "mark": 0,
+  "why": "Values wrong"
+ },
+ "r154": {
+  "mark": 0,
+  "why": "Only one group's value given"
+ },
+ "r156": {
+  "mark": 0,
+  "why": "Only one group's value given"
+ },
+ "r192": {
+  "mark": 0,
+  "why": "Only one group's value given"
+ },
+ "r197": {
+  "mark": 0,
+  "why": "Values wrong"
+ },
+ "r084": {
+  "mark": 0,
+  "why": "Gives a number instead of not reported"
+ },
+ "r128": {
+  "mark": 0,
+  "why": "Gives numbers for unreported outcome"
+ },
+ "r151": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r158": {
+  "mark": 0,
+  "why": "Value wrong"
+ },
+ "r083": {
+  "mark": 0,
+  "why": "Wrong or no study identified"
+ },
+ "r092": {
+  "mark": 0,
+  "why": "Wrong or no study identified"
+ },
+ "r104": {
+  "mark": 0,
+  "why": "Wrong or no study identified"
+ },
+ "r046": {
+  "mark": 0,
+  "why": "No study values given"
+ },
+ "r187": {
+  "mark": 0,
+  "why": "No study values given"
+ },
+ "r200": {
+  "mark": 0,
+  "why": "No study values given"
+ },
+ "r047": {
+  "mark": 0,
+  "why": "Values not in reference, no attribution"
+ },
+ "r123": {
+  "mark": 0,
+  "why": "Gahunia SMD given but not attributed to study"
+ },
+ "r164": {
+  "mark": 0,
+  "why": "Gahunia SMD given but not attributed to study"
+ },
+ "r166": {
+  "mark": 0,
+  "why": "Gahunia SMD given but not attributed to study"
+ },
+ "r067": {
+  "mark": 0,
+  "why": "Values unattributed to studies"
+ },
+ "r068": {
+  "mark": 0,
+  "why": "Morini values not in reference"
+ },
+ "r095": {
+  "mark": 0.4,
+  "why": "Muafa and Zou correct; others not in reference"
+ },
+ "r040": {
+  "mark": 0.2,
+  "why": "Only Gahunia correct; Al-Ihribat wrong, Zou no value"
+ },
+ "r115": {
+  "mark": 0.2,
+  "why": "Only Gahunia correct; Zou no value"
+ },
+ "r117": {
+  "mark": 0.2,
+  "why": "Only Gahunia correct; Morini wrong"
+ },
+ "r140": {
+  "mark": 0.2,
+  "why": "Muafa correct only"
+ },
+ "r089": {
+  "mark": 0.2,
+  "why": "Gahunia correct; Al-Ihribat value wrong"
+ },
+ "r132": {
+  "mark": 0.2,
+  "why": "Only Gahunia correct"
+ },
+ "r149": {
+  "mark": 0.2,
+  "why": "Only Gahunia correct"
+ },
+ "r145": {
+  "mark": 0,
+  "why": "Muafa value but study not named"
+ }
+}

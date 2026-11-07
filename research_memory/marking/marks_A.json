@@ -1,0 +1,802 @@
+{
+ "r001": {
+  "mark": 0.0,
+  "why": "Only one unattributed value given"
+ },
+ "r002": {
+  "mark": 1.0,
+  "why": "Matches study years"
+ },
+ "r003": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r004": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r005": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r006": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r007": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r008": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r009": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r010": {
+  "mark": 1.0,
+  "why": "Median 10 mL correct"
+ },
+ "r011": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r012": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r013": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r014": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r015": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r016": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r017": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r018": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r019": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r020": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r021": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r022": {
+  "mark": 0.0,
+  "why": "No values given"
+ },
+ "r023": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r024": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r025": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r026": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r027": {
+  "mark": 0.0,
+  "why": "No values; wrong study"
+ },
+ "r028": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r029": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r030": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r031": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r032": {
+  "mark": 1.0,
+  "why": "Matches study years"
+ },
+ "r033": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r034": {
+  "mark": 0.0,
+  "why": "No values given"
+ },
+ "r035": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r036": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r037": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r038": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r039": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r040": {
+  "mark": 0.12,
+  "why": "Only Gahunia 0.41 correct of 8 results"
+ },
+ "r041": {
+  "mark": 1.0,
+  "why": "Median 10 mL correct"
+ },
+ "r042": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r043": {
+  "mark": 1.0,
+  "why": "Median 10 mL correct"
+ },
+ "r044": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r045": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r046": {
+  "mark": 0.0,
+  "why": "No study values given"
+ },
+ "r047": {
+  "mark": 0.0,
+  "why": "Values not in reference"
+ },
+ "r048": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r049": {
+  "mark": 1.0,
+  "why": "Both groups correct"
+ },
+ "r050": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r051": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r052": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r053": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r054": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r055": {
+  "mark": 0.0,
+  "why": "Robotic percentage wrong"
+ },
+ "r056": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r057": {
+  "mark": 1.0,
+  "why": "Correct period, reformatted"
+ },
+ "r058": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r059": {
+  "mark": 1.0,
+  "why": "Correct count"
+ },
+ "r060": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r061": {
+  "mark": 0.0,
+  "why": "No values given"
+ },
+ "r062": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r063": {
+  "mark": 1.0,
+  "why": "Correct period"
+ },
+ "r064": {
+  "mark": 1.0,
+  "why": "Correct rate"
+ },
+ "r065": {
+  "mark": 1.0,
+  "why": "Matches study years"
+ },
+ "r066": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r067": {
+  "mark": 0.0,
+  "why": "Values not attributed to studies"
+ },
+ "r068": {
+  "mark": 0.0,
+  "why": "Value not in reference"
+ },
+ "r069": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r070": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r071": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r072": {
+  "mark": 0.0,
+  "why": "Laparoscopic value wrong"
+ },
+ "r073": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r074": {
+  "mark": 1.0,
+  "why": "Correct count"
+ },
+ "r075": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r076": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r077": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r078": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r079": {
+  "mark": 1.0,
+  "why": "Both groups correct in order"
+ },
+ "r080": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r081": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r082": {
+  "mark": 1.0,
+  "why": "Correct period"
+ },
+ "r083": {
+  "mark": 0.0,
+  "why": "No correct study identified"
+ },
+ "r084": {
+  "mark": 0.0,
+  "why": "Gives a number"
+ },
+ "r085": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r086": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r087": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r088": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r089": {
+  "mark": 0.36,
+  "why": "Four Gahunia SMDs correct of 11"
+ },
+ "r090": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r091": {
+  "mark": 0.0,
+  "why": "No group values"
+ },
+ "r092": {
+  "mark": 0.0,
+  "why": "Wrong study identified"
+ },
+ "r093": {
+  "mark": 0.0,
+  "why": "Wrong values"
+ },
+ "r094": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r095": {
+  "mark": 0.2,
+  "why": "Muafa and Zou correct of 10"
+ },
+ "r096": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r097": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r098": {
+  "mark": 0.0,
+  "why": "No values given"
+ },
+ "r099": {
+  "mark": 1.0,
+  "why": "Correct count"
+ },
+ "r100": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r101": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r102": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r103": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r104": {
+  "mark": 0.0,
+  "why": "Wrong study identified"
+ },
+ "r105": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r106": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r107": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r108": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r109": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r110": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r111": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r112": {
+  "mark": 0.0,
+  "why": "Wrong values"
+ },
+ "r113": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r114": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r115": {
+  "mark": 0.12,
+  "why": "Only Gahunia 0.41 correct of 8"
+ },
+ "r116": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r117": {
+  "mark": 0.12,
+  "why": "Only Gahunia correct; Morini wrong"
+ },
+ "r118": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r119": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r120": {
+  "mark": 1.0,
+  "why": "Both groups correct"
+ },
+ "r121": {
+  "mark": 0.0,
+  "why": "Wrong values"
+ },
+ "r122": {
+  "mark": 1.0,
+  "why": "Both groups correct"
+ },
+ "r123": {
+  "mark": 0.0,
+  "why": "Value not attributed to study"
+ },
+ "r124": {
+  "mark": 1.0,
+  "why": "Median 10 mL correct"
+ },
+ "r125": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r126": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r127": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r128": {
+  "mark": 0.0,
+  "why": "Gives numbers for unreported outcome"
+ },
+ "r129": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r130": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r131": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r132": {
+  "mark": 0.45,
+  "why": "Five Gahunia SMDs correct of 11"
+ },
+ "r133": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r134": {
+  "mark": 1.0,
+  "why": "Two per group correct"
+ },
+ "r135": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r136": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r137": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r138": {
+  "mark": 0.0,
+  "why": "Wrong values"
+ },
+ "r139": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r140": {
+  "mark": 0.12,
+  "why": "Muafa correct, one of 8"
+ },
+ "r141": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r142": {
+  "mark": 1.0,
+  "why": "Correct count"
+ },
+ "r143": {
+  "mark": 1.0,
+  "why": "Correct count"
+ },
+ "r144": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r145": {
+  "mark": 0.0,
+  "why": "Value given without study attribution"
+ },
+ "r146": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r147": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r148": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r149": {
+  "mark": 0.18,
+  "why": "Two Gahunia SMDs correct of 11"
+ },
+ "r150": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r151": {
+  "mark": 0.0,
+  "why": "Wrong period"
+ },
+ "r152": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r153": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r154": {
+  "mark": 0.0,
+  "why": "Laparoscopic value missing"
+ },
+ "r155": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r156": {
+  "mark": 0.0,
+  "why": "Laparoscopic value missing"
+ },
+ "r157": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r158": {
+  "mark": 0.0,
+  "why": "Wrong period"
+ },
+ "r159": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r160": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r161": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r162": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r163": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r164": {
+  "mark": 0.0,
+  "why": "Value not attributed to study"
+ },
+ "r165": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r166": {
+  "mark": 0.0,
+  "why": "Value not attributed to study"
+ },
+ "r167": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r168": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r169": {
+  "mark": 1.0,
+  "why": "Correct count"
+ },
+ "r170": {
+  "mark": 1.0,
+  "why": "Correct period, reformatted"
+ },
+ "r171": {
+  "mark": 1.0,
+  "why": "Correct period"
+ },
+ "r172": {
+  "mark": 0.0,
+  "why": "Wrong values"
+ },
+ "r173": {
+  "mark": 1.0,
+  "why": "Correct count"
+ },
+ "r174": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r175": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r176": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r177": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r178": {
+  "mark": 1.0,
+  "why": "Two per group correct"
+ },
+ "r179": {
+  "mark": 1.0,
+  "why": "Correct rate"
+ },
+ "r180": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r181": {
+  "mark": 1.0,
+  "why": "Correct count"
+ },
+ "r182": {
+  "mark": 1.0,
+  "why": "Both groups correct"
+ },
+ "r183": {
+  "mark": 1.0,
+  "why": "Correct count"
+ },
+ "r184": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r185": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r186": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r187": {
+  "mark": 0.0,
+  "why": "No study values given"
+ },
+ "r188": {
+  "mark": 1.0,
+  "why": "Correct count"
+ },
+ "r189": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r190": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r191": {
+  "mark": 0.0,
+  "why": "Wrong value"
+ },
+ "r192": {
+  "mark": 0.0,
+  "why": "Laparoscopic value missing"
+ },
+ "r193": {
+  "mark": 0.0,
+  "why": "Says not mentioned"
+ },
+ "r194": {
+  "mark": 1.0,
+  "why": "Correctly not mentioned"
+ },
+ "r195": {
+  "mark": 1.0,
+  "why": "Both groups correct"
+ },
+ "r196": {
+  "mark": 1.0,
+  "why": "Correct value"
+ },
+ "r197": {
+  "mark": 0.0,
+  "why": "Wrong values"
+ },
+ "r198": {
+  "mark": 0.0,
+  "why": "No values given"
+ },
+ "r199": {
+  "mark": 1.0,
+  "why": "Correct period, reformatted"
+ },
+ "r200": {
+  "mark": 0.0,
+  "why": "No study values given"
+ }
+}
